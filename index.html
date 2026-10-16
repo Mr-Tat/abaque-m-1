@@ -1,0 +1,1016 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152334"><title>Math'as — Abaque des longueurs v0.6.3</title><style>
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#172838;background:#e5ebed}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(120deg,#dce6e8,#f5f1eb)}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,[role=button]:focus-visible{outline:3px solid #f3a441;outline-offset:2px}.shell{max-width:1420px;margin:14px auto;background:#f9f8f4;min-height:calc(100vh - 28px);border-radius:22px;overflow:hidden;box-shadow:0 18px 50px #253b4b24}header{background:#152334;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 22px}.brand{font-weight:950;letter-spacing:-.03em;font-size:1.35rem}.brand span{color:#54c3c5}.mutedHead{font-size:.8rem;color:#bdced4}.headerBtns{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #b8c7cf;border-radius:11px;background:white;color:#173044;min-height:43px;padding:9px 15px;font-weight:800}.btn.primary{background:#167b82;border-color:#167b82;color:white}.btn.dark{background:#304257;border-color:#516578;color:#fff}.btn:disabled{opacity:.44;cursor:not-allowed}main{padding:22px}.hidden{display:none!important}.eyebrow{color:#127d83;letter-spacing:.12em;font-size:.75rem;font-weight:950;text-transform:uppercase}.screenTitle{font-size:clamp(1.4rem,3vw,2.2rem);margin:6px 0 8px}.sub{color:#566674;font-size:.94rem;font-weight:600;margin:0 0 18px}.homeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:950px;margin:32px auto}.homeCard{padding:25px;border:2px solid #c8d7d9;border-radius:19px;background:white;text-align:left;min-height:200px;box-shadow:0 8px 21px #162b4010}.homeCard strong{display:block;font-size:1.38rem;margin:14px 0 9px}.homeCard p{color:#5c6874;margin:0;line-height:1.45}.homeCard .symbol{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:16px;background:#d8f1ef;color:#146a72;font-weight:950;font-size:1.8rem}.homeCard.disabled{background:#e8eaeb;border-color:#d4dade;cursor:default}.homeCard.disabled .symbol{background:#dce0e4;color:#819098}.soon{font-size:.78rem;color:#66727d;font-weight:900;letter-spacing:.07em}.steps{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 20px}.step{padding:8px 13px;border-radius:999px;background:#e7e9e7;color:#6f7d84;font-size:.8rem;font-weight:850}.step.on{background:#cce9e5;color:#116e71}.step.done{background:#e4f2e6;color:#22805b}.intro{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.pill{border-radius:30px;background:#e3ecec;color:#3a5c66;padding:9px 14px;font-weight:900;font-size:.82rem}.sectionTitle{font-size:1.03rem;margin:17px 0 8px}.unitBank{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px;border-radius:14px;background:#e9efef;margin-bottom:12px;min-height:75px}.unitChip{background:white;border:2px solid #6caaa9;color:#163344;border-radius:12px;min-width:82px;min-height:50px;padding:8px 17px;font-size:1.23rem;font-weight:950;touch-action:none;user-select:none}.unitChip.selected{background:#fff1dd;border-color:#e79440}.unitChip.inSlot{min-width:0;width:100%;max-width:102px;min-height:47px}.unitChip.verifiedGood{border-color:#359b77;background:#e5f5eb}.unitChip.verifiedBad{border-color:#c95361;background:#ffedf0}.unitChip:disabled{opacity:1;cursor:default}.abaqueWrap{overflow-x:auto;padding:3px 2px 10px;scrollbar-color:#98b6bb transparent}.abaque{display:grid;grid-template-columns:repeat(7,minmax(112px,1fr));gap:5px;min-width:816px}.col{border:2px dashed #bbc8ce;border-radius:12px;min-width:0;min-height:164px;display:flex;flex-direction:column;gap:7px;padding:7px;background:#e9eeee;align-items:center;transition:background .1s}.col.target{background:#f2fbfa;border-color:#70b3b3}.col.dropHover{background:#d2eae8;border-color:#188589}.col.nonTarget{background:#ebece9;border-color:#d5d9d7}.colHeader{text-align:center;background:#dce7e9;color:#375063;width:100%;border-radius:7px;padding:7px 2px;font-weight:950;font-size:.9rem}.col.target .colHeader{background:#d3eeeb;color:#1a7378}.col .hint{font-size:.69rem;font-weight:750;color:#7b8c96;text-align:center;margin:auto}.labelSlot{width:100%;min-height:58px;display:flex;align-items:center;justify-content:center;border:1px dashed #afc4c7;border-radius:10px;padding:4px}.imagesSlot{display:flex;flex-direction:column;align-items:stretch;gap:5px;width:100%;min-height:72px}.itemCard{position:relative;background:#fff;border:2px solid #c2d3d7;border-radius:9px;padding:4px;min-width:0;text-align:center;cursor:grab;user-select:none;touch-action:none;box-shadow:0 2px 6px #22374712}.itemCard.selected{border-color:#e99644;background:#fff4e4}.itemCard img{display:block;width:100%;height:64px;object-fit:contain;background:#e6eff0;border-radius:6px;pointer-events:none}.itemCard span{display:block;font-weight:780;font-size:.72rem;line-height:1.17;padding-top:4px}.itemCard.small img{height:90px}.itemCard.small span{font-size:.66rem}.itemCard.good{border-color:#2b936c;background:#e5f6ea}.itemCard.bad{border-color:#c54f5b;background:#fff0f0}.imagesBank{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:10px 0;padding:12px;border:1px solid #d8e0df;border-radius:15px;background:#ebf0ef;min-height:116px}.imagesBank .itemCard img{height:150px;object-fit:cover;object-position:center}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 7px}.feedback{min-height:34px;margin:8px 0;font-weight:800;color:#395367}.feedback.good{color:#18845c}.feedback.error{color:#bb4758}.help{margin:10px 0;padding:12px 14px;background:#e8eff0;border-left:4px solid #18858c;border-radius:0 9px 9px 0;line-height:1.5;font-size:.9rem}.ghost{position:fixed;pointer-events:none;z-index:3000;transform:translate(-50%,-50%);box-shadow:0 15px 30px #102f4466;opacity:.93;min-width:80px;max-width:130px}.footer{border-top:1px solid #d7dfe0;padding:13px 22px;color:#77838a;font-size:.75rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.note{color:#647783;font-size:.78rem;line-height:1.45}.count{font-variant-numeric:tabular-nums}@media(max-width:950px){.imagesBank{grid-template-columns:repeat(3,minmax(0,1fr))}.imagesBank .itemCard img{height:120px;object-fit:cover;object-position:center}}@media(max-width:600px){.shell{border-radius:0;margin:0;min-height:100vh}header{padding:12px}.brand{font-size:1.1rem}main{padding:12px}.homeGrid{grid-template-columns:1fr;margin:20px auto}.homeCard{min-height:150px;padding:18px}.imagesBank{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:6px}.imagesBank .itemCard img{height:48px;object-fit:cover;object-position:center}.imagesBank .itemCard span{font-size:.65rem}.btn{padding:8px 10px;font-size:.85rem}.col{min-height:138px}.itemCard.small img{height:66px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+#unitsSection{max-height:220px;opacity:1;overflow:hidden;transition:max-height .45s ease,opacity .25s ease,margin .4s ease}
+#unitsSection.collapsed{max-height:0;opacity:0;margin:0;pointer-events:none}
+#imagesSection.appear{animation:revealImages .45s ease both}
+@keyframes revealImages{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.abaqueWrap{scroll-margin-top:16px}
+@media(prefers-reduced-motion:reduce){#unitsSection,#imagesSection.appear{animation:none!important;transition:none!important}}
+
+/* Activité 2 : 5 curseurs gradués */
+.moveToolbar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 17px}
+.moveAbacus{position:fixed;left:50%;transform:translateX(-50%);top:88px;z-index:1400;width:min(1120px,calc(100vw - 18px));max-height:42vh;overflow:auto;border:2px solid #adc8d2;background:#edf4f5;border-radius:16px;padding:12px 12px 10px;margin:0;box-shadow:0 20px 36px #12364b33}
+.moveAbacusRow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.moveAbacusRow span{background:#fff;border:1px solid #b4c9d0;border-radius:7px;text-align:center;font-weight:900;padding:14px 0;font-size:clamp(.68rem,1.5vw,1rem)}
+.moveExamples{display:flex;flex-direction:column;gap:13px;max-width:1300px;margin:20px auto}
+.moveEx{--moveColor:#a9b4bc;background:#fff;border:2px solid #d2dfe3;border-radius:17px;padding:14px 16px;display:grid;grid-template-columns:minmax(116px,185px) minmax(360px,1fr) minmax(220px,320px);align-items:center;gap:16px;box-shadow:0 5px 13px #1533480a}
+.moveEx[data-dir="left"]{--moveColor:var(--shade)}.moveEx[data-dir="right"]{--moveColor:var(--shade)}
+.movePrompt{font-size:1.3rem;font-weight:950;line-height:1.3}.movePrompt small{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:#637784;margin-bottom:5px}
+.moveRail{position:relative;height:146px;touch-action:none;user-select:none;outline:none;min-width:0;cursor:ew-resize}
+.moveRail:focus-visible{outline:3px solid #e5a447;border-radius:9px}
+.moveRail svg{display:block;width:100%;height:100%;overflow:visible}
+.moveDot{transition:transform .13s ease;filter:drop-shadow(0 2px 2px #1237)}
+.moveRail.dragging .moveDot{transition:none}
+.moveNudge{font-size:.8rem;fill:#7c96aa;opacity:.6}
+.moveResult{font-size:1.26rem;font-weight:900;color:#435968;line-height:1.32;min-height:86px;display:flex;align-items:center}
+.moveResult strong{font-weight:950;font-size:2.1rem;color:var(--moveColor);display:inline-block;min-width:1.6ch}.moveResult .moveWord{color:var(--moveColor);font-weight:950}.moveResult .moveLine{font-size:clamp(1.15rem,2.2vw,1.6rem)}
+.moveCheck{margin-top:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.moveCheck .btn{min-height:34px;padding:5px 9px;font-size:.79rem}
+.moveFeedback{font-weight:850;font-size:.8rem;min-height:18px}
+.moveFeedback.ok{color:#16805c}.moveFeedback.no{color:#bd3e4d}
+@media(max-width:850px){.moveEx{grid-template-columns:1fr;gap:6px;padding:12px}.movePrompt{font-size:1.1rem}.moveRail{height:136px}.moveResult{min-height:auto;text-align:center;justify-content:center}.moveCheck{justify-content:center}.moveAbacus{top:72px;width:calc(100vw - 12px);max-height:46vh}}
+@media(prefers-reduced-motion:reduce){.moveDot{transition:none}}
+
+/* v0.6.3 — La banque est toujours visible pendant le classement.
+   Elle dispose de son propre défilement horizontal : la page ne la fait plus disparaître. */
+#gameScreen.imagesMode{padding-bottom:var(--bank-height,270px)}
+#gameScreen.imagesMode #imagesSection{
+ position:fixed;left:50%;bottom:0;transform:translateX(-50%);
+ z-index:150;width:min(1400px,calc(100vw - 18px));max-height:min(42vh,335px);
+ padding:9px 14px max(10px,env(safe-area-inset-bottom));
+ border:2px solid #a4c9cc;border-radius:16px 16px 0 0;
+ background:#f5faf9;box-shadow:0 -10px 28px #102a3a30;
+ display:flex;flex-direction:column;gap:8px;
+}
+.bankHeader{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px}
+.bankHeadText{min-width:0;flex:1}
+.bankHeader .sectionTitle{margin:0 0 3px;font-size:.99rem}
+.bankHeader .note{margin:0;font-size:.76rem;line-height:1.35}
+.remainingImages{font-size:.77rem;color:#3f6975;font-weight:800;white-space:nowrap}
+.bankArrows{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.bankArrow{width:37px;height:37px;border:1px solid #94bbc3;border-radius:10px;background:white;color:#116a75;font-size:1.25rem;font-weight:900}
+.bankArrow:disabled{opacity:.35;cursor:default}
+#gameScreen.imagesMode .imagesBank{
+ display:flex;gap:10px;align-items:stretch;margin:0;padding:4px 2px 9px;
+ min-height:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;
+ scroll-snap-type:x proximity;overscroll-behavior-x:contain;
+ background:transparent;border:0;touch-action:pan-x;
+}
+#gameScreen.imagesMode .imagesBank .itemCard{
+ flex:0 0 clamp(160px,16vw,215px);max-width:215px;min-width:0;
+ scroll-snap-align:start;
+}
+#gameScreen.imagesMode .imagesBank .itemCard img{height:135px;object-fit:cover;object-position:center}
+#gameScreen.imagesMode .imagesBank .itemCard span{font-size:.79rem}
+#gameScreen.imagesMode .imagesBank:empty::after{content:'Toutes les images sont placées.';padding:16px;color:#365e62;font-weight:800}
+@media(max-width:700px){
+ #gameScreen.imagesMode #imagesSection{width:100%;padding:8px 8px max(6px,env(safe-area-inset-bottom));max-height:min(42vh,290px);border-radius:13px 13px 0 0}
+ #gameScreen.imagesMode .imagesBank .itemCard{flex-basis:145px}
+ #gameScreen.imagesMode .imagesBank .itemCard img{height:95px}
+ .bankHeader .note{font-size:.70rem}
+ .bankArrow{width:34px;height:34px}
+}
+@media(max-height:570px){
+ #gameScreen.imagesMode #imagesSection{max-height:44vh}
+ #gameScreen.imagesMode .imagesBank .itemCard img{height:74px}
+ .bankHeader .note{display:none}
+}
+
+/* v0.6.3 : tableau classique à cases contiguës, et bande d'images immobile */
+#gameScreen.imagesMode #imagesSection.appear{animation:none!important;transform:translateX(-50%)!important}
+#gameScreen.imagesMode{padding-bottom:max(var(--bank-height,275px),220px)}
+.metricTableScroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.moveAbacus{padding:16px 18px 13px;background:#f9fcfb;border:2px solid #9eb7c0}
+.tableTop{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap;margin:0 0 9px}
+.tableHeading{font-weight:900;font-size:1.02rem;color:#263e4b}
+.tableHint{font-size:.82rem;color:#587783;font-weight:750}
+.metricTable{display:grid;grid-template-rows:auto 38px;min-width:560px;border:2px solid #405f70;border-bottom:0;background:#fff}
+.metricHeaders,.metricPlaces{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.metricHeaders{background:#dce9ed}
+.metricHeaders > div{padding:13px 2px;text-align:center;font-size:1.14rem;font-weight:950;line-height:1.2;color:#1f3d50;border-right:2px solid #7a98a4;border-bottom:2px solid #405f70}
+.metricHeaders > div:nth-child(1),.metricHeaders > div:nth-child(4),.metricHeaders > div:nth-child(6),.metricHeaders > div:nth-child(7){background:#d4eae7}
+.metricHeaders > div:last-child,.metricPlaces > div:last-child{border-right:0}
+.metricPlaces > div{border-right:2px solid #9bb0b7;background:#fff;min-height:38px}
+.metricPlaces > div:nth-child(1),.metricPlaces > div:nth-child(4),.metricPlaces > div:nth-child(6),.metricPlaces > div:nth-child(7){background:#f3faf8}
+.metricDirections{display:flex;justify-content:space-between;gap:14px;color:#516d7c;font-size:.8rem;font-weight:700;margin-top:9px}
+/* Même lecture de gauche à droite dans l'abaque où l'élève place les réponses. */
+.abaque{gap:0;grid-template-columns:repeat(7,minmax(112px,1fr));border:2px solid #658892;border-bottom:0;border-radius:12px 12px 0 0;overflow:hidden}
+.abaque .col{border:0;border-right:2px solid #9aafb5;border-radius:0;min-height:164px;background:#f3faf9;transition:background .12s}
+.abaque .col:last-child{border-right:0}
+.abaque .col.target,.abaque .col.nonTarget{border-color:#9aafb5}
+.abaque .col.nonTarget{background:#e5e9eb;opacity:.68;cursor:default}.abaque .col.nonTarget .colHeader{background:#d8dddf;color:#74838b}.abaque .col.nonTarget .imagesSlot{opacity:.65}
+.abaque .col.dropHover{background:#cae7e5!important;outline:3px solid #16818b;outline-offset:-3px}
+.abaque .colHeader{background:#dae9eb;border-radius:4px;border-bottom:1px solid #b2c9ce;font-size:1rem}
+.abaque .col.target .colHeader{background:#d0eae6}
+@media(max-width:700px){.metricDirections{font-size:.69rem}.tableTop{align-items:flex-start}}
+
+/* v0.6.3 : quatre exercices en deux colonnes, taille compacte et aide à construire. */
+#moveScreen{max-width:1400px;margin:auto}
+#moveScreen .sub{margin:3px 0 0}
+.moveTop{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+.moveTop .screenTitle{font-size:clamp(1.45rem,2.25vw,1.95rem);margin:3px 0 2px}
+.moveHelpTrigger{background:#eef9f7;border:2px solid #9ac8c6;color:#165f69;white-space:nowrap;min-height:46px}
+.moveExamples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:none;margin:10px 0 14px}
+.moveEx{grid-template-columns:minmax(71px,90px) minmax(145px,1fr) minmax(126px,178px);min-height:162px;gap:7px;padding:9px 11px;border-radius:13px;box-shadow:0 2px 9px #15334809}
+.movePrompt{font-size:clamp(1.08rem,1.6vw,1.28rem);line-height:1.2}
+.movePrompt small{font-size:.65rem;margin-bottom:7px}
+.moveRail{height:120px}
+.moveResult{font-size:.94rem;min-height:0;line-height:1.1;display:block;text-align:center;color:#475f72}
+.moveResult strong{font-size:2rem;line-height:1;font-weight:950;min-width:0}
+.moveLineTop{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;font-size:clamp(.86rem,1.17vw,1.03rem);font-weight:900}
+.moveLineBottom{margin-top:5px;font-size:clamp(1rem,1.25vw,1.17rem);font-weight:900}
+.moveResult .moveWord{color:var(--moveColor);font-weight:950}
+.moveFeedback{margin-top:5px;font-size:.74rem;min-height:20px;text-align:center}
+.moveFeedback.ok{color:#16805c}.moveFeedback.no{color:#bd3e4d}
+.moveEx.resultOk{border-color:#69b69b}.moveEx.resultBad{border-color:#dc8f98}
+.moveAllActions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin:5px auto 9px}
+.moveAllActions .btn{font-size:1.06rem;padding:10px 24px;min-height:48px}
+.moveAllFeedback{font-weight:900;color:#385b65}
+.moveBottomNote{text-align:center;font-size:.75rem;margin:5px 0}
+.moveDot.idle{transform-origin:center;animation:movePulse 1.3s ease-in-out infinite}
+@keyframes movePulse{0%,100%{opacity:1}50%{opacity:.65}}
+.moveHelpTop{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px}
+.moveHelpTop strong{font-size:1.04rem}
+.moveAbacus{position:fixed;top:clamp(68px,12vh,105px);max-height:calc(100vh - 120px);overflow-y:auto;z-index:1600;box-shadow:0 20px 55px #0d304a45}
+.moveHelpUnitBank{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;background:#ecf2f3;padding:9px;border-radius:10px;margin:10px 0}
+.helpUnitChip{background:#fff;border:2px solid #75aaa9;color:#163344;padding:7px 12px;border-radius:9px;font-size:1.09rem;font-weight:950;min-width:61px;min-height:44px;touch-action:none;user-select:none;cursor:grab}
+.helpUnitChip.chosen{border-color:#e79a40;background:#fff0d8}
+.helpUnitChip.dragGhost{position:fixed;z-index:5000;pointer-events:none;box-shadow:0 7px 15px #20384855;transform:translate(-50%,-50%);opacity:.93}
+.moveHelpTable{grid-template-rows:auto minmax(62px,auto)}
+.moveHelpTable .metricHeaders>div{background:#e6eff0!important;color:#526b77;font-size:1.3rem;padding:8px 0}
+.moveHelpTable .metricPlaces>div{min-height:64px;display:flex;justify-content:center;align-items:center;background:#f7fbfb!important;cursor:pointer;outline-offset:-3px}
+.moveHelpTable .metricPlaces>div:hover,.moveHelpTable .metricPlaces>div.helpHover{background:#d6f1ec!important;outline:2px solid #258f99}
+.moveHelpTable .helpUnitChip{font-size:1rem;min-width:0;max-width:95%;padding:6px 9px}
+.moveHelpActions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.moveHelpFeedback{font-weight:800;color:#b44751;font-size:.9rem}
+@media(max-width:1120px){.moveEx{grid-template-columns:70px minmax(135px,1fr) minmax(118px,145px);gap:5px;padding:8px}.moveResult strong{font-size:1.8rem}}
+@media(max-width:890px){.moveExamples{grid-template-columns:1fr}.moveEx{grid-template-columns:minmax(78px,120px) minmax(220px,1fr) minmax(140px,210px)}.moveResult strong{font-size:2rem}}
+@media(max-width:580px){.moveTop{align-items:flex-start}.moveHelpTrigger{width:100%}.moveEx{grid-template-columns:minmax(65px,85px) minmax(135px,1fr);gap:4px;min-height:155px}.movePrompt{font-size:1.1rem}.moveRail{height:100px}.moveResult{grid-column:1/-1;text-align:center;display:flex;justify-content:center;align-items:center}.moveResult .moveLine{display:flex;gap:8px;align-items:center}.moveLineBottom{margin-top:0}.moveFeedback{grid-column:1/-1}.moveAbacus{width:calc(100vw - 10px);top:6px;max-height:92vh;padding:11px}.moveHelpTop strong{font-size:.9rem}}
+@media(max-width:580px){.moveOutcome{grid-column:1/-1}.moveResult .moveLine{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;align-items:center}.moveLineTop{display:inline-flex;flex-wrap:nowrap;gap:4px}.moveLineBottom{white-space:nowrap}.moveFeedback{text-align:center}}
+@media(prefers-reduced-motion:reduce){.moveDot.idle{animation:none}}
+
+
+/* Activité 3 : tableau manipulable inspiré des cases et de la virgule de Puissance de 10 v1.4 */
+.homeGrid{max-width:1100px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.homeCard{min-height:205px}
+#convertScreen{max-width:1370px;margin:auto}
+.t3Top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.t3TopCount{padding:8px 13px;background:#e0f0ef;color:#176772;border-radius:100px;font-size:.82rem;font-weight:900}
+.t3Layout{display:grid;grid-template-columns:minmax(0,1fr) 205px;align-items:start;gap:14px}
+.t3ExList{display:flex;flex-direction:column;gap:10px}
+.t3Ex{border:2px solid #d4e0df;border-radius:15px;background:#fffdf9;padding:11px 14px 12px;min-width:0}
+.t3Ex.t3good{border-color:#55a787;background:#f3fcf6}.t3Ex.t3bad{border-color:#dc8b99;background:#fff8f8}
+.t3Heading{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.t3Num{display:inline-grid;place-items:center;width:34px;height:34px;flex:0 0 auto;border-radius:9px;background:#e8eeef;color:#526578;font-weight:950}
+.t3Expression{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:clamp(1.1rem,1.9vw,1.35rem);font-weight:950}
+.t3Answer{width:135px;max-width:43vw;height:45px;padding:7px 10px;border:2px solid #96b7b9;border-radius:11px;background:#fff;color:#143646;font-size:1.35rem;font-weight:900;text-align:center;outline:none}
+.t3Answer:focus,.t3Answer.active{border-color:#0a989e;box-shadow:0 0 0 3px #0a989e22;background:#f6fefe}
+.t3Answer:disabled{color:#173044;background:#f5f8f7}
+.t3Controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:9px 0 0 46px}
+.t3HelpBtn{min-height:36px;font-weight:850;font-size:.79rem;padding:7px 10px;background:#eef5f5;color:#235e69;border:1px solid #acd2d2}
+.t3HelpBtn[aria-expanded="true"]{background:#dfefec;border-color:#69aaa8}
+.t3Status{font-size:.86rem;font-weight:900;color:#64798a;min-height:20px}
+.t3good .t3Status{color:#19815d}.t3bad .t3Status{color:#bb4858}
+.t3Assistance{border-top:1px dashed #c5d5d7;margin-top:11px;padding:10px 4px 3px;text-align:center}
+.t3AssistTop{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 9px}
+.t3AssistNote{font-size:.78rem;font-weight:750;color:#5e717c}
+.t3UnitsBtn{font-size:.78rem;font-weight:850;min-height:35px;padding:6px 10px;border:1px solid #bcb2df;background:#f5efff;color:#6c4595}
+.t3UnitsBtn[aria-pressed="true"]{background:#e9ddfb}
+.t3BoardScroll{overflow-x:auto;max-width:100%;padding:4px 3px 3px;scrollbar-color:#b6cdd0 transparent}
+.t3Board{--cell:51px;width:calc(7.5 * var(--cell));margin:auto}
+.t3UnitLabels,.t3Digits{display:grid;grid-template-columns:repeat(7,var(--cell));width:max-content}
+.t3UnitLabels{margin-bottom:2px}.t3UnitLabels.hidden{display:none!important}
+.t3UnitLabel{height:29px;padding:5px 0;text-align:center;font-weight:950;font-size:.76rem;background:#e8f0f1;border-right:1px solid #cbd6d9;color:#547078}
+.t3UnitLabel.from{background:#d4f1e7;color:#096b68}.t3UnitLabel.to{outline:2px solid #9d6fcd;outline-offset:-2px}
+.t3UnitLabel:first-child{border-radius:7px 0 0 7px}.t3UnitLabel:last-child{border-radius:0 7px 7px 0}
+.t3Digits{border:2px solid #bfcbd0;border-radius:11px;overflow:hidden}
+.t3Digit{display:grid;place-items:center;position:relative;height:49px;min-width:0;border-right:1px solid #d6dce0;background:#fff;color:#182e43;font-size:1.55rem;font-weight:950;cursor:pointer;user-select:none}
+.t3Digit:last-child{border-right:0}.t3Digit.zero-added{background:#f3f8f9;color:#4b6174}.t3Digit.zero-removed{background:#fff7ed}
+.t3Digit.from{box-shadow:inset 0 -4px 0 #53b5aa}.t3Digit:focus-visible{outline:3px solid #df9b35;outline-offset:-3px}
+.t3Commas{display:grid;grid-template-columns:repeat(7,var(--cell));width:max-content;margin:-4px 0 0 calc(var(--cell) / 2 + 2px);touch-action:none;user-select:none}
+.t3CommaSlot{height:35px;display:grid;place-items:center;position:relative}
+.t3CommaSlot::before{content:"";width:29px;height:28px;background:#fff8e8;border:2px dashed #e0af66;border-radius:8px;position:absolute}
+.t3CommaSlot.selected::before{border:2px solid #d17d14;background:#ffe6b8}
+.t3Comma{font-size:1.4rem;z-index:3;position:relative;line-height:1;display:grid;place-items:center;width:31px;height:31px;cursor:grab;touch-action:none;color:#a4560d;font-weight:950}
+.t3CommaGhost{z-index:2;font-size:1.2rem;font-weight:950;color:#b38c5c;opacity:.45}
+.t3Tip{font-size:.73rem;color:#70808b;margin:4px 0 0}
+.t3BoardActions{display:flex;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+.t3ResetHelp{font-size:.76rem;min-height:36px;padding:6px 10px;border:1px solid #d8e1e2;background:#fff;white-space:normal;line-height:1.15}
+.t3Bottom{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 0}
+#t3Summary{font-size:.91rem;font-weight:950;color:#315d69}
+.t3Keypad{position:sticky;top:12px;border-radius:17px;background:#eff4f3;border:2px solid #d2e0e0;padding:11px;box-shadow:0 3px 12px #102e4410}
+.t3KeyTitle{font-weight:950;text-align:center;font-size:1rem}.t3KeyInfo{font-size:.76rem;color:#54707c;min-height:25px;text-align:center;margin:6px 0;font-weight:850}
+.t3KeyGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+.t3KeyGrid button{min-height:46px;padding:4px 0;border:2px solid #ccd8da;background:#fff;border-radius:9px;font-size:1.2rem;font-weight:950;color:#143449}
+.t3KeyGrid button:active{background:#d8f4f2}.t3KeyGrid button:disabled{opacity:.45;cursor:default}
+.t3KeyGrid .t3NextKey{grid-column:1/-1;min-height:39px;font-size:.82rem;background:#e0efed;color:#16676e}
+/* v0.6.3 : virgule aux intercases, arceaux et aide plus compacte */
+.t3ManipRow{display:flex;align-items:center;justify-content:center;gap:14px;min-width:0}
+.t3ManipRow .t3BoardScroll{margin:0;flex:0 1 auto;min-width:0;padding:4px 4px 4px}
+.t3BoardSide{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:12px;flex:0 1 175px;min-width:128px;max-width:190px}
+.t3Direction{font-size:1.12rem;font-weight:900;line-height:1.27;color:#49606d;text-align:center;min-height:48px;display:grid;place-items:center}
+.t3Direction .t3Color{color:var(--dir-color,#895bc7);font-weight:950}
+.t3Direction .t3Count{font-size:1.58rem}
+.t3Movement{width:calc(7 * var(--cell));height:40px;visibility:hidden}
+.t3Movement.active{visibility:visible}
+.t3Movement svg{display:block;width:100%;height:40px;overflow:visible;pointer-events:none}
+.t3Assistance{padding-bottom:8px}
+.t3AssistTop{margin-bottom:3px}
+@media(max-width:690px){
+ .t3ManipRow{flex-direction:column;align-items:stretch;gap:0}
+ .t3ManipRow .t3BoardScroll{margin:auto;max-width:100%}
+ .t3BoardSide{max-width:none;min-width:0;flex:auto;flex-direction:row;align-items:center;gap:9px;justify-content:space-between;margin-top:4px}
+ .t3Direction{min-height:0;text-align:left;font-size:.94rem;display:block;flex:1}
+ .t3Direction .t3Count{font-size:1.2rem}
+ .t3ResetHelp{font-size:.7rem;min-height:33px;padding:5px 8px;max-width:175px}
+ .t3Board{--cell:45px}
+}
+@media(max-width:390px){.t3Board{--cell:41px}.t3Assistance{padding-left:0;padding-right:0}}
+@media(max-width:1100px){.homeGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.t3Layout{grid-template-columns:1fr}.t3Keypad{position:static;max-width:300px;width:100%;margin:auto}}
+@media(max-width:620px){.homeGrid{grid-template-columns:1fr}.t3Ex{padding:10px 9px}.t3Heading{gap:8px}.t3Controls{margin-left:0}.t3Expression{gap:5px}.t3Answer{width:104px}.t3Board{--cell:45px}}
+
+
+/* v0.6.3 — Les teintes bleu/mauve sont réservées au sens des déplacements. */
+#moveScreen .eyebrow{color:#a85e20}
+#moveScreen .moveHelpTrigger{background:#fff4e5;border-color:#eac295;color:#875019}
+#moveScreen .moveHelpTrigger:hover{background:#ffebcf}
+#moveScreen .moveEx{border-color:#e3dacd;background:#fffdf9;
+  grid-template-columns:max-content minmax(0,1fr) minmax(112px,129px);
+  column-gap:4px;padding:9px 8px;min-width:0}
+#moveScreen .movePrompt{white-space:nowrap;font-size:clamp(.96rem,1.34vw,1.16rem)}
+#moveScreen .movePrompt small{font-size:.64rem;color:#817362;white-space:nowrap}
+#moveScreen .moveRail{min-width:0;height:115px}
+#moveScreen .moveResult{font-size:.95rem;color:#465563}
+#moveScreen .moveLineTop{font-size:clamp(.79rem,1.05vw,.95rem);gap:3px}
+#moveScreen .moveResult strong{font-size:1.9rem}
+#moveScreen .moveLineBottom{font-size:clamp(.90rem,1.15vw,1.05rem)}
+#moveScreen #verifyMoves{background:#ad6a2e;border-color:#ad6a2e;color:#fff}
+#moveScreen #verifyMoves:hover{background:#965820}
+#moveScreen .moveHelpUnitBank{background:#f5efe6}
+#moveScreen .moveHelpTable .metricHeaders>div{background:#f1e9df!important}
+#moveScreen .moveHelpTable .metricPlaces>div:hover,
+#moveScreen .moveHelpTable .metricPlaces>div.helpHover{background:#fae9d5!important;outline-color:#bd803e}
+#moveScreen .moveHelpActions .primary{background:#ad6a2e;border-color:#ad6a2e}
+#moveLaunchBtn .symbol{background:#fae4c9;color:#95551e}
+#convertLaunchBtn .symbol{background:#d6ebdc;color:#256e4b}
+/* Une teinte sobre pour les commandes d'aide, distincte des flèches directionnelles. */
+.t3UnitsBtn{background:#edf4f0!important;border-color:#b9d1c4!important;color:#356b52!important}
+.t3UnitsBtn[aria-pressed="true"]{background:#dceee2!important;border-color:#87b79d!important}
+.t3UnitLabel.to{outline-color:#c28c39!important}
+/* Les commandes d'affichage des deux aides sont groupées et restent disponibles. */
+.t3HelpControls{display:flex;flex-direction:column;gap:5px;align-items:stretch}
+.t3HelpControls .btn{font-size:.79rem;min-height:33px;white-space:nowrap}
+.t3Controls{align-items:center}
+.t3AssistTop{display:none!important}
+@media(max-width:1120px){
+ #moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(111px,123px);column-gap:3px;padding:8px 7px}
+ #moveScreen .movePrompt{font-size:1rem}
+ #moveScreen .moveResult strong{font-size:1.65rem}
+}
+@media(max-width:890px){
+ #moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(110px,155px)}
+}
+@media(max-width:580px){
+ #moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr);gap:5px}
+ #moveScreen .moveResult{grid-column:1/-1}
+ #moveScreen .moveRail{height:100px}
+ #moveScreen .movePrompt{font-size:1rem}
+ .t3HelpControls .btn{min-height:33px}
+}
+
+
+/* v0.6.3 — interface épurée et sélection tactile explicite */
+#gameScreen.hasSelection .col.target,#gameScreen.hasSelection:not(.imagesMode) .col{border-color:#d77d24;box-shadow:inset 0 0 0 2px #f5bc67,0 0 0 2px #f9e1bb;background:#fff9ed;cursor:pointer}
+#gameScreen .itemCard.selected,#gameScreen .unitChip.selected{outline:3px solid #e99a33;outline-offset:2px;box-shadow:0 0 0 6px #f9e4bd}
+#gameScreen .unitChip.verifiedBad{border-color:#c73e55;background:#ffe9ee;box-shadow:0 0 0 2px #e69da9}
+#gameScreen .intro{margin-bottom:8px}
+#gameScreen .stageText{margin-bottom:7px}
+#gameScreen .abaqueWrap{padding-top:7px}
+#gameScreen .unitBank{margin-bottom:6px}
+#gameScreen .feedback:empty{min-height:0;margin:0}
+#gameScreen .actions{margin-top:8px}
+#convertScreen .t3TopCount.hidden{display:none!important}
+#convertScreen .t3Ex.t3retry{border-color:#d89045;background:#fffbf4}
+#convertScreen .t3retry .t3Status{color:#b36c19}
+#convertScreen .t3Ex.t3corrected{border-color:#78b59d;background:#f3faf4}
+#convertScreen .t3corrected .t3Status{color:#2f7d5d}
+#moveScreen .moveResult:not([data-moved]){color:#8a8c91;text-align:center;justify-content:center;font-size:1.6rem}
+@media(min-width:891px){#moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(102px,121px);column-gap:4px;padding-left:8px;padding-right:8px}}
+@media(max-width:890px) and (min-width:581px){#moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(105px,140px);column-gap:3px}}
+</style></head><body><div class="shell"><header><div><div class="brand">MATH<span>'AS</span> / LONGUEURS <small class="mutedHead">v0.6.3</small></div></div><div class="headerBtns"><button id="homeBtn" class="btn dark hidden" type="button">← Accueil</button><button id="helpBtn" class="btn dark hidden" type="button">? Aide</button><button id="fullBtn" class="btn dark" type="button">⛶ Plein écran</button></div></header><main><section id="homeScreen"><div class="eyebrow">Math'as · Les unités de longueur</div><h1 class="screenTitle">L'abaque, étape par étape.</h1><p class="sub">Choisis une activité pour commencer.</p><div class="homeGrid"><button id="launchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 54 48" width="47" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="48" height="34" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 7v34M35 7v34M3 20h48" stroke="currentColor" stroke-width="2"/><path d="M9 14h4m12 0h4m12 0h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 28h7m10 0h5m10 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span><strong>1. Construire l’abaque</strong><p>Place les unités, puis classe les images.</p></button><button id="moveLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">↔</span><strong>2. Compter les déplacements</strong><p>Fais glisser le point et compte les déplacements.</p></button><button id="convertLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">⇄</span><strong>3. Convertir les longueurs</strong><p>Convertis les longueurs, avec deux aides facultatives.</p></button></div></section><section id="moveScreen" class="hidden" aria-label="Compter les déplacements">
+<div class="moveTop">
+  <div><div class="eyebrow">Activité 2 · Comprendre les déplacements</div>
+  <h1 class="screenTitle">Compte les déplacements</h1>
+  </div>
+  <button class="btn moveHelpTrigger" id="showMoveAbacus" type="button" aria-expanded="false" aria-controls="moveAbacus">▦ Afficher l’abaque</button>
+</div>
+<div id="moveAbacus" class="moveAbacus hidden" role="dialog" aria-modal="false" aria-label="Abaque d’aide">
+  <div class="moveHelpTop"><strong id="moveHelpTitle">Reconstitue l’abaque pour obtenir l’aide</strong><button class="btn" type="button" id="closeMoveAbacus" aria-label="Fermer l'aide">✕ Fermer</button></div>
+  <div id="moveHelpChallenge">
+    <p class="note">Place les 4 unités dans les 7 colonnes, puis valide. Tu peux te tromper et corriger ton placement.</p>
+    <div id="moveHelpUnitBank" class="moveHelpUnitBank" aria-label="Étiquettes à placer"></div>
+    <div class="metricTableScroll"><div class="metricTable moveHelpTable">
+      <div class="metricHeaders" aria-hidden="true"><div>?</div><div>?</div><div>?</div><div>?</div><div>?</div><div>?</div><div>?</div></div>
+      <div id="moveHelpSlots" class="metricPlaces" role="group" aria-label="Sept colonnes de l'abaque"></div>
+    </div></div>
+    <div class="moveHelpActions"><button id="verifyMoveHelp" type="button" class="btn primary" disabled>✓ Valider les unités</button><div id="moveHelpFeedback" class="moveHelpFeedback" role="status" aria-live="polite"></div></div>
+  </div>
+  <div id="moveHelpRevealed" class="hidden">
+    <div class="tableTop"><span class="tableHeading">Tableau des unités de longueur</span><span class="tableHint">1 déplacement = 1 colonne</span></div>
+    <div class="metricTableScroll"><div class="metricTable" role="table" aria-label="Abaque métrique complet">
+      <div class="metricHeaders" role="row"><div role="columnheader">km</div><div role="columnheader">hm</div><div role="columnheader">dam</div><div role="columnheader">m</div><div role="columnheader">dm</div><div role="columnheader">cm</div><div role="columnheader">mm</div></div>
+      <div class="metricPlaces" role="row"><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div></div>
+    </div></div>
+    <div class="metricDirections"><span>← Vers les grandes unités</span><span>Vers les petites unités →</span></div>
+  </div>
+</div>
+<div class="moveExamples" id="moveExamples"></div>
+<div class="moveAllActions"><button class="btn primary" id="verifyMoves" type="button">✓ Tout vérifier</button><button class="btn hidden" id="moveNew" type="button">↻ Nouvelle série</button><div class="moveAllFeedback" id="moveAllFeedback" role="status" aria-live="polite"></div></div>
+
+</section>
+<section id="convertScreen" class="hidden" aria-label="Transformer les unités de longueur">
+  <div class="t3Top"><div><div class="eyebrow">Activité 3 · Convertir des longueurs</div>
+    <h1 class="screenTitle">Convertis les longueurs</h1>
+    <p class="sub">Écris les réponses. Utilise les aides si nécessaire.</p>
+  </div><div class="t3TopCount hidden" id="t3Progress" aria-live="polite"></div></div>
+  <div class="t3Layout"><div>
+    <div class="t3ExList" id="t3ExList"></div>
+    <div class="t3Bottom"><button type="button" class="btn primary" id="t3Verify">✓ Vérifier les 4 réponses</button>
+      <button type="button" class="btn hidden" id="t3New">↻ Nouvelle série</button>
+      <span id="t3Summary" role="status" aria-live="polite"></span></div>
+  </div><aside class="t3Keypad" aria-label="Pavé numérique pour répondre">
+    <div class="t3KeyTitle">Pavé numérique</div><div class="t3KeyInfo" id="t3KeyInfo">Choisis une réponse</div>
+    <div class="t3KeyGrid">
+      <button type="button" data-t3key="7">7</button><button type="button" data-t3key="8">8</button><button type="button" data-t3key="9">9</button>
+      <button type="button" data-t3key="4">4</button><button type="button" data-t3key="5">5</button><button type="button" data-t3key="6">6</button>
+      <button type="button" data-t3key="1">1</button><button type="button" data-t3key="2">2</button><button type="button" data-t3key="3">3</button>
+      <button type="button" data-t3key="clear" aria-label="Effacer la réponse">C</button><button type="button" data-t3key="0">0</button><button type="button" data-t3key="back" aria-label="Effacer un chiffre">⌫</button>
+      <button type="button" class="t3NextKey" data-t3key="next">Réponse suivante →</button>
+    </div>
+  </aside></div>
+</section>
+<section id="gameScreen" class="hidden"><div class="intro"><div><div id="stageEyebrow" class="eyebrow">Étape 1 / 2</div><h1 id="stageTitle" class="screenTitle">Place les unités dans l'abaque</h1><p id="stageText" class="sub">Place km, m, cm et mm dans leurs colonnes. Les trois autres restent vides.</p></div><span class="pill count" id="counter">0 / 4 placées</span></div><div class="steps hidden"><span id="step1" class="step on">1 · Placer les unités</span><span id="step2" class="step">2 · Classer les images</span></div><div class="help hidden" id="help">Choisis une étiquette ou une image puis clique sur une colonne, ou glisse-la dans l’abaque. <b>Tu peux reprendre un élément déjà placé et le déplacer.</b> Clique sur « Valider » pour voir ta correction. Sur téléphone, fais défiler le tableau horizontalement.</div><section id="unitsSection"><div id="unitBank" class="unitBank"></div></section><div class="abaqueWrap" id="abaqueWrap"><div id="abaque" class="abaque" aria-label="Abaque de longueur à sept colonnes"></div></div><section id="imagesSection" class="hidden" aria-label="Banque fixe des images à placer">
+<div class="bankHeader">
+  <div class="bankHeadText"><h2 class="sectionTitle">Images à placer <span id="remainingImages" class="remainingImages">8 restantes</span></h2></div>
+  <div class="bankArrows"><button class="bankArrow" type="button" id="bankPrev" aria-label="Voir les images précédentes">←</button><button class="bankArrow" type="button" id="bankNext" aria-label="Voir les images suivantes">→</button></div>
+</div>
+<div id="imagesBank" class="imagesBank" aria-label="Liste des images, défilable horizontalement"></div>
+</section><div class="actions"><button id="verifyBtn" class="btn primary" type="button">✓ Valider</button><button id="retryBtn" class="btn" type="button">↺ Recommencer</button><button id="continueBtn" class="btn primary hidden" type="button">Continuer →</button><button id="newBtn" class="btn hidden" type="button">Nouvelle partie ↻</button></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div></section></main></div><script>
+window.MATHAS_ITEMS = [
+  {
+    "id": "ant",
+    "unit": "mm",
+    "question": "Longueur d’une fourmi",
+    "label": "Fourmi",
+    "image": "./assets/images/mm_fourmi.webp"
+  },
+  {
+    "id": "coin",
+    "unit": "mm",
+    "question": "Épaisseur d’une pièce",
+    "label": "Pièce de monnaie",
+    "image": "./assets/images/mm_epaisseur_piece.webp"
+  },
+  {
+    "id": "rice",
+    "unit": "mm",
+    "question": "Longueur d’un grain de riz",
+    "label": "Grain de riz",
+    "image": "./assets/images/mm_grain_riz.webp"
+  },
+  {
+    "id": "pencil",
+    "unit": "mm",
+    "question": "Épaisseur de la pointe d’un crayon",
+    "label": "Pointe de crayon",
+    "image": "./assets/images/mm_pointe_crayon.webp"
+  },
+  {
+    "id": "card",
+    "unit": "mm",
+    "question": "Épaisseur d’une carte",
+    "label": "Carte bancaire",
+    "image": "./assets/images/mm_epaisseur_carte.webp"
+  },
+  {
+    "id": "phone",
+    "unit": "cm",
+    "question": "Hauteur d’un smartphone",
+    "label": "Smartphone",
+    "image": "./assets/images/cm_smartphone.webp"
+  },
+  {
+    "id": "shoe",
+    "unit": "cm",
+    "question": "Longueur d’une chaussure",
+    "label": "Chaussure",
+    "image": "./assets/images/cm_chaussure.webp"
+  },
+  {
+    "id": "brush",
+    "unit": "cm",
+    "question": "Longueur d’une brosse à dents",
+    "label": "Brosse à dents",
+    "image": "./assets/images/cm_brosse_dents.webp"
+  },
+  {
+    "id": "paperclip",
+    "unit": "cm",
+    "question": "Longueur d’un trombone",
+    "label": "Trombone",
+    "image": "./assets/images/cm_trombone.webp"
+  },
+  {
+    "id": "spoon",
+    "unit": "cm",
+    "question": "Longueur d’une cuillère",
+    "label": "Cuillère",
+    "image": "./assets/images/cm_cuillere.webp"
+  },
+  {
+    "id": "bottle",
+    "unit": "cm",
+    "question": "Hauteur d’une gourde",
+    "label": "Gourde",
+    "image": "./assets/images/cm_gourde.webp"
+  },
+  {
+    "id": "pencilcase",
+    "unit": "cm",
+    "question": "Longueur d’une trousse",
+    "label": "Trousse",
+    "image": "./assets/images/cm_trousse.webp"
+  },
+  {
+    "id": "car",
+    "unit": "m",
+    "question": "Longueur d’une voiture",
+    "label": "Voiture",
+    "image": "./assets/images/m_voiture.webp"
+  },
+  {
+    "id": "door",
+    "unit": "m",
+    "question": "Hauteur d’une porte",
+    "label": "Porte",
+    "image": "./assets/images/m_porte.webp"
+  },
+  {
+    "id": "bike",
+    "unit": "m",
+    "question": "Longueur d’un vélo",
+    "label": "Vélo",
+    "image": "./assets/images/m_velo.webp"
+  },
+  {
+    "id": "bed",
+    "unit": "m",
+    "question": "Longueur d’un lit",
+    "label": "Lit",
+    "image": "./assets/images/m_lit.webp"
+  },
+  {
+    "id": "sofa",
+    "unit": "m",
+    "question": "Longueur d’un canapé",
+    "label": "Canapé",
+    "image": "./assets/images/m_canape.webp"
+  },
+  {
+    "id": "student",
+    "unit": "m",
+    "question": "Taille d’un élève",
+    "label": "Taille d’un élève",
+    "image": "./assets/images/m_taille_eleve.webp"
+  },
+  {
+    "id": "verviers-liege",
+    "unit": "km",
+    "question": "Distance entre Verviers et Liège",
+    "label": "Verviers → Liège",
+    "image": "./assets/images/km_verviers_liege.webp"
+  },
+  {
+    "id": "verviers-spa",
+    "unit": "km",
+    "question": "Distance entre Verviers et Spa",
+    "label": "Verviers → Spa",
+    "image": "./assets/images/km_verviers_spa.webp"
+  },
+  {
+    "id": "liege-bruxelles",
+    "unit": "km",
+    "question": "Distance entre Liège et Bruxelles",
+    "label": "Liège → Bruxelles",
+    "image": "./assets/images/km_liege_bruxelles.webp"
+  },
+  {
+    "id": "hike",
+    "unit": "km",
+    "question": "Longueur d’une randonnée",
+    "label": "Randonnée",
+    "image": "./assets/images/km_randonnee.webp"
+  },
+  {
+    "id": "train",
+    "unit": "km",
+    "question": "Distance entre deux gares de villes différentes",
+    "label": "Entre deux gares",
+    "image": "./assets/images/km_deux_gares.webp"
+  },
+  {
+    "id": "villages",
+    "unit": "km",
+    "question": "Distance entre deux villages",
+    "label": "Entre deux villages",
+    "image": "./assets/images/km_deux_villages.webp"
+  }
+];
+
+</script><script>
+(()=>{'use strict';const UNITS=['km','hm','dam','m','dm','cm','mm'],TARGET=['km','m','cm','mm'],$=id=>document.getElementById(id),items=window.MATHAS_ITEMS;let stage=0,unitPosition={},imgPosition={},round=[],chosen=null,verified=false,history=[],drag=null,ghost=null,ignoreClick=false,showUnitErrors=false;
+const shuffle=x=>{const a=[...x];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+function drawRound(){// Toujours 8 images : le plus souvent 2 par unité, parfois 1/3/2/2.
+ const counts=Object.fromEntries(TARGET.map(u=>[u,2]));
+ if(Math.random()<0.42){const order=shuffle([...TARGET]);counts[order[0]]=1;counts[order[1]]=3;}
+ let selection=[];for(const u of TARGET){const candidates=shuffle(items.filter(a=>a.unit===u));const fresh=candidates.filter(a=>!history.includes(a.id)),old=candidates.filter(a=>history.includes(a.id));selection.push(...[...fresh,...old].slice(0,counts[u]));}history=[...new Set([...selection.map(x=>x.id),...history])].slice(0,14);return shuffle(selection);
+}
+function say(t,cl=''){$('feedback').textContent=t;$('feedback').className='feedback '+cl;}
+function start(){round=drawRound();unitPosition={};imgPosition={};stage=1;verified=false;chosen=null;showUnitErrors=false;$('homeScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');$('gameScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');$('helpBtn').classList.remove('hidden');$('help').classList.add('hidden');say('');render();}
+function home(){$('homeScreen').classList.remove('hidden');$('gameScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('homeBtn').classList.add('hidden');$('helpBtn').classList.add('hidden');stage=0;}
+function mapForStage(){return stage===1?unitPosition:imgPosition;}
+function itemFor(id){return items.find(a=>a.id===id);}
+function makeTile(type,id,small=false){const el=document.createElement('button');el.type='button';el.className=type==='unit'?'unitChip':'itemCard';if(small)el.classList.add(type==='unit'?'inSlot':'small');if(chosen?.type===type&&chosen.id===id)el.classList.add('selected');el.dataset.type=type;el.dataset.id=id;el.dataset.drag='yes';if(type==='unit'){el.textContent=id;el.setAttribute('aria-label',`Étiquette ${id}`);}else{const it=itemFor(id);const pic=document.createElement('img');pic.src=it.image;pic.alt='';pic.draggable=false;el.appendChild(pic);const t=document.createElement('span');t.textContent=it.label;el.appendChild(t);el.title=it.question;el.setAttribute('aria-label',it.question);}if(showUnitErrors&&stage===1&&type==='unit'&&unitPosition[id]!==id)el.classList.add('verifiedBad');if(verified){el.classList.add((type==='unit'?unitPosition[id]===id:imgPosition[id]===itemFor(id).unit)?'good':'bad');el.disabled=true;}else{el.addEventListener('click',()=>{if(ignoreClick)return;if(chosen&&chosen.type===type&&chosen.id!==id&&el.closest('.col')){put(chosen.type,chosen.id,el.closest('.col').dataset.unit);return;}chosen=chosen?.type===type&&chosen.id===id?null:{type,id};render();});el.addEventListener('pointerdown',dragStart);}return el;}
+function put(type,id,unit){if(verified||!UNITS.includes(unit)||(stage===2&&!TARGET.includes(unit)))return;if(stage===1&&type!=='unit'||stage===2&&type!=='image')return;const map=mapForStage();if(type==='unit'){const previous=map[id],occupant=Object.keys(map).find(k=>k!==id&&map[k]===unit);if(occupant){if(previous!==undefined)map[occupant]=previous;else delete map[occupant];}}map[id]=unit;chosen=null;showUnitErrors=false;say('');render();}
+function clearOne(type,id){if(verified)return;delete (type==='unit'?unitPosition:imgPosition)[id];chosen={type,id};showUnitErrors=false;say('');render();}
+function updateBankControls(){
+ const bank=$('imagesBank');const prev=$('bankPrev'),next=$('bankNext');
+ if(!bank||!prev||!next)return;
+ prev.disabled=bank.scrollLeft<=2;
+ next.disabled=bank.scrollLeft+bank.clientWidth>=bank.scrollWidth-3;
+}
+function updateBankLayout(){
+ if(stage===2&&!verified){
+   document.documentElement.style.setProperty('--bank-height',($('imagesSection').getBoundingClientRect().height+18)+'px');
+ }
+ updateBankControls();
+}
+function render(){if(!stage)return;const stage1=stage===1;const bankScrollBefore=$('imagesBank').scrollLeft;
+ $('gameScreen').classList.toggle('imagesMode',!stage1&&!verified);$('gameScreen').classList.toggle('hasSelection',!!chosen&&!verified);
+ $('remainingImages').textContent=(round.length-Object.keys(imgPosition).length)+' restantes';
+$('stageEyebrow').textContent=`Étape ${stage} / 2`;$('stageTitle').textContent=stage1?"Place les unités dans l'abaque":"Classe les images dans l'abaque";$('stageText').textContent=chosen?'Touche une colonne pour déposer ton choix.':stage1?'Place km, m, cm et mm.':'Classe les images selon leur unité.';$('step1').className='step '+(stage1?'on':'done');$('step2').className='step '+(stage1?'':'on');$('unitsSection').classList.toggle('collapsed',!stage1);$('imagesSection').classList.toggle('hidden',stage1||verified);$('imagesSection').classList.toggle('appear',!stage1);const ids=shuffleUnitOrder;const ub=$('unitBank');ub.replaceChildren(...ids.filter(u=>!unitPosition[u]).map(u=>makeTile('unit',u)));const ib=$('imagesBank');ib.replaceChildren(...round.filter(a=>!imgPosition[a.id]).map(a=>makeTile('image',a.id)));ib.scrollLeft=bankScrollBefore;const ab=$('abaque');ab.replaceChildren();for(const unit of UNITS){const active=stage1||TARGET.includes(unit);const col=document.createElement('div');col.className='col '+(active?'target':'nonTarget');col.dataset.unit=unit;const head=document.createElement('div');head.className='colHeader';head.textContent=stage1?'?':unit;col.appendChild(head);if(stage1){const area=document.createElement('div');area.className='labelSlot';const occupying=ids.find(u=>unitPosition[u]===unit);if(occupying)area.appendChild(makeTile('unit',occupying,true));else{const hint=document.createElement('span');hint.className='hint';hint.textContent='Déposer ici';area.appendChild(hint);}col.appendChild(area);}else{const area=document.createElement('div');area.className='imagesSlot';const assigned=round.filter(a=>imgPosition[a.id]===unit);for(const a of assigned)area.appendChild(makeTile('image',a.id,true));if(!assigned.length){const hint=document.createElement('span');hint.className='hint';hint.textContent=active?'Déposer ici':'—';area.appendChild(hint);}col.appendChild(area);}if(!verified&&active){col.setAttribute('role','button');col.tabIndex=0;col.setAttribute('aria-label',`Placer dans la colonne ${stage1?'numéro '+(UNITS.indexOf(unit)+1):unit}`);col.addEventListener('click',e=>{if(e.target.closest('[data-drag]'))return;if(chosen)put(chosen.type,chosen.id,unit);});col.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&chosen){e.preventDefault();put(chosen.type,chosen.id,unit);}});}ab.appendChild(col);}const count=stage1?Object.keys(unitPosition).length:Object.keys(imgPosition).length,total=stage1?4:round.length;$('counter').textContent=`${count} / ${total} placés`;$('verifyBtn').disabled=verified||count!==total;$('verifyBtn').classList.toggle('hidden',verified);$('retryBtn').classList.toggle('hidden',verified);$('continueBtn').classList.add('hidden');$('newBtn').classList.toggle('hidden',!verified||stage1);if(verified){$('counter').textContent=stage1?'Unités corrigées':`Images corrigées · ${round.length}`;}requestAnimationFrame(updateBankLayout);}
+const shuffleUnitOrder=shuffle(TARGET);
+function check(){
+ const map=mapForStage(),total=stage===1?4:round.length;
+ if(verified||Object.keys(map).length!==total)return;
+ const correct=stage===1?TARGET.filter(u=>map[u]===u).length:round.filter(a=>map[a.id]===a.unit).length;
+ if(stage===1){
+  if(correct===4){verified=true;next();return;}
+  showUnitErrors=true;
+  say(`${correct} unité${correct>1?'s':''} bien placée${correct>1?'s':''} sur 4. Corrige les étiquettes rouges puis valide à nouveau.`,'error');
+  render();return;
+ }
+ verified=true;
+ if(correct===total)say(`Bravo ! Les ${total} images sont bien classées.`,'good');
+ else say(`${correct} bonne${correct>1?'s':''} réponse${correct>1?'s':''} sur ${total}. Corrections : ${round.filter(a=>map[a.id]!==a.unit).map(a=>a.label+' → '+a.unit).join(' · ')}`,'error');
+ render();
+}
+function next(){if(stage!==1||!verified)return;stage=2;verified=false;chosen=null;say('');render();requestAnimationFrame(()=>{document.getElementById('abaqueWrap').scrollIntoView({behavior:'smooth',block:'start'});});}
+function retry(){if(verified)return;if(stage===1)unitPosition={};else imgPosition={};chosen=null;showUnitErrors=false;say('');render();}
+function dragStart(e){if(verified||e.button!==0)return;const el=e.currentTarget;drag={type:el.dataset.type,id:el.dataset.id,pointer:e.pointerId,x:e.clientX,y:e.clientY,moved:false};try{el.setPointerCapture(e.pointerId);}catch{}el.addEventListener('pointermove',dragMove);el.addEventListener('pointerup',dragEnd,{once:true});el.addEventListener('pointercancel',dragCancel,{once:true});}
+function dragMove(e){if(!drag||drag.pointer!==e.pointerId)return;const d=drag;if(!d.moved&&Math.hypot(e.clientX-d.x,e.clientY-d.y)>9){d.moved=true;ghost=makeTile(d.type,d.id,true);ghost.classList.add('ghost');ghost.disabled=true;document.body.appendChild(ghost);}if(ghost){ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px';const hit=targetAt(e.clientX,e.clientY,'.col');document.querySelectorAll('.col').forEach(c=>c.classList.toggle('dropHover',c===hit&&(stage===1||TARGET.includes(c.dataset.unit))));}}
+// Identify the target by geometry; independent of pointer capture and the floating preview.
+function targetAt(x,y,selector){for(const node of document.querySelectorAll(selector)){const r=node.getBoundingClientRect();if(x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom)return node;}return null;}
+function dragEnd(e){if(!drag||drag.pointer!==e.pointerId)return;const d=drag;drag=null;cleanDrag(e.currentTarget);if(d.moved){ignoreClick=true;const hit=targetAt(e.clientX,e.clientY,'.col');const bank=targetAt(e.clientX,e.clientY,stage===1?'#unitBank':'#imagesBank');if(hit&&(stage===1||TARGET.includes(hit.dataset.unit)))put(d.type,d.id,hit.dataset.unit);else if(bank)clearOne(d.type,d.id);else{chosen={type:d.type,id:d.id};render();}setTimeout(()=>{ignoreClick=false;},0);}}
+function dragCancel(e){drag=null;cleanDrag(e.currentTarget);}function cleanDrag(el){el.removeEventListener('pointermove',dragMove);if(ghost){ghost.remove();ghost=null;}document.querySelectorAll('.dropHover').forEach(c=>c.classList.remove('dropHover'));}
+$('imagesBank').addEventListener('scroll',updateBankControls,{passive:true});
+$('bankPrev').addEventListener('click',()=>{$('imagesBank').scrollBy({left:-225,behavior:'smooth'});});
+$('bankNext').addEventListener('click',()=>{$('imagesBank').scrollBy({left:225,behavior:'smooth'});});
+window.addEventListener('resize',()=>requestAnimationFrame(updateBankLayout),{passive:true});
+$('launchBtn').addEventListener('click',start);$('homeBtn').addEventListener('click',home);$('verifyBtn').addEventListener('click',check);$('retryBtn').addEventListener('click',retry);$('continueBtn').addEventListener('click',next);$('newBtn').addEventListener('click',start);$('helpBtn').addEventListener('click',()=>{$('help').classList.toggle('hidden');});$('fullBtn').addEventListener('click',()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.().catch(()=>{});else document.exitFullscreen?.().catch(()=>{});});})();
+</script><script>
+/* Activité 2 : 4 exercices compacts et aide dont l'abaque doit être reconstruit. */
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const names=['km','hm','dam','m','dm','cm','mm'];
+const targets=['km','m','cm','mm'];
+const pairs=[];for(const a of targets)for(const b of targets)if(a!==b)pairs.push([a,b]);
+let tasks=[];const states=[0,0,0,0],checked=[false,false,false,false];
+let previousTasks=[];
+function shufflePairs(list){const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a}
+function newTasks(){
+ const left=shufflePairs(pairs.filter(([a,b])=>names.indexOf(b)<names.indexOf(a)));
+ const right=shufflePairs(pairs.filter(([a,b])=>names.indexOf(b)>names.indexOf(a)));
+ const picked=[];
+ // Prefer unseen pairs and different numbers of columns moved.
+ for(const arr of [left,right]){
+  arr.sort((a,b)=>Number(previousTasks.includes(a.join('/')))-Number(previousTasks.includes(b.join('/'))));
+  const first=arr[0];picked.push(first);
+  const second=arr.find(p=>p!==first&&Math.abs(expected(...p))!==Math.abs(expected(...first)))||arr[1];picked.push(second);
+ }
+ tasks=shufflePairs(picked);previousTasks=tasks.map(t=>t.join('/'));
+ states.fill(0);checked.fill(false);
+}
+let refs=[],helpPosition={},helpSelected=null,helpUnlocked=false,helpDrag=null,helpGhost=null,suppressUnitClick=false;
+function expected(a,b){return names.indexOf(b)-names.indexOf(a)}
+function hideHelp(){
+ $('moveAbacus').classList.add('hidden');$('showMoveAbacus').setAttribute('aria-expanded','false');
+ $('showMoveAbacus').textContent='▦ Afficher l’abaque';
+}
+function openMoves(){
+ $('homeScreen').classList.add('hidden');$('gameScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');
+ $('moveScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');
+ $('helpBtn').classList.add('hidden');hideHelp();
+ helpUnlocked=false;helpPosition={};helpSelected=null;
+ newTasks();renderAll();renderHelp();$('moveNew').classList.add('hidden');$('verifyMoves').classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function color(n){const k=Math.abs(n);if(!k)return '#738696';const l=n<0?
+ ['#b7e8f8','#83d1ee','#4eaedb','#248cbb','#116a9a','#09496f']:
+ ['#e1cafa','#c4a1f5','#a178e8','#8450cb','#6536ae','#48248b'];return l[Math.min(k-1,5)]}
+function svg(i){
+ const n=states[i],abs=Math.abs(n),sign=Math.sign(n),col=color(n),cx=300,cy=81,unit=44,end=cx+unit*n;
+ let arcs='';for(let k=0;k<abs;k++){
+  let x1=cx+sign*k*unit,x2=cx+sign*(k+1)*unit,y=61-Math.min(k,5)*7;
+  arcs+=`<path d="M ${x1} 67 Q ${(x1+x2)/2} ${y-29} ${x2} 67" fill="none" stroke="${col}" stroke-width="${Math.min(4,2.8+k*.28)}" stroke-linecap="round" opacity="${(.58+k*.075).toFixed(2)}"/>`;
+ }
+ let ticks='';for(let k=-6;k<=6;k++){
+  const x=cx+k*unit;ticks+=`<line x1="${x}" y1="95" x2="${x}" y2="${k===0?110:104}" stroke="${k===0?'#425d70':'#b1c3cb'}" stroke-width="${k===0?3:1.7}"/>`;
+ }
+ const marker=n===0?`<circle cx="${cx}" cy="${cy}" r="13" fill="#255268" opacity=".12"/>`:
+ `<line x1="${cx}" y1="${cy}" x2="${end}" y2="${cy}" stroke="${col}" stroke-width="7" stroke-linecap="round" opacity=".85"/>`;
+ return `<svg viewBox="0 0 600 135" role="img" aria-hidden="true"><line x1="33" y1="95" x2="567" y2="95" stroke="#d0dde1" stroke-width="4" stroke-linecap="round"/>${ticks}<text x="${cx-42}" y="77" class="moveNudge" text-anchor="middle">◀</text><text x="${cx+42}" y="77" class="moveNudge" text-anchor="middle">▶</text>${arcs}${marker}<circle cx="${cx}" cy="${cy}" r="4.3" fill="#9eb6c2"/><g class="moveDot ${n===0?'idle':''}"><circle cx="${end}" cy="${cy}" r="17" fill="${col}" stroke="white" stroke-width="4"/><circle cx="${end}" cy="${cy}" r="6.5" fill="white" opacity=".87"/></g></svg>`;
+}
+function description(n){return n===0?'Au point central. Choisir un déplacement.':`${Math.abs(n)} déplacement${Math.abs(n)>1?'s':''} vers la ${n<0?'gauche':'droite'}`}
+function renderOne(i){
+ const box=refs[i];if(!box)return;const n=states[i];box.dataset.dir=n<0?'left':n>0?'right':'none';
+ box.style.setProperty('--shade',color(n));
+ const rail=box.querySelector('.moveRail');rail.innerHTML=svg(i);
+ box.querySelector('.moveResult').toggleAttribute('data-moved',n!==0);box.querySelector('.moveResult').innerHTML=n===0?'?':`<div class="moveLine"><div class="moveLineTop"><strong>${Math.abs(n)}</strong><span>déplacement${Math.abs(n)>1?'s':''}</span></div><div class="moveLineBottom">vers la <span class="moveWord">${n<0?'gauche':'droite'}</span></div></div>`;
+ rail.setAttribute('aria-valuenow',String(n));rail.setAttribute('aria-valuetext',description(n));
+ if(!checked[i]){
+  box.classList.remove('resultOk','resultBad');box.querySelector('.moveFeedback').textContent='';
+  box.querySelector('.moveFeedback').className='moveFeedback';
+ }
+}
+function setVal(i,n){states[i]=Math.max(-6,Math.min(6,Math.round(n)));checked[i]=false;renderOne(i);$('moveAllFeedback').textContent=''}
+function pointAt(i,clientX,clientY){
+ const rail=refs[i].querySelector('.moveRail'),svgEl=rail.querySelector('svg');
+ // SVG transform maps the exact drawn tick positions to the real pointer coordinates,
+ // including letterboxing and responsive resizing.
+ const m=svgEl.getScreenCTM();if(!m)return;
+ const point=svgEl.createSVGPoint();point.x=clientX;point.y=clientY;
+ const svgPoint=point.matrixTransform(m.inverse());
+ setVal(i,Math.round((svgPoint.x-300)/44));
+}
+function renderAll(){
+ const host=$('moveExamples');host.replaceChildren();refs=[];
+ tasks.forEach(([from,to],i)=>{
+  const el=document.createElement('article');el.className='moveEx';
+  el.innerHTML=`<div class="movePrompt"><small>EXERCICE ${i+1}</small><span class="moveEquation">${from} <span style="color:#86827b">→</span> ${to}</span></div><div class="moveRail" role="slider" tabindex="0" aria-label="Déplacements de ${from} vers ${to}" aria-valuemin="-6" aria-valuemax="6" aria-valuenow="0" aria-valuetext="Point de départ"></div><div class="moveOutcome"><div class="moveResult"></div><div class="moveFeedback" role="status" aria-live="polite"></div></div>`;
+  const rail=el.querySelector('.moveRail');let pointer=null;
+  rail.addEventListener('pointerdown',e=>{
+   if(e.pointerType==='mouse'&&e.button!==0)return;
+   pointer=e.pointerId;rail.classList.add('dragging');
+   try{rail.setPointerCapture(e.pointerId)}catch{}
+   pointAt(i,e.clientX,e.clientY);e.preventDefault();
+  });
+  rail.addEventListener('pointermove',e=>{if(pointer===e.pointerId)pointAt(i,e.clientX,e.clientY)});
+  const up=e=>{if(pointer!==e.pointerId)return;pointer=null;rail.classList.remove('dragging')};
+  rail.addEventListener('pointerup',up);rail.addEventListener('pointercancel',up);
+  rail.addEventListener('keydown',e=>{
+   if(e.key==='ArrowLeft'){e.preventDefault();setVal(i,states[i]-1)}
+   else if(e.key==='ArrowRight'){e.preventDefault();setVal(i,states[i]+1)}
+   else if(e.key==='Home'){e.preventDefault();setVal(i,0)}
+  });
+  host.appendChild(el);refs.push(el);renderOne(i);
+ });
+ $('moveAllFeedback').textContent='';
+}
+function verifyAll(){
+ let correct=0;
+ tasks.forEach(([from,to],i)=>{
+  checked[i]=true;const ok=states[i]===expected(from,to),box=refs[i];
+  if(ok)correct++;
+  box.classList.toggle('resultOk',ok);box.classList.toggle('resultBad',!ok);
+  const feedback=box.querySelector('.moveFeedback');feedback.className='moveFeedback '+(ok?'ok':'no');
+  feedback.textContent=ok?'✓ Exact !':'À revoir';
+ });
+ $('moveAllFeedback').textContent=`${correct} réponse${correct>1?'s':''} correcte${correct>1?'s':''} sur 4${correct===4?' — Bravo !':''}`;$('moveNew').classList.remove('hidden');
+}
+function putHelp(id,unit){
+ if(helpUnlocked||!targets.includes(id)||!names.includes(unit))return;
+ for(const u of targets)if(u!==id&&helpPosition[u]===unit)delete helpPosition[u];
+ helpPosition[id]=unit;helpSelected=null;renderHelp();
+}
+function makeHelpChip(id){
+ const b=document.createElement('button');b.type='button';b.className='helpUnitChip';b.textContent=id;
+ b.dataset.id=id;b.setAttribute('aria-label','Étiquette '+id);
+ if(id===helpSelected)b.classList.add('chosen');
+ b.addEventListener('click',()=>{
+  if(suppressUnitClick)return;
+  helpSelected=helpSelected===id?null:id;renderHelp();
+ });
+ b.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  helpDrag={id,pointer:e.pointerId,x:e.clientX,y:e.clientY,moved:false};
+  try{b.setPointerCapture(e.pointerId)}catch{}
+ });
+ b.addEventListener('pointermove',e=>{
+  if(!helpDrag||helpDrag.pointer!==e.pointerId||helpDrag.id!==id)return;
+  if(!helpDrag.moved&&Math.hypot(e.clientX-helpDrag.x,e.clientY-helpDrag.y)>8){
+   helpDrag.moved=true;helpGhost=document.createElement('div');helpGhost.className='helpUnitChip dragGhost';
+   helpGhost.textContent=id;document.body.appendChild(helpGhost);
+  }
+  if(helpGhost){helpGhost.style.left=e.clientX+'px';helpGhost.style.top=e.clientY+'px';
+   const hit=helpTargetAt(e.clientX,e.clientY);document.querySelectorAll('.helpSlot').forEach(x=>x.classList.toggle('helpHover',x===hit));
+  }
+ });
+ const finish=e=>{
+  if(!helpDrag||helpDrag.pointer!==e.pointerId||helpDrag.id!==id)return;
+  const d=helpDrag;helpDrag=null;const hit=helpTargetAt(e.clientX,e.clientY);
+  if(helpGhost){helpGhost.remove();helpGhost=null}
+  document.querySelectorAll('.helpHover').forEach(x=>x.classList.remove('helpHover'));
+  if(d.moved){
+   suppressUnitClick=true;
+   if(hit)putHelp(id,hit.dataset.unit);
+   else if($('moveHelpUnitBank').getBoundingClientRect().top<=e.clientY&&$('moveHelpUnitBank').getBoundingClientRect().bottom>=e.clientY){delete helpPosition[id];helpSelected=null;renderHelp()}
+   else{helpSelected=id;renderHelp()}
+   setTimeout(()=>{suppressUnitClick=false},0);
+  }
+ };
+ b.addEventListener('pointerup',finish);b.addEventListener('pointercancel',finish);
+ return b;
+}
+function helpTargetAt(x,y){
+ for(const c of document.querySelectorAll('.helpSlot')){
+  const r=c.getBoundingClientRect();if(x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom)return c;
+ }return null;
+}
+function renderHelp(){
+ $('moveHelpChallenge').classList.toggle('hidden',helpUnlocked);
+ $('moveHelpRevealed').classList.toggle('hidden',!helpUnlocked);
+ $('moveHelpTitle').textContent=helpUnlocked?'Abaque métrique complet':'Reconstitue l’abaque pour obtenir l’aide';
+ if(helpUnlocked)return;
+ $('moveHelpUnitBank').replaceChildren(...targets.filter(u=>!helpPosition[u]).map(makeHelpChip));
+ const root=$('moveHelpSlots');root.replaceChildren();
+ for(const unit of names){
+  const cell=document.createElement('div');cell.className='helpSlot';cell.dataset.unit=unit;
+  cell.setAttribute('role','button');cell.tabIndex=0;cell.setAttribute('aria-label',`Colonne ${names.indexOf(unit)+1}`);
+  const id=targets.find(u=>helpPosition[u]===unit);
+  if(id)cell.appendChild(makeHelpChip(id));
+  else{const h=document.createElement('span');h.className='note';h.textContent='+';cell.appendChild(h)}
+  cell.addEventListener('click',e=>{
+   if(e.target.closest('.helpUnitChip'))return;
+   if(helpSelected)putHelp(helpSelected,unit);
+  });
+  cell.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&helpSelected){e.preventDefault();putHelp(helpSelected,unit)}});
+  root.appendChild(cell);
+ }
+ $('verifyMoveHelp').disabled=Object.keys(helpPosition).length!==4;
+ $('moveHelpFeedback').textContent='';
+}
+function verifyHelp(){
+ if(Object.keys(helpPosition).length!==4)return;
+ const good=targets.filter(u=>helpPosition[u]===u).length;
+ if(good===4){helpUnlocked=true;helpSelected=null;renderHelp()}
+ else{$('moveHelpFeedback').textContent=`${good} unité${good>1?'s':''} correcte${good>1?'s':''} sur 4. Corrige le placement et valide à nouveau.`}
+}
+$('moveLaunchBtn').addEventListener('click',openMoves);
+$('verifyMoves').addEventListener('click',verifyAll);$('moveNew').addEventListener('click',()=>{newTasks();renderAll();$('moveNew').classList.add('hidden')});
+$('showMoveAbacus').addEventListener('click',()=>{
+ const box=$('moveAbacus');if(!box.classList.contains('hidden')){hideHelp();return}
+ box.classList.remove('hidden');$('showMoveAbacus').setAttribute('aria-expanded','true');
+ $('showMoveAbacus').textContent='▦ Masquer l’abaque';renderHelp();
+});
+$('closeMoveAbacus').addEventListener('click',hideHelp);
+$('verifyMoveHelp').addEventListener('click',verifyHelp);
+$('homeBtn').addEventListener('click',hideHelp);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('moveAbacus').classList.contains('hidden'))hideHelp()});
+})();
+</script>
+<script>
+/* Activité 3 — conversions d'entiers, avec manipulations locales (aucun serveur). */
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const UNITS=['km','hm','dam','m','dm','cm','mm'];
+const OPTIONS=['km','m','cm','mm'];
+const POS=Object.fromEntries(UNITS.map((u,i)=>[u,i]));
+const pairList=[];
+for(const a of OPTIONS)for(const b of OPTIONS)if(a!==b)pairList.push([a,b]);
+let series=[],activeIndex=0,locked=false,first=true,correctionMode=false;
+const random=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const shuffle=arr=>{const x=[...arr];for(let i=x.length-1;i>0;i--){const j=random(0,i);[x[i],x[j]]=[x[j],x[i]]}return x};
+const nice=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
+const expected=(source,from,to)=>{
+ const shift=POS[to]-POS[from];
+ return shift>=0?source*10**shift:source/10**(-shift);
+};
+function makeTask(from,to){
+ const shift=POS[to]-POS[from],limit=10**(POS[from]+1)-1;
+ let source,result;
+ for(let attempt=0;attempt<100;attempt++){
+   if(shift<0){
+     const factor=10**(-shift);
+     const maxBase=Math.floor(limit/factor);
+     if(maxBase<1)continue;
+     const base=random(1,Math.min(maxBase,Math.max(12,Math.min(999,Math.floor(maxBase/3)))));
+     source=base*factor;
+   }else{
+     const max=Math.min(limit,1000);
+     let x=random(1,Math.max(1,max));
+     if(Math.random()<.33&&x*10<=limit)x*=10;
+     source=x;
+   }
+   result=expected(source,from,to);
+   if(Number.isInteger(result)&&result>0&&Number.isSafeInteger(result))break;
+ }
+ if(!source||!Number.isInteger(result))return null;
+ return {from,to,source,result,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null};
+}
+function makeSeries(){
+ let specs=shuffle(pairList);
+ // Two directions and several unit steps in the same series.
+ let chosen=[];
+ for(const pair of specs){
+  if(chosen.some(p=>p.join('/')===pair.join('/')))continue;
+  if(chosen.length===1&&Math.sign(POS[pair[1]]-POS[pair[0]])===Math.sign(POS[chosen[0][1]]-POS[chosen[0][0]]))continue;
+  chosen.push(pair);if(chosen.length===4)break;
+ }
+ if(first){first=false;chosen=[['cm','m'],...chosen.filter(p=>p.join('/')!=='cm/m').slice(0,3)]}
+ series=chosen.map(([from,to],i)=>{
+  if(i===0&&from==='cm'&&to==='m'&&!window.__MATHAS_T3_EXAMPLE_DONE){window.__MATHAS_T3_EXAMPLE_DONE=true;return {from,to,source:34000,result:340,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null}}
+  return makeTask(from,to)
+ });
+ activeIndex=0;locked=false;correctionMode=false;
+ $('t3Summary').textContent='';$('t3Progress').textContent='';$('t3Progress').classList.add('hidden');$('t3Verify').textContent='✓ Vérifier les 4 réponses';
+ $('t3Verify').classList.remove('hidden');$('t3New').classList.add('hidden');
+ renderAll();
+}
+function showScreen(){
+ $('homeScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('gameScreen').classList.add('hidden');
+ $('convertScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');$('helpBtn').classList.add('hidden');
+ makeSeries();window.scrollTo({top:0,behavior:'smooth'});
+}
+function makeHelp(ex){
+ const chars=String(ex.source).split('');
+ const end=POS[ex.from],start=end-chars.length+1;
+ return {digits:chars,positions:chars.map((_,i)=>start+i),original:end,comma:end,added:new Set(),removed:new Set()};
+}
+function renderOne(i){
+ const ex=series[i],el=$('t3ExList').children[i];if(!el)return;
+ el.classList.toggle('t3good',ex.status==='good'||ex.status==='corrected');
+ el.classList.toggle('t3bad',ex.status==='badFinal');
+ el.classList.toggle('t3retry',ex.status==='retry');
+ el.classList.toggle('t3corrected',ex.status==='corrected');
+ const input=el.querySelector('.t3Answer');if(input.value!==ex.answer)input.value=ex.answer;
+ input.disabled=locked||!['pending','retry'].includes(ex.status);input.classList.toggle('active',i===activeIndex&&!input.disabled);
+ el.querySelector('.t3Open').setAttribute('aria-expanded',String(ex.open));
+ el.querySelector('.t3Open').textContent=ex.open?'▦ Masquer la manipulation':'▦ Manipuler la virgule';
+ el.querySelector('.t3UnitsBtn').setAttribute('aria-pressed',String(ex.units));
+ el.querySelector('.t3UnitsBtn').textContent=ex.units?'▤ Masquer les unités':'▤ Afficher les unités';
+ el.querySelector('.t3Assistance').classList.toggle('hidden',!ex.open);
+ const st=el.querySelector('.t3Status');
+ st.textContent=ex.status==='good'?'✓ Correct.':ex.status==='retry'?'À corriger : deuxième essai.':ex.status==='corrected'?'✓ Corrigé au deuxième essai.':ex.status==='badFinal'?`✗ Réponse attendue : ${nice(ex.result)} ${ex.to}`:'';
+ if(ex.open)renderBoard(i);
+}
+function renderAll(){
+ const host=$('t3ExList');host.replaceChildren();
+ series.forEach((ex,i)=>{
+  const article=document.createElement('article');article.className='t3Ex';
+  article.innerHTML=`<div class="t3Heading"><span class="t3Num">${i+1}</span><div class="t3Expression"><span>${nice(ex.source)} ${ex.from} =</span><input class="t3Answer" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Réponse de la conversion ${i+1}" maxlength="13"><span>${ex.to}</span></div></div>
+   <div class="t3Controls"><div class="t3HelpControls"><button class="btn t3HelpBtn t3Open" type="button" aria-expanded="false">▦ Manipuler la virgule</button><button class="btn t3UnitsBtn" type="button" aria-pressed="false">▤ Afficher les unités</button></div><div class="t3Status" role="status"></div></div>
+   <div class="t3Assistance hidden">
+   <div class="t3ManipRow"><div class="t3BoardScroll"><div class="t3Board"><div class="t3Movement" aria-hidden="true"></div><div class="t3UnitLabels hidden"></div><div class="t3Digits"></div><div class="t3Commas"></div></div></div>
+   <div class="t3BoardSide"><div class="t3Direction" role="status" aria-live="polite"></div><div class="t3BoardActions"><button type="button" class="btn t3ResetHelp">↺ Recommencer la manipulation</button></div></div></div></div>`;
+  const input=article.querySelector('input');
+  input.value=ex.answer;
+  input.addEventListener('focus',()=>{if(!input.disabled)setActive(i)});
+  input.addEventListener('click',()=>{if(!input.disabled)setActive(i)});
+  input.addEventListener('input',()=>{ex.answer=input.value.replace(/\D/g,'').slice(0,13);if(input.value!==ex.answer)input.value=ex.answer;});
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();nextAnswer()}});
+  article.querySelector('.t3Open').addEventListener('click',()=>{
+    ex.open=!ex.open;if(ex.open&&!ex.help)ex.help=makeHelp(ex);renderOne(i);
+  });
+  article.querySelector('.t3UnitsBtn').addEventListener('click',()=>{ex.units=!ex.units;if(ex.units){ex.open=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i)});
+  article.querySelector('.t3ResetHelp').addEventListener('click',()=>{ex.help=makeHelp(ex);renderBoard(i)});
+  host.appendChild(article);
+ });
+ series.forEach((_,i)=>renderOne(i));setActive(activeIndex);
+}
+function setActive(i){
+ if(locked||!series[i]||!['pending','retry'].includes(series[i].status))return;activeIndex=i;
+ $('t3KeyInfo').textContent=`Réponse de l'exercice ${i+1}`;
+ document.querySelectorAll('#t3ExList .t3Answer').forEach((inp,j)=>inp.classList.toggle('active',j===i));
+}
+function nextAnswer(){if(locked)return;const available=series.map((ex,i)=>['pending','retry'].includes(ex.status)?i:-1).filter(i=>i>=0);if(!available.length)return;let next=available.find(i=>i>activeIndex);if(next===undefined)next=available.find(i=>!series[i].answer)??available[0];setActive(next);$('t3ExList').children[next].querySelector('input').focus()}
+function renderBoard(i){
+ const ex=series[i],state=ex.help,article=$('t3ExList').children[i];if(!state)return;
+ article.querySelector('.t3UnitsBtn').textContent=ex.units?'▤ Masquer les unités':'▤ Afficher les unités';
+ article.querySelector('.t3UnitsBtn').setAttribute('aria-pressed',String(ex.units));
+ const headers=article.querySelector('.t3UnitLabels');headers.replaceChildren();headers.classList.toggle('hidden',!ex.units);
+ if(ex.units)UNITS.forEach((u,j)=>{
+  const d=document.createElement('div');d.className='t3UnitLabel';
+  if(j===POS[ex.from])d.classList.add('from');
+  if(j===POS[ex.to])d.classList.add('to');
+  d.textContent=u;d.setAttribute('aria-hidden','true');headers.appendChild(d);
+ });
+ const board=article.querySelector('.t3Digits');board.replaceChildren();
+ for(let k=0;k<7;k++){
+  const j=state.positions.indexOf(k),digit=j>=0?state.digits[j]:null,origZero=digit==='0',removed=state.removed.has(k);
+  const added=state.added.has(k);
+  const d=document.createElement('div');d.className='t3Digit';d.tabIndex=0;
+  if(ex.units&&k===POS[ex.from])d.classList.add('from');
+  if(removed)d.classList.add('zero-removed');
+  if(added)d.classList.add('zero-added');
+  d.textContent=removed?'':digit!==null?digit:(added?'0':'');
+  const canChange=digit===null||origZero;
+  d.setAttribute('aria-label',`Colonne ${UNITS[k]} : ${d.textContent||'vide'}${canChange?' ; toucher pour modifier le zéro':''}`);
+  if(canChange){const toggle=()=>{const s=digit===null?state.added:state.removed;s.has(k)?s.delete(k):s.add(k);renderBoard(i)};
+   d.addEventListener('click',toggle);d.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+  }else{d.style.cursor='default';d.tabIndex=-1}
+  board.appendChild(d);
+ }
+ const movement=article.querySelector('.t3Movement');
+ const direction=article.querySelector('.t3Direction');
+ const updateMovement=()=>{
+  const steps=state.comma-state.original, count=Math.abs(steps),left=steps<0;
+  const palette=left?['#a6dff4','#70c8e7','#43a9d8','#1c87b8','#126b9d','#07517b']:['#dec3f9','#c69af1','#aa79df','#8956ca','#6c3caa','#4f288d'];
+  const shade=palette[Math.min(Math.max(count-1,0),5)];
+  movement.classList.toggle('active',count>0);
+  if(!count){movement.replaceChildren();direction.textContent='';return}
+  let paths='';const cell=51; // Géométrie proportionnelle : même viewBox quelle que soit la taille réelle des cases.
+  for(let step=0;step<count;step++){
+   const start=(state.original+1+Math.sign(steps)*step)*cell;
+   const end=start+Math.sign(steps)*cell;
+   const mid=(start+end)/2;
+   const paint=palette[Math.min(step,5)];
+   paths+=`<path d="M ${start} 34 Q ${mid} ${6-Math.min(step,3)*2} ${end} 34" fill="none" stroke="${paint}" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowT3${i})"/>`;
+  }
+  movement.innerHTML=`<svg viewBox="0 0 357 40" aria-hidden="true" preserveAspectRatio="none"><defs><marker id="arrowT3${i}" markerWidth="4.8" markerHeight="4.8" refX="3.1" refY="2" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L3.7,2 L0,4 Z" fill="${shade}"/></marker></defs>${paths}</svg>`;
+  direction.innerHTML=`<span><span class="t3Color t3Count">${count}</span> déplacement${count>1?'s':''} vers la <span class="t3Color">${left?'gauche':'droite'}</span></span>`;
+  direction.style.setProperty('--dir-color',shade);
+ };
+ const commas=article.querySelector('.t3Commas');commas.replaceChildren();
+ for(let k=0;k<7;k++){const slot=document.createElement('div');slot.className='t3CommaSlot';slot.dataset.pos=String(k);commas.appendChild(slot)}
+ const visual=()=>{
+  [...commas.children].forEach((slot,k)=>{
+   slot.classList.toggle('selected',k===state.comma);slot.replaceChildren();
+   if(k===state.original&&k!==state.comma){const g=document.createElement('span');g.className='t3CommaGhost';g.textContent=',';slot.appendChild(g)}
+   if(k===state.comma){const comma=document.createElement('span');comma.className='t3Comma';comma.textContent=',';comma.setAttribute('role','slider');comma.tabIndex=0;comma.setAttribute('aria-label','Virgule mobile');comma.setAttribute('aria-valuemin','0');comma.setAttribute('aria-valuemax','6');comma.setAttribute('aria-valuenow',String(k));
+    comma.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();state.comma=e.key==='ArrowLeft'?Math.max(0,state.comma-1):e.key==='ArrowRight'?Math.min(6,state.comma+1):e.key==='Home'?0:6;visual();const focus=commas.querySelector('.t3Comma');focus?.focus()}});
+    slot.appendChild(comma)}
+  });
+  updateMovement();
+ };
+ visual();
+ const closest=x=>{let best=0,dist=Infinity;[...commas.children].forEach((slot,k)=>{const r=slot.getBoundingClientRect(),delta=Math.abs(x-r.left-r.width/2);if(delta<dist){best=k;dist=delta}});return best};
+ let pointer=null;
+ commas.onpointerdown=e=>{if(locked)return;if(!e.target.closest('.t3Comma'))return;e.preventDefault();pointer=e.pointerId;try{commas.setPointerCapture(e.pointerId)}catch{}};
+ commas.onpointermove=e=>{if(e.pointerId!==pointer)return;const next=closest(e.clientX);if(next!==state.comma){state.comma=next;visual()}};
+ const end=e=>{if(e.pointerId===pointer){pointer=null;try{if(commas.hasPointerCapture(e.pointerId))commas.releasePointerCapture(e.pointerId)}catch{}}};
+ commas.onpointerup=end;commas.onpointercancel=end;
+}
+function verify(){
+ if(locked)return;
+ const editable=series.map((ex,i)=>['pending','retry'].includes(ex.status)?i:-1).filter(i=>i>=0);
+ const blank=editable.find(i=>!series[i].answer.trim());
+ if(blank!==undefined){$('t3Summary').textContent=`Il manque la réponse ${blank+1}.`;setActive(blank);$('t3ExList').children[blank].querySelector('input').focus();return}
+ if(!correctionMode){
+  const wrong=[];
+  series.forEach((ex,i)=>{if(Number(ex.answer)===ex.result){ex.status='good'}else{ex.status='retry';wrong.push(i)}});
+  if(wrong.length){
+   correctionMode=true;
+   $('t3Summary').textContent=`${4-wrong.length} bonne${4-wrong.length>1?'s':''} réponse${4-wrong.length>1?'s':''}. Corrige les cases orange.`;
+   $('t3Verify').textContent='✓ Valider les corrections';
+   series.forEach((_,i)=>renderOne(i));
+   setActive(wrong[0]);$('t3ExList').children[wrong[0]].querySelector('input').focus();
+   return;
+  }
+ }else{
+  series.forEach(ex=>{if(ex.status==='retry')ex.status=Number(ex.answer)===ex.result?'corrected':'badFinal'});
+ }
+ locked=true;
+ const firstGood=series.filter(ex=>ex.status==='good').length;
+ const corrected=series.filter(ex=>ex.status==='corrected').length;
+ series.forEach((_,i)=>renderOne(i));
+ $('t3Progress').textContent=`${firstGood} / 4 sans correction`;$('t3Progress').classList.remove('hidden');
+ $('t3Summary').textContent=firstGood===4?'Bravo ! Les quatre conversions sont correctes.':`Premier essai : ${firstGood}/4${corrected?' · '+corrected+' corrigée'+(corrected>1?'s':''):''}.`;
+ $('t3Verify').classList.add('hidden');$('t3New').classList.remove('hidden');
+} 
+$('convertLaunchBtn').addEventListener('click',showScreen);
+$('t3Verify').addEventListener('click',verify);
+$('t3New').addEventListener('click',makeSeries);
+function setKey(k){
+ if(locked)return;const ex=series[activeIndex];if(!ex||!['pending','retry'].includes(ex.status))return;
+ let val=ex.answer;
+ if(k==='next'){nextAnswer();return}
+ if(k==='clear')val='';else if(k==='back')val=val.slice(0,-1);else if(/^\d$/.test(k)&&val.length<13)val+=k;
+ ex.answer=val;renderOne(activeIndex);
+}
+document.querySelectorAll('[data-t3key]').forEach(btn=>btn.addEventListener('click',()=>setKey(btn.dataset.t3key)));
+$('homeBtn').addEventListener('click',()=>{$('convertScreen').classList.add('hidden')});
+})();
+</script>
+</body></html>
