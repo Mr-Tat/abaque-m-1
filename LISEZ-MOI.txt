@@ -1,11 +1,6 @@
-Math’as – Longueurs v0.6.3 · 16 octobre 2026
+Math'as — Longueurs v0.7.0
 
-Aucune publication GitHub dans cette version. Application hors ligne : ouvrir index.html après décompression.
+Ouvrir index.html pour tester hors ligne.
+Conserver le dossier assets/images à côté du fichier HTML.
 
-Activité 1 : consignes plus courtes, moins d’éléments superflus ; erreurs dans les unités modifiables, puis validation à nouveau. Si les quatre unités sont bonnes, passage automatique aux images. Sélection tactile avec colonnes surlignées.
-
-Activité 2 : quatre conversions renouvelées par série, avec deux déplacements vers chaque sens et des distances variées. Nouveau bouton « Nouvelle série » après correction ; réponse « ? » avant le mouvement. Réglettes plus larges, quatre cartes 2×2 conservées.
-
-Activité 3 : titre, textes et compteurs simplifiés. Deuxième tentative pour les réponses fausses avant affichage de la solution ; les réponses justes restent conservées. Deux aides facultatives et pavé numérique conservés.
-
-Aucune modification du système de scores ni de publication en ligne.
+Nouveauté : résultats chiffrés au-dessus des ronds des activités 1 et 2 et sur les boutons des modes 1, 3 et 5 pages de l'activité 3. Les meilleurs résultats sont conservés localement ; les résultats exacts des anciennes versions, non enregistrés, sont présentés sans chiffres inventés.

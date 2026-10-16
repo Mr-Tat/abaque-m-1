@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152334"><title>Math'as — Abaque des longueurs v0.6.3</title><style>
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152334"><title>Math'as — Abaque des longueurs v0.7.0</title><style>
 :root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#172838;background:#e5ebed}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(120deg,#dce6e8,#f5f1eb)}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,[role=button]:focus-visible{outline:3px solid #f3a441;outline-offset:2px}.shell{max-width:1420px;margin:14px auto;background:#f9f8f4;min-height:calc(100vh - 28px);border-radius:22px;overflow:hidden;box-shadow:0 18px 50px #253b4b24}header{background:#152334;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 22px}.brand{font-weight:950;letter-spacing:-.03em;font-size:1.35rem}.brand span{color:#54c3c5}.mutedHead{font-size:.8rem;color:#bdced4}.headerBtns{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #b8c7cf;border-radius:11px;background:white;color:#173044;min-height:43px;padding:9px 15px;font-weight:800}.btn.primary{background:#167b82;border-color:#167b82;color:white}.btn.dark{background:#304257;border-color:#516578;color:#fff}.btn:disabled{opacity:.44;cursor:not-allowed}main{padding:22px}.hidden{display:none!important}.eyebrow{color:#127d83;letter-spacing:.12em;font-size:.75rem;font-weight:950;text-transform:uppercase}.screenTitle{font-size:clamp(1.4rem,3vw,2.2rem);margin:6px 0 8px}.sub{color:#566674;font-size:.94rem;font-weight:600;margin:0 0 18px}.homeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:950px;margin:32px auto}.homeCard{padding:25px;border:2px solid #c8d7d9;border-radius:19px;background:white;text-align:left;min-height:200px;box-shadow:0 8px 21px #162b4010}.homeCard strong{display:block;font-size:1.38rem;margin:14px 0 9px}.homeCard p{color:#5c6874;margin:0;line-height:1.45}.homeCard .symbol{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:16px;background:#d8f1ef;color:#146a72;font-weight:950;font-size:1.8rem}.homeCard.disabled{background:#e8eaeb;border-color:#d4dade;cursor:default}.homeCard.disabled .symbol{background:#dce0e4;color:#819098}.soon{font-size:.78rem;color:#66727d;font-weight:900;letter-spacing:.07em}.steps{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 20px}.step{padding:8px 13px;border-radius:999px;background:#e7e9e7;color:#6f7d84;font-size:.8rem;font-weight:850}.step.on{background:#cce9e5;color:#116e71}.step.done{background:#e4f2e6;color:#22805b}.intro{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.pill{border-radius:30px;background:#e3ecec;color:#3a5c66;padding:9px 14px;font-weight:900;font-size:.82rem}.sectionTitle{font-size:1.03rem;margin:17px 0 8px}.unitBank{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px;border-radius:14px;background:#e9efef;margin-bottom:12px;min-height:75px}.unitChip{background:white;border:2px solid #6caaa9;color:#163344;border-radius:12px;min-width:82px;min-height:50px;padding:8px 17px;font-size:1.23rem;font-weight:950;touch-action:none;user-select:none}.unitChip.selected{background:#fff1dd;border-color:#e79440}.unitChip.inSlot{min-width:0;width:100%;max-width:102px;min-height:47px}.unitChip.verifiedGood{border-color:#359b77;background:#e5f5eb}.unitChip.verifiedBad{border-color:#c95361;background:#ffedf0}.unitChip:disabled{opacity:1;cursor:default}.abaqueWrap{overflow-x:auto;padding:3px 2px 10px;scrollbar-color:#98b6bb transparent}.abaque{display:grid;grid-template-columns:repeat(7,minmax(112px,1fr));gap:5px;min-width:816px}.col{border:2px dashed #bbc8ce;border-radius:12px;min-width:0;min-height:164px;display:flex;flex-direction:column;gap:7px;padding:7px;background:#e9eeee;align-items:center;transition:background .1s}.col.target{background:#f2fbfa;border-color:#70b3b3}.col.dropHover{background:#d2eae8;border-color:#188589}.col.nonTarget{background:#ebece9;border-color:#d5d9d7}.colHeader{text-align:center;background:#dce7e9;color:#375063;width:100%;border-radius:7px;padding:7px 2px;font-weight:950;font-size:.9rem}.col.target .colHeader{background:#d3eeeb;color:#1a7378}.col .hint{font-size:.69rem;font-weight:750;color:#7b8c96;text-align:center;margin:auto}.labelSlot{width:100%;min-height:58px;display:flex;align-items:center;justify-content:center;border:1px dashed #afc4c7;border-radius:10px;padding:4px}.imagesSlot{display:flex;flex-direction:column;align-items:stretch;gap:5px;width:100%;min-height:72px}.itemCard{position:relative;background:#fff;border:2px solid #c2d3d7;border-radius:9px;padding:4px;min-width:0;text-align:center;cursor:grab;user-select:none;touch-action:none;box-shadow:0 2px 6px #22374712}.itemCard.selected{border-color:#e99644;background:#fff4e4}.itemCard img{display:block;width:100%;height:64px;object-fit:contain;background:#e6eff0;border-radius:6px;pointer-events:none}.itemCard span{display:block;font-weight:780;font-size:.72rem;line-height:1.17;padding-top:4px}.itemCard.small img{height:90px}.itemCard.small span{font-size:.66rem}.itemCard.good{border-color:#2b936c;background:#e5f6ea}.itemCard.bad{border-color:#c54f5b;background:#fff0f0}.imagesBank{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:10px 0;padding:12px;border:1px solid #d8e0df;border-radius:15px;background:#ebf0ef;min-height:116px}.imagesBank .itemCard img{height:150px;object-fit:cover;object-position:center}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 7px}.feedback{min-height:34px;margin:8px 0;font-weight:800;color:#395367}.feedback.good{color:#18845c}.feedback.error{color:#bb4758}.help{margin:10px 0;padding:12px 14px;background:#e8eff0;border-left:4px solid #18858c;border-radius:0 9px 9px 0;line-height:1.5;font-size:.9rem}.ghost{position:fixed;pointer-events:none;z-index:3000;transform:translate(-50%,-50%);box-shadow:0 15px 30px #102f4466;opacity:.93;min-width:80px;max-width:130px}.footer{border-top:1px solid #d7dfe0;padding:13px 22px;color:#77838a;font-size:.75rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.note{color:#647783;font-size:.78rem;line-height:1.45}.count{font-variant-numeric:tabular-nums}@media(max-width:950px){.imagesBank{grid-template-columns:repeat(3,minmax(0,1fr))}.imagesBank .itemCard img{height:120px;object-fit:cover;object-position:center}}@media(max-width:600px){.shell{border-radius:0;margin:0;min-height:100vh}header{padding:12px}.brand{font-size:1.1rem}main{padding:12px}.homeGrid{grid-template-columns:1fr;margin:20px auto}.homeCard{min-height:150px;padding:18px}.imagesBank{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:6px}.imagesBank .itemCard img{height:48px;object-fit:cover;object-position:center}.imagesBank .itemCard span{font-size:.65rem}.btn{padding:8px 10px;font-size:.85rem}.col{min-height:138px}.itemCard.small img{height:66px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 #unitsSection{max-height:220px;opacity:1;overflow:hidden;transition:max-height .45s ease,opacity .25s ease,margin .4s ease}
 #unitsSection.collapsed{max-height:0;opacity:0;margin:0;pointer-events:none}
@@ -31,7 +31,7 @@
 @media(max-width:850px){.moveEx{grid-template-columns:1fr;gap:6px;padding:12px}.movePrompt{font-size:1.1rem}.moveRail{height:136px}.moveResult{min-height:auto;text-align:center;justify-content:center}.moveCheck{justify-content:center}.moveAbacus{top:72px;width:calc(100vw - 12px);max-height:46vh}}
 @media(prefers-reduced-motion:reduce){.moveDot{transition:none}}
 
-/* v0.6.3 — La banque est toujours visible pendant le classement.
+/* v0.7.0 — La banque est toujours visible pendant le classement.
    Elle dispose de son propre défilement horizontal : la page ne la fait plus disparaître. */
 #gameScreen.imagesMode{padding-bottom:var(--bank-height,270px)}
 #gameScreen.imagesMode #imagesSection{
@@ -76,7 +76,7 @@
  .bankHeader .note{display:none}
 }
 
-/* v0.6.3 : tableau classique à cases contiguës, et bande d'images immobile */
+/* v0.7.0 : tableau classique à cases contiguës, et bande d'images immobile */
 #gameScreen.imagesMode #imagesSection.appear{animation:none!important;transform:translateX(-50%)!important}
 #gameScreen.imagesMode{padding-bottom:max(var(--bank-height,275px),220px)}
 .metricTableScroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
@@ -104,7 +104,7 @@
 .abaque .col.target .colHeader{background:#d0eae6}
 @media(max-width:700px){.metricDirections{font-size:.69rem}.tableTop{align-items:flex-start}}
 
-/* v0.6.3 : quatre exercices en deux colonnes, taille compacte et aide à construire. */
+/* v0.7.0 : quatre exercices en deux colonnes, taille compacte et aide à construire. */
 #moveScreen{max-width:1400px;margin:auto}
 #moveScreen .sub{margin:3px 0 0}
 .moveTop{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
@@ -129,23 +129,22 @@
 .moveBottomNote{text-align:center;font-size:.75rem;margin:5px 0}
 .moveDot.idle{transform-origin:center;animation:movePulse 1.3s ease-in-out infinite}
 @keyframes movePulse{0%,100%{opacity:1}50%{opacity:.65}}
-.moveHelpTop{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px}
+.moveHelpTop{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:8px}
 .moveHelpTop strong{font-size:1.04rem}
-.moveAbacus{position:fixed;top:clamp(68px,12vh,105px);max-height:calc(100vh - 120px);overflow-y:auto;z-index:1600;box-shadow:0 20px 55px #0d304a45}
-.moveHelpUnitBank{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;background:#ecf2f3;padding:9px;border-radius:10px;margin:10px 0}
+.moveAbacus{position:relative;top:auto;left:auto;transform:none;width:100%;max-height:none;overflow:visible;z-index:auto;box-shadow:none;min-height:118px}
+.moveHelpUnitBank{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;background:#ecf2f3;padding:8px;border-radius:10px;margin:6px 0 8px}
 .helpUnitChip{background:#fff;border:2px solid #75aaa9;color:#163344;padding:7px 12px;border-radius:9px;font-size:1.09rem;font-weight:950;min-width:61px;min-height:44px;touch-action:none;user-select:none;cursor:grab}
 .helpUnitChip.chosen{border-color:#e79a40;background:#fff0d8}
 .helpUnitChip.dragGhost{position:fixed;z-index:5000;pointer-events:none;box-shadow:0 7px 15px #20384855;transform:translate(-50%,-50%);opacity:.93}
-.moveHelpTable{grid-template-rows:auto minmax(62px,auto)}
-.moveHelpTable .metricHeaders>div{background:#e6eff0!important;color:#526b77;font-size:1.3rem;padding:8px 0}
-.moveHelpTable .metricPlaces>div{min-height:64px;display:flex;justify-content:center;align-items:center;background:#f7fbfb!important;cursor:pointer;outline-offset:-3px}
-.moveHelpTable .metricPlaces>div:hover,.moveHelpTable .metricPlaces>div.helpHover{background:#d6f1ec!important;outline:2px solid #258f99}
-.moveHelpTable .helpUnitChip{font-size:1rem;min-width:0;max-width:95%;padding:6px 9px}
+.moveHelpTable{grid-template-rows:auto minmax(24px,auto)}
+.moveHelpTable .metricHeaders>div{min-height:64px;display:flex;justify-content:center;align-items:center;background:#f7fbfb!important;cursor:pointer;outline-offset:-3px;color:#526b77;font-size:1.3rem;padding:8px 0}.moveHelpTable .metricHeaders>div:hover,.moveHelpTable .metricHeaders>div.helpHover{background:#d6f1ec!important;outline:2px solid #258f99}.moveHelpTable .metricPlaces>div{min-height:18px;background:transparent!important;border-top:0;border-bottom:0}
+.moveHelpTable .helpUnitChip{font-size:1rem;min-width:0;max-width:95%;padding:6px 9px}.moveHelpTable .metricHeaders .note{font-size:1.2rem;font-weight:900;color:#7e9099}
 .moveHelpActions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
 .moveHelpFeedback{font-weight:800;color:#b44751;font-size:.9rem}
 @media(max-width:1120px){.moveEx{grid-template-columns:70px minmax(135px,1fr) minmax(118px,145px);gap:5px;padding:8px}.moveResult strong{font-size:1.8rem}}
 @media(max-width:890px){.moveExamples{grid-template-columns:1fr}.moveEx{grid-template-columns:minmax(78px,120px) minmax(220px,1fr) minmax(140px,210px)}.moveResult strong{font-size:2rem}}
-@media(max-width:580px){.moveTop{align-items:flex-start}.moveHelpTrigger{width:100%}.moveEx{grid-template-columns:minmax(65px,85px) minmax(135px,1fr);gap:4px;min-height:155px}.movePrompt{font-size:1.1rem}.moveRail{height:100px}.moveResult{grid-column:1/-1;text-align:center;display:flex;justify-content:center;align-items:center}.moveResult .moveLine{display:flex;gap:8px;align-items:center}.moveLineBottom{margin-top:0}.moveFeedback{grid-column:1/-1}.moveAbacus{width:calc(100vw - 10px);top:6px;max-height:92vh;padding:11px}.moveHelpTop strong{font-size:.9rem}}
+@media(max-width:760px){.moveTop{grid-template-columns:1fr;align-items:flex-start}.moveHelpTrigger{width:100%}.moveAbacus{width:100%;min-height:0;padding:11px}.moveHelpTop strong{font-size:.9rem}}
+@media(max-width:580px){.moveEx{grid-template-columns:minmax(65px,85px) minmax(135px,1fr);gap:4px;min-height:155px}.movePrompt{font-size:1.1rem}.moveRail{height:100px}.moveResult{grid-column:1/-1;text-align:center;display:flex;justify-content:center;align-items:center}.moveResult .moveLine{display:flex;gap:8px;align-items:center}.moveLineBottom{margin-top:0}.moveFeedback{grid-column:1/-1}}
 @media(max-width:580px){.moveOutcome{grid-column:1/-1}.moveResult .moveLine{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;align-items:center}.moveLineTop{display:inline-flex;flex-wrap:nowrap;gap:4px}.moveLineBottom{white-space:nowrap}.moveFeedback{text-align:center}}
 @media(prefers-reduced-motion:reduce){.moveDot.idle{animation:none}}
 
@@ -171,7 +170,7 @@
 .t3HelpBtn[aria-expanded="true"]{background:#dfefec;border-color:#69aaa8}
 .t3Status{font-size:.86rem;font-weight:900;color:#64798a;min-height:20px}
 .t3good .t3Status{color:#19815d}.t3bad .t3Status{color:#bb4858}
-.t3Assistance{border-top:1px dashed #c5d5d7;margin-top:11px;padding:10px 4px 3px;text-align:center}
+.t3Assistance{border-top:1px dashed #c5d5d7;margin-top:11px;padding:8px 4px 3px;text-align:center}
 .t3AssistTop{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 9px}
 .t3AssistNote{font-size:.78rem;font-weight:750;color:#5e717c}
 .t3UnitsBtn{font-size:.78rem;font-weight:850;min-height:35px;padding:6px 10px;border:1px solid #bcb2df;background:#f5efff;color:#6c4595}
@@ -204,7 +203,7 @@
 .t3KeyGrid button{min-height:46px;padding:4px 0;border:2px solid #ccd8da;background:#fff;border-radius:9px;font-size:1.2rem;font-weight:950;color:#143449}
 .t3KeyGrid button:active{background:#d8f4f2}.t3KeyGrid button:disabled{opacity:.45;cursor:default}
 .t3KeyGrid .t3NextKey{grid-column:1/-1;min-height:39px;font-size:.82rem;background:#e0efed;color:#16676e}
-/* v0.6.3 : virgule aux intercases, arceaux et aide plus compacte */
+/* v0.7.0 : virgule aux intercases, arceaux et aide plus compacte */
 .t3ManipRow{display:flex;align-items:center;justify-content:center;gap:14px;min-width:0}
 .t3ManipRow .t3BoardScroll{margin:0;flex:0 1 auto;min-width:0;padding:4px 4px 4px}
 .t3BoardSide{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:12px;flex:0 1 175px;min-width:128px;max-width:190px}
@@ -231,7 +230,7 @@
 @media(max-width:620px){.homeGrid{grid-template-columns:1fr}.t3Ex{padding:10px 9px}.t3Heading{gap:8px}.t3Controls{margin-left:0}.t3Expression{gap:5px}.t3Answer{width:104px}.t3Board{--cell:45px}}
 
 
-/* v0.6.3 — Les teintes bleu/mauve sont réservées au sens des déplacements. */
+/* v0.7.0 — Les teintes bleu/mauve sont réservées au sens des déplacements. */
 #moveScreen .eyebrow{color:#a85e20}
 #moveScreen .moveHelpTrigger{background:#fff4e5;border-color:#eac295;color:#875019}
 #moveScreen .moveHelpTrigger:hover{background:#ffebcf}
@@ -249,11 +248,11 @@
 #moveScreen #verifyMoves:hover{background:#965820}
 #moveScreen .moveHelpUnitBank{background:#f5efe6}
 #moveScreen .moveHelpTable .metricHeaders>div{background:#f1e9df!important}
-#moveScreen .moveHelpTable .metricPlaces>div:hover,
-#moveScreen .moveHelpTable .metricPlaces>div.helpHover{background:#fae9d5!important;outline-color:#bd803e}
+#moveScreen .moveHelpTable .metricHeaders>div:hover,
+#moveScreen .moveHelpTable .metricHeaders>div.helpHover{background:#fae9d5!important;outline-color:#bd803e}
 #moveScreen .moveHelpActions .primary{background:#ad6a2e;border-color:#ad6a2e}
 #moveLaunchBtn .symbol{background:#fae4c9;color:#95551e}
-#convertLaunchBtn .symbol{background:#d6ebdc;color:#256e4b}
+#convertLaunchCard .symbol{background:#d6ebdc;color:#256e4b}
 /* Une teinte sobre pour les commandes d'aide, distincte des flèches directionnelles. */
 .t3UnitsBtn{background:#edf4f0!important;border-color:#b9d1c4!important;color:#356b52!important}
 .t3UnitsBtn[aria-pressed="true"]{background:#dceee2!important;border-color:#87b79d!important}
@@ -280,7 +279,7 @@
 }
 
 
-/* v0.6.3 — interface épurée et sélection tactile explicite */
+/* v0.7.0 — interface épurée et sélection tactile explicite */
 #gameScreen.hasSelection .col.target,#gameScreen.hasSelection:not(.imagesMode) .col{border-color:#d77d24;box-shadow:inset 0 0 0 2px #f5bc67,0 0 0 2px #f9e1bb;background:#fff9ed;cursor:pointer}
 #gameScreen .itemCard.selected,#gameScreen .unitChip.selected{outline:3px solid #e99a33;outline-offset:2px;box-shadow:0 0 0 6px #f9e4bd}
 #gameScreen .unitChip.verifiedBad{border-color:#c73e55;background:#ffe9ee;box-shadow:0 0 0 2px #e69da9}
@@ -298,32 +297,138 @@
 #moveScreen .moveResult:not([data-moved]){color:#8a8c91;text-align:center;justify-content:center;font-size:1.6rem}
 @media(min-width:891px){#moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(102px,121px);column-gap:4px;padding-left:8px;padding-right:8px}}
 @media(max-width:890px) and (min-width:581px){#moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(105px,140px);column-gap:3px}}
-</style></head><body><div class="shell"><header><div><div class="brand">MATH<span>'AS</span> / LONGUEURS <small class="mutedHead">v0.6.3</small></div></div><div class="headerBtns"><button id="homeBtn" class="btn dark hidden" type="button">← Accueil</button><button id="helpBtn" class="btn dark hidden" type="button">? Aide</button><button id="fullBtn" class="btn dark" type="button">⛶ Plein écran</button></div></header><main><section id="homeScreen"><div class="eyebrow">Math'as · Les unités de longueur</div><h1 class="screenTitle">L'abaque, étape par étape.</h1><p class="sub">Choisis une activité pour commencer.</p><div class="homeGrid"><button id="launchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 54 48" width="47" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="48" height="34" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 7v34M35 7v34M3 20h48" stroke="currentColor" stroke-width="2"/><path d="M9 14h4m12 0h4m12 0h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 28h7m10 0h5m10 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span><strong>1. Construire l’abaque</strong><p>Place les unités, puis classe les images.</p></button><button id="moveLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">↔</span><strong>2. Compter les déplacements</strong><p>Fais glisser le point et compte les déplacements.</p></button><button id="convertLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">⇄</span><strong>3. Convertir les longueurs</strong><p>Convertis les longueurs, avec deux aides facultatives.</p></button></div></section><section id="moveScreen" class="hidden" aria-label="Compter les déplacements">
+
+/* v0.7.0 — Déblocages et modes : affichage compact, sur les boutons uniquement. */
+.homeCard{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.homeCard p{min-height:2.9em}
+.homeCard .progressDots{display:flex;gap:10px;margin-top:auto;padding-top:12px;min-height:25px}
+.progressDot{width:16px;height:16px;border-radius:50%;display:inline-block;border:2px solid #b1bec4;background:#f4f6f5;box-shadow:0 2px 3px #233c4b15}
+.progressDot.red{background:#d84e57;border-color:#ba3944}
+.progressDot.orange{background:#ef9b28;border-color:#d78313}
+.progressDot.green{background:#2da56b;border-color:#188c57}
+.lockNote{margin-top:auto;padding:8px 10px;border-radius:9px;background:#ebeff1;color:#4a5c68;font-size:.79rem;font-weight:900;line-height:1.3}
+.homeCard.lockedCard{background:#f1f2f0;border-color:#d5ddda;filter:saturate(.6)}
+.homeCard.lockedCard .symbol{background:#dfe7e7;color:#6d8282}
+.homeCard.lockedCard:hover{transform:none}
+.pageStep{display:inline-block;font-size:.74rem;font-weight:800;color:#866b48;vertical-align:middle;margin-left:12px}
+.t3Mode{border:2px solid #cbdad8;border-radius:16px;background:#fffdf9;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;padding:18px 15px;min-height:150px;font-weight:800;color:#213a44}
+.t3Mode strong{font-size:1.24rem}
+.t3Mode>span:nth-child(2){font-size:.86rem;color:#687680}
+.t3Mode .modeResult{margin-top:auto;padding-top:11px;font-size:.82rem;min-height:28px}
+.t3Mode.lockedMode{background:#ecefed;border-color:#d4dbd9;color:#879296;filter:saturate(.65)}
+.t3Mode.lockedMode .modeResult{color:#515b60}
+.t3Mode.grade-red{border-color:#d45764;background:#fff3f4}
+.t3Mode.grade-orange{border-color:#e79c38;background:#fff7e9}
+.t3Mode.grade-green{border-color:#34a46e;background:#edf9f2}
+.t3SessionHead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;color:#2d6064}
+.t3SessionHead>strong{font-size:.96rem}
+.masterToggle{position:fixed;bottom:5px;left:5px;z-index:4000;width:28px;height:28px;padding:0;border:1px solid #8b99a43d;background:#ffffff77;color:#34434d;opacity:.13;border-radius:50%;font-size:.75rem;font-weight:900}
+.masterToggle:hover,.masterToggle:focus-visible,.masterToggle.active{opacity:.82;background:#f5f9f8}
+.masterTools{position:fixed;bottom:7px;left:40px;z-index:4000;display:flex;align-items:center;gap:6px;padding:5px;background:#ffffffec;border:1px solid #b5ccc8;border-radius:12px;box-shadow:0 8px 24px #132c3f25}
+.masterTools span{font-size:.74rem;font-weight:900;color:#248358;padding:0 4px}.masterTools .btn{font-size:.73rem;min-height:30px;padding:5px 9px}
+.masterDialog{border:0;border-radius:17px;width:min(400px,calc(100vw - 24px));padding:23px;background:#fff;color:#173044;box-shadow:0 20px 65px #11293d66}
+.masterDialog::backdrop{background:#102638aa}
+.masterDialog h2{margin:0 0 9px;font-size:1.25rem}.masterDialog p{font-size:.9rem;color:#556873}
+.masterDialog input{width:100%;height:47px;border:2px solid #aac4c6;border-radius:10px;padding:10px;font-size:1.12rem;letter-spacing:.22em}
+.masterDialogActions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+.masterError{min-height:18px;font-size:.82rem;font-weight:850;color:#bf4054}
+@media(max-width:600px){.t3Mode{padding:12px;min-height:132px}.t3Mode strong{font-size:1.03rem}.t3Mode .modeResult{font-size:.72rem}.masterTools{max-width:calc(100vw - 45px);flex-wrap:wrap}.homeCard p{min-height:0}}
+
+/* v0.7.0.1 — ajustements demandés pour l’aide et l’activité 3 */
+.moveTop{display:grid!important;grid-template-columns:minmax(300px,470px) minmax(340px,1fr) auto;align-items:start;gap:12px;margin-bottom:12px}
+.moveTop .screenTitle{font-size:clamp(1.45rem,2.25vw,1.95rem);margin:3px 0 2px}
+.moveAbacus{position:relative!important;top:auto!important;left:auto!important;transform:none!important;width:100%!important;max-height:none!important;overflow:visible!important;z-index:auto!important;box-shadow:none!important;min-height:118px}
+.moveHelpTable{grid-template-rows:auto minmax(24px,auto)!important}
+.moveHelpTable .metricHeaders>div{min-height:64px;display:flex;justify-content:center;align-items:center;cursor:pointer;outline-offset:-3px}
+.moveHelpTable .metricPlaces>div{min-height:18px!important;background:transparent!important;border-top:0!important;border-bottom:0!important}
+@media(max-width:760px){.moveTop{grid-template-columns:1fr!important;align-items:flex-start}.moveHelpTrigger{width:100%}.moveAbacus{width:100%!important;min-height:0;padding:11px}.moveHelpTop strong{font-size:.9rem}}
+
+.t3ManipRow{display:grid!important;grid-template-columns:auto minmax(0,1fr) minmax(210px,290px) auto;align-items:center;justify-content:start;gap:12px;min-width:0}
+.t3ManipRow .t3BoardScroll{margin:0;min-width:0;padding:4px 4px 4px}
+.t3ManipRow .t3UnitsBtn{align-self:center;justify-self:start;min-width:122px}
+.t3BoardSide{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:12px;min-width:0;max-width:none!important;flex:0 1 auto!important}
+.t3Direction{font-size:1.02rem!important;font-weight:900;line-height:1.15;color:#49606d;text-align:center;min-height:0!important;display:flex!important;align-items:center;justify-content:center;flex:1}
+.t3Direction .t3Count{font-size:1.55rem!important}
+.t3Movement{height:38px!important}
+.t3Movement svg{height:38px!important}
+.t3Assistance{padding-bottom:8px}
+@media(max-width:930px){.t3ManipRow{grid-template-columns:auto minmax(0,1fr)!important;grid-template-areas:"units units" "board board" "dir reset";gap:8px}.t3ManipRow .t3UnitsBtn{grid-area:units}.t3ManipRow .t3BoardScroll{grid-area:board}.t3BoardSide{grid-area:dir / dir / reset / reset;justify-content:space-between!important}.t3Direction{text-align:left!important;justify-content:flex-start!important}.t3ResetHelp{justify-self:end}}
+@media(max-width:690px){.t3ManipRow{display:flex!important;flex-direction:column;align-items:stretch;gap:0}.t3ManipRow .t3BoardScroll{margin:auto;max-width:100%}.t3BoardSide{flex-direction:row!important;align-items:center!important;gap:9px;justify-content:space-between!important;margin-top:4px}.t3Direction{display:block!important;flex:1;min-height:0!important;text-align:left!important;font-size:.94rem!important}.t3Direction .t3Count{font-size:1.2rem!important}.t3ResetHelp{font-size:.7rem;min-height:33px;padding:5px 8px;max-width:175px}.t3Board{--cell:45px}}
+
+
+/* v0.7.0 — modes sur l’accueil, verrous plus lisibles, aide compacte */
+.homeCard.homeCardPanel{cursor:default}
+.homeModeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;margin-top:auto;padding-top:10px}
+.homeModeBtn{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:1px;text-align:left;width:100%;min-height:56px;padding:9px 12px 8px;border-radius:14px;border:2px solid #d4dfdf;background:#f8fbfb;color:#173044;box-shadow:none}
+.homeModeBtn strong{margin:0;font-size:1rem;display:block;line-height:1.1}.homeModeBtn span{font-size:.8rem;color:#60727c;line-height:1.1}.homeModeBtn .modeResult{margin-top:3px;padding-top:0;font-size:.74rem;font-weight:900;color:#56636a;line-height:1.08}.homeModeBtn .modeResult:empty{display:none}
+.homeModeBtn.lockedMode{background:#eef1f1;color:#7a878d;border-color:#d7dfe0;filter:saturate(.7)}
+.homeModeBtn.grade-orange{border-color:#e39d47;background:#fff5e8}.homeModeBtn.grade-green{border-color:#49a66e;background:#edf8f1}.homeModeBtn.grade-red{border-color:#d46767;background:#fff0f0}
+.homeCard.lockedCard{background:#e7eaeb!important;border-color:#c9d2d4!important;filter:grayscale(.35) saturate(.25) brightness(.98)!important;opacity:.95}.homeCard.lockedCard .symbol{background:#d8dfe1!important;color:#728389!important}.homeCard.lockedCard p,.homeCard.lockedCard strong{color:#60717a!important}
+#moveScreen .homeCard.lockedCard,#homeScreen .homeCard.lockedCard{box-shadow:none}
+#moveAbacus.compactDone{min-height:0!important;padding:5px 8px!important}.moveAbacus.compactDone #moveHelpRevealed{display:block}.moveAbacus.compactDone .metricTable.compactAbacus{grid-template-rows:auto minmax(10px,auto)}.moveAbacus.compactDone .compactAbacus .metricHeaders>div{min-height:38px!important;font-size:1rem;padding:3px 0}.moveAbacus.compactDone .compactAbacus .metricPlaces>div{min-height:10px!important;padding:0;border:0!important}.moveAbacus.compactDone .metricTableScroll{padding:0}.moveAbacus.compactDone{background:#f7faf9}
+.t3Status:empty{display:none}.t3Controls{margin:8px 0 0 46px!important}.t3Assistance{margin-top:6px!important;padding:4px 0 3px!important;border-top:1px dashed #c5d5d7}.t3ManipRow{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto auto!important;align-items:center!important;gap:10px!important}.t3ManipRow .t3BoardScroll{margin:0!important;padding:0 2px!important}.t3ManipRow .t3UnitsBtn{justify-self:start;align-self:center}.t3BoardSide{display:contents!important}.t3Direction{justify-self:center;align-self:center;font-size:1rem!important;min-height:0!important;display:flex!important;align-items:center;justify-content:center;margin:0!important}.t3BoardActions{justify-self:end}.t3ResetHelp{min-height:36px!important}.t3Ex .t3Board{margin:0 auto}.t3Ex .t3Digits{justify-content:center}.t3Ex .t3Commas{justify-content:center}
+@media(max-width:1040px){.homeModeGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.t3ManipRow{grid-template-columns:auto minmax(0,1fr)!important;grid-template-areas:"units reset" "board board" "dir dir"}.t3ManipRow .t3UnitsBtn{grid-area:units}.t3ManipRow .t3BoardScroll{grid-area:board}.t3Direction{grid-area:dir;justify-content:flex-start!important;text-align:left!important;padding-left:4px}.t3BoardActions{grid-area:reset;justify-self:end}}
+@media(max-width:700px){.homeModeGrid{grid-template-columns:1fr 1fr}.homeModeBtn{min-height:54px;padding:8px 10px}.t3ManipRow{display:flex!important;flex-direction:column;align-items:stretch!important;gap:6px!important}.t3ManipRow .t3BoardScroll{align-self:center}.t3Direction{text-align:left!important;justify-content:flex-start!important}.t3BoardActions{justify-self:auto;align-self:flex-end}.t3Ex .t3Board{--cell:46px}}
+@media(max-width:600px){#convertLaunchCard{min-height:0}.homeModeGrid{grid-template-columns:1fr 1fr;gap:8px}.homeModeBtn{min-height:52px;padding:8px 9px}.homeModeBtn strong{font-size:.92rem}.homeModeBtn span{font-size:.73rem}.homeModeBtn .modeResult{font-size:.7rem}}
+
+
+/* v0.7.0 — aides mises en évidence + célébrations */
+.homeModeBtn[data-mode="sudden"] > span:not(.modeResult){display:none}
+.homeModeBtn[data-mode="sudden"] .modeResult:empty{display:none}
+.moveEx.helpUsed .moveRail{position:relative}
+.moveEx.helpUsed .moveRail::before{content:"";position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-52%);border-radius:999px;background:radial-gradient(circle,#d8bef68a 0%,#d8bef652 48%,transparent 72%);pointer-events:none;z-index:0}
+.moveEx.helpUsed .moveRail svg{position:relative;z-index:1}
+.t3Ex.helpUsed .t3Answer{box-shadow:0 0 0 4px #d8bef680,0 10px 24px #b98be03b}
+.t3Ex.helpUsed .t3Num{box-shadow:0 0 0 6px #d8bef672}
+#celebrateToast{position:fixed;left:50%;top:82px;transform:translateX(-50%) scale(.92);padding:14px 22px;border-radius:18px;background:linear-gradient(135deg,#ffffff,#f7f1ff);border:2px solid #d6bdf6;color:#5d3490;font-weight:950;font-size:1.25rem;box-shadow:0 16px 36px #3d245328;z-index:5000;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+#celebrateToast.show{opacity:1;transform:translateX(-50%) scale(1)}
+.celebrateOverlay{border:0;border-radius:24px;padding:0;max-width:min(92vw,560px);width:min(92vw,560px);background:transparent}
+.celebrateOverlay::backdrop{background:#13233870;backdrop-filter:blur(4px)}
+.celebrateCard{background:linear-gradient(180deg,#fffdfd,#fbf8ff);border:2px solid #d7c2f4;border-radius:24px;padding:24px 24px 20px;box-shadow:0 18px 50px #24153c33;text-align:center;position:relative;overflow:hidden}
+.celebrateBurst{font-size:3.2rem;line-height:1;animation:popIn .46s cubic-bezier(.2,.9,.2,1.25)}
+.celebrateTitle{margin:10px 0 8px;font-size:clamp(1.5rem,4vw,2.2rem);color:#4d2c7e;font-weight:1000}
+.celebrateText{color:#5a6772;font-weight:700;line-height:1.45;margin:0 auto 16px;max-width:34ch}
+.celebrateActions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.celebrateActions .btn{min-width:150px}
+.celebratePrimary{background:#8d62d6!important;border-color:#8d62d6!important;color:#fff!important}
+.celebrateDecor,.celebrateDecor2{position:absolute;border-radius:999px;filter:blur(2px);opacity:.28;pointer-events:none}
+.celebrateDecor{width:180px;height:180px;left:-50px;top:-60px;background:#dcbef7}
+.celebrateDecor2{width:160px;height:160px;right:-40px;bottom:-65px;background:#b8e4f0}
+@keyframes popIn{0%{transform:scale(.55);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+
+
+/* v0.7.0 : résultats chiffrés, sans allonger les boutons */
+.homeCard .progressDots{gap:12px;align-items:flex-end;padding-top:8px;min-height:0}
+.dotResult{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:37px}
+.dotScore{font-size:.75rem;line-height:1.1;white-space:nowrap;font-weight:950;color:#324d5c;min-height:13px;font-variant-numeric:tabular-nums}
+.dotScore:empty{visibility:hidden}
+.dotResult .progressDot{flex:none}
+.homeModeBtn .modeResult{font-size:.75rem;line-height:1.15;font-variant-numeric:tabular-nums;white-space:normal;overflow-wrap:normal}
+.homeModeBtn .modeResult:empty{display:none}
+@media(max-width:600px){.dotScore{font-size:.72rem}.homeModeBtn .modeResult{font-size:.71rem}}
+</style></head><body><div class="shell"><header><div><div class="brand">MATH<span>'AS</span> / LONGUEURS <small class="mutedHead">v0.7.0</small></div></div><div class="headerBtns"><button id="homeBtn" class="btn dark hidden" type="button">← Accueil</button><button id="helpBtn" class="btn dark hidden" type="button">? Aide</button><button id="fullBtn" class="btn dark" type="button">⛶ Plein écran</button></div></header><main><section id="homeScreen"><div class="eyebrow">Math'as · Les unités de longueur</div><h1 class="screenTitle">L'abaque, étape par étape.</h1><p class="sub">Choisis une activité pour commencer.</p><div class="homeGrid"><button id="launchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 54 48" width="47" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="48" height="34" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 7v34M35 7v34M3 20h48" stroke="currentColor" stroke-width="2"/><path d="M9 14h4m12 0h4m12 0h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 28h7m10 0h5m10 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span><strong>1. Construire l’abaque</strong><p>Place les unités, puis classe les images.</p><span class="progressDots" id="stage1Dots" aria-label="Progression : 0 réussite sur 2"></span></button><button id="moveLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">↔</span><strong>2. Compter les déplacements</strong><p>Fais glisser le point et compte les déplacements.</p><span class="progressDots" id="stage2Dots" aria-label="Progression : 0 réussite sur 2"></span><span class="lockNote hidden" id="moveLock">🔒 Réussis 2 fois l’activité 1 · 0/2</span></button><div id="convertLaunchCard" class="homeCard homeCardPanel"><span class="symbol" aria-hidden="true">⇄</span><strong>3. Convertir les longueurs</strong><p>Convertis les longueurs, avec deux aides facultatives.</p><div class="homeModeGrid" id="homeModeGrid" aria-label="Modes de l’activité 3"><button type="button" class="t3Mode homeModeBtn" data-mode="one"><strong>1 page</strong><span>4 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="three"><strong>3 pages</strong><span>12 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="five"><strong>5 pages</strong><span>20 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="sudden"><strong>Mort subite</strong><span></span><span class="modeResult"></span></button></div><span class="lockNote hidden" id="convertLock">🔒 Réussis 2 fois l’activité 2 · 0/2</span></div></div></section><section id="moveScreen" class="hidden" aria-label="Compter les déplacements">
 <div class="moveTop">
   <div><div class="eyebrow">Activité 2 · Comprendre les déplacements</div>
-  <h1 class="screenTitle">Compte les déplacements</h1>
+  <h1 class="screenTitle">Compte les déplacements <span class="pageStep" id="movePageLabel">Page 1 / 2</span></h1>
+  </div>
+  <div id="moveAbacus" class="moveAbacus hidden" role="dialog" aria-modal="false" aria-label="Abaque d’aide">
+    <div id="moveHelpTop" class="moveHelpTop"><strong id="moveHelpTitle">Reconstitue l’abaque pour obtenir l’aide</strong><button class="btn" type="button" id="closeMoveAbacus" aria-label="Fermer l'aide">✕ Fermer</button></div>
+    <div id="moveHelpChallenge">
+      <div id="moveHelpUnitBank" class="moveHelpUnitBank" aria-label="Étiquettes à placer"></div>
+      <div class="metricTableScroll"><div class="metricTable moveHelpTable">
+        <div id="moveHelpSlots" class="metricHeaders" role="group" aria-label="Sept colonnes de l'abaque"></div>
+        <div class="metricPlaces" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div></div>
+      <div class="moveHelpActions"><button id="verifyMoveHelp" type="button" class="btn primary" disabled>✓ Valider les unités</button><div id="moveHelpFeedback" class="moveHelpFeedback" role="status" aria-live="polite"></div></div>
+    </div>
+    <div id="moveHelpRevealed" class="hidden">
+      <div class="metricTableScroll compactAbacus"><div class="metricTable compactAbacus" role="table" aria-label="Abaque métrique complet">
+        <div class="metricHeaders" role="row"><div role="columnheader">km</div><div role="columnheader">hm</div><div role="columnheader">dam</div><div role="columnheader">m</div><div role="columnheader">dm</div><div role="columnheader">cm</div><div role="columnheader">mm</div></div>
+        <div class="metricPlaces" role="row"><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div></div>
+      </div></div>
+    </div>
   </div>
   <button class="btn moveHelpTrigger" id="showMoveAbacus" type="button" aria-expanded="false" aria-controls="moveAbacus">▦ Afficher l’abaque</button>
-</div>
-<div id="moveAbacus" class="moveAbacus hidden" role="dialog" aria-modal="false" aria-label="Abaque d’aide">
-  <div class="moveHelpTop"><strong id="moveHelpTitle">Reconstitue l’abaque pour obtenir l’aide</strong><button class="btn" type="button" id="closeMoveAbacus" aria-label="Fermer l'aide">✕ Fermer</button></div>
-  <div id="moveHelpChallenge">
-    <p class="note">Place les 4 unités dans les 7 colonnes, puis valide. Tu peux te tromper et corriger ton placement.</p>
-    <div id="moveHelpUnitBank" class="moveHelpUnitBank" aria-label="Étiquettes à placer"></div>
-    <div class="metricTableScroll"><div class="metricTable moveHelpTable">
-      <div class="metricHeaders" aria-hidden="true"><div>?</div><div>?</div><div>?</div><div>?</div><div>?</div><div>?</div><div>?</div></div>
-      <div id="moveHelpSlots" class="metricPlaces" role="group" aria-label="Sept colonnes de l'abaque"></div>
-    </div></div>
-    <div class="moveHelpActions"><button id="verifyMoveHelp" type="button" class="btn primary" disabled>✓ Valider les unités</button><div id="moveHelpFeedback" class="moveHelpFeedback" role="status" aria-live="polite"></div></div>
-  </div>
-  <div id="moveHelpRevealed" class="hidden">
-    <div class="tableTop"><span class="tableHeading">Tableau des unités de longueur</span><span class="tableHint">1 déplacement = 1 colonne</span></div>
-    <div class="metricTableScroll"><div class="metricTable" role="table" aria-label="Abaque métrique complet">
-      <div class="metricHeaders" role="row"><div role="columnheader">km</div><div role="columnheader">hm</div><div role="columnheader">dam</div><div role="columnheader">m</div><div role="columnheader">dm</div><div role="columnheader">cm</div><div role="columnheader">mm</div></div>
-      <div class="metricPlaces" role="row"><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div><div role="cell"></div></div>
-    </div></div>
-    <div class="metricDirections"><span>← Vers les grandes unités</span><span>Vers les petites unités →</span></div>
-  </div>
 </div>
 <div class="moveExamples" id="moveExamples"></div>
 <div class="moveAllActions"><button class="btn primary" id="verifyMoves" type="button">✓ Tout vérifier</button><button class="btn hidden" id="moveNew" type="button">↻ Nouvelle série</button><div class="moveAllFeedback" id="moveAllFeedback" role="status" aria-live="polite"></div></div>
@@ -334,7 +439,8 @@
     <h1 class="screenTitle">Convertis les longueurs</h1>
     <p class="sub">Écris les réponses. Utilise les aides si nécessaire.</p>
   </div><div class="t3TopCount hidden" id="t3Progress" aria-live="polite"></div></div>
-  <div class="t3Layout"><div>
+  <div class="t3SessionHead hidden" id="t3SessionHead"><strong id="t3PageLabel">Page 1 / 1</strong></div>
+  <div class="t3Layout hidden" id="t3Layout"><div>
     <div class="t3ExList" id="t3ExList"></div>
     <div class="t3Bottom"><button type="button" class="btn primary" id="t3Verify">✓ Vérifier les 4 réponses</button>
       <button type="button" class="btn hidden" id="t3New">↻ Nouvelle série</button>
@@ -356,7 +462,15 @@
   <div class="bankArrows"><button class="bankArrow" type="button" id="bankPrev" aria-label="Voir les images précédentes">←</button><button class="bankArrow" type="button" id="bankNext" aria-label="Voir les images suivantes">→</button></div>
 </div>
 <div id="imagesBank" class="imagesBank" aria-label="Liste des images, défilable horizontalement"></div>
-</section><div class="actions"><button id="verifyBtn" class="btn primary" type="button">✓ Valider</button><button id="retryBtn" class="btn" type="button">↺ Recommencer</button><button id="continueBtn" class="btn primary hidden" type="button">Continuer →</button><button id="newBtn" class="btn hidden" type="button">Nouvelle partie ↻</button></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div></section></main></div><script>
+</section><div class="actions"><button id="verifyBtn" class="btn primary" type="button">✓ Valider</button><button id="retryBtn" class="btn" type="button">↺ Recommencer</button><button id="continueBtn" class="btn primary hidden" type="button">Continuer →</button><button id="newBtn" class="btn hidden" type="button">Nouvelle partie ↻</button></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div></section></main></div>
+<button id="masterToggle" class="masterToggle" type="button" aria-label="Accès enseignant" title="Mode enseignant">M</button>
+<div class="masterTools hidden" id="masterTools"><span>Master actif</span><button type="button" id="masterReset" class="btn">Retour à 0</button><button type="button" id="masterExit" class="btn">Quitter Master</button></div>
+<dialog id="masterDialog" class="masterDialog" aria-labelledby="masterDialogTitle"><form id="masterForm" method="dialog">
+<h2 id="masterDialogTitle">Mode enseignant</h2><p>Entre le mot de passe pour débloquer les activités pendant cette session.</p>
+<input id="masterPassword" type="password" autocomplete="off" spellcheck="false" aria-label="Mot de passe enseignant" required>
+<div id="masterError" class="masterError" role="alert"></div>
+<div class="masterDialogActions"><button class="btn" type="button" id="masterCancel">Annuler</button><button class="btn primary" type="submit">Valider</button></div>
+</form></dialog><script>
 window.MATHAS_ITEMS = [
   {
     "id": "ant",
@@ -529,7 +643,112 @@ window.MATHAS_ITEMS = [
 ];
 
 </script><script>
-(()=>{'use strict';const UNITS=['km','hm','dam','m','dm','cm','mm'],TARGET=['km','m','cm','mm'],$=id=>document.getElementById(id),items=window.MATHAS_ITEMS;let stage=0,unitPosition={},imgPosition={},round=[],chosen=null,verified=false,history=[],drag=null,ghost=null,ignoreClick=false,showUnitErrors=false;
+/* Progression uniquement locale et conservée sur cet appareil ; aucune requête réseau. */
+(()=>{'use strict';
+ const STORAGE='mathas_abaque_longueurs_progress_v1', SESSION='mathas_abaque_longueurs_master_v1';
+ const $=id=>document.getElementById(id);
+ const blank=()=>({stage1:{passes:[],passScores:[],failed:false,failedScore:null},stage2:{passes:[],passScores:[],failed:false,failedScore:null},modes:{one:null,three:null,five:null,sudden:null},modeScores:{one:null,three:null,five:null},suddenBest:0});
+ let data=blank(), master=false;
+ try{const saved=JSON.parse(localStorage.getItem(STORAGE));if(saved&&typeof saved==='object'){
+   for(const key of ['stage1','stage2']) if(saved[key]){
+     const old=saved[key];const raw=Array.isArray(old.passes)?old.passes.slice(0,2):[];
+     data[key].passes=raw.filter(x=>x==='orange'||x==='green');
+     data[key].passScores=data[key].passes.map((grade,i)=>{
+       const v=Array.isArray(old.passScores)?old.passScores[i]:null;
+       return Number.isInteger(v)&&v>=0&&v<=(key==='stage1'?12:8)?v:null;
+     });
+     data[key].failed=!!old.failed;
+     const fail=old.failedScore;data[key].failedScore=Number.isInteger(fail)&&fail>=0&&fail<=(key==='stage1'?12:8)?fail:null;
+   }
+   if(saved.modes&&typeof saved.modes==='object')for(const m of Object.keys(data.modes))if(['red','orange','green'].includes(saved.modes[m]))data.modes[m]=saved.modes[m];
+   if(saved.modeScores&&typeof saved.modeScores==='object')for(const [m,total] of [['one',4],['three',12],['five',20]]){
+     const v=saved.modeScores[m];if(Number.isInteger(v)&&v>=0&&v<=total)data.modeScores[m]=v;
+   }
+   data.suddenBest=Math.max(0,Math.floor(Number(saved.suddenBest)||0));
+ }}catch(e){}
+ try{master=sessionStorage.getItem(SESSION)==='1'}catch(e){}
+ const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(data))}catch(e){}};
+ const color=(correct,total)=>correct===total?'green':correct/total>=.8?'orange':'red';
+ const passes=key=>data[key].passes.length;
+ const unlocked=what=>master||what==='stage1'||what==='stage2'&&passes('stage1')>=2||what==='stage3'&&passes('stage2')>=2||what==='one'&&passes('stage2')>=2||what==='three'&&['orange','green'].includes(data.modes.one)||what==='five'&&['orange','green'].includes(data.modes.three)||what==='sudden'&&['orange','green'].includes(data.modes.five);
+ // Master autorise les essais, mais leurs résultats n'avancent pas les déblocages des élèves.
+ const recordStage=(key,correct,total)=>{
+  if(master)return {grade:color(correct,total),count:passes(key)};
+  const grade=color(correct,total);
+  if(grade==='red'){if(passes(key)<2){data[key].failed=true;data[key].failedScore=correct}}
+  else if(passes(key)<2){data[key].passes.push(grade);data[key].passScores.push(correct);data[key].failed=false;data[key].failedScore=null}
+  save();render();return {grade,count:passes(key)};
+ };
+ const recordMode=(key,correct,total)=>{
+  const grade=color(correct,total);if(master)return grade;
+  const rank={red:0,orange:1,green:2};
+  const oldGrade=data.modes[key];const previous=data.modeScores[key];
+  if(!oldGrade||rank[grade]>rank[oldGrade]){data.modes[key]=grade;data.modeScores[key]=correct}
+  else if(rank[grade]===rank[oldGrade] && (!Number.isInteger(previous)||correct>previous))data.modeScores[key]=correct;
+  save();render();return grade;
+ };
+ const recordSudden=points=>{if(master)return;data.suddenBest=Math.max(data.suddenBest,points);data.modes.sudden=points>0?'green':'red';save();render()};
+ function dots(key){const target=$(key==='stage1'?'stage1Dots':'stage2Dots');target.replaceChildren();
+  const total=key==='stage1'?12:8;
+  for(let i=0;i<2;i++){
+   const col=data[key].passes[i]||((i===passes(key)&&data[key].failed)?'red':'empty');
+   const score=col==='red'?data[key].failedScore:data[key].passScores[i];
+   const shown=col==='empty'?'':Number.isInteger(score)?`${score}/${total}`:col==='green'?'100 %':col==='orange'?'≥80 %':'<80 %';
+   const group=document.createElement('span');group.className='dotResult';
+   const label=document.createElement('span');label.className='dotScore';label.textContent=shown;
+   const dot=document.createElement('span');dot.className='progressDot '+col;dot.setAttribute('aria-hidden','true');
+   group.append(label,dot);group.setAttribute('aria-label',shown?`${shown}, ${col==='green'?'sans-faute':col==='orange'?'réussite':'à réessayer'}`:'Non réalisé');
+   target.appendChild(group);
+  }
+  target.setAttribute('aria-label',passes(key)+' réussites sur 2');
+ }
+ function render(){dots('stage1');dots('stage2');
+  $('moveLaunchBtn').classList.toggle('lockedCard',!unlocked('stage2'));
+  $('moveLaunchBtn').setAttribute('aria-disabled',String(!unlocked('stage2')));
+  $('moveLock').classList.toggle('hidden',unlocked('stage2'));
+  $('moveLock').textContent='🔒 Activité 1 · '+passes('stage1')+'/2 réussites';
+  $('convertLaunchCard').classList.toggle('lockedCard',!unlocked('stage3'));
+  $('convertLock').classList.toggle('hidden',unlocked('stage3'));
+  $('convertLock').textContent='🔒 Activité 2 · '+passes('stage2')+'/2 réussites';
+  $('masterToggle').classList.toggle('active',master);$('masterTools').classList.toggle('hidden',!master);
+  const homeVisibleMode=(m)=>{
+    if(!unlocked('stage3')) return false;
+    if(unlocked(m)) return true;
+    const prev={three:'one',five:'three',sudden:'five'}[m];
+    return !!prev && unlocked(prev);
+  };
+  for(const m of ['one','three','five','sudden']){
+   const state=data.modes[m];const open=unlocked(m);
+   const prev={one:'Activité 2',three:'1 page',five:'3 pages',sudden:'5 pages'}[m];
+   const total={one:4,three:12,five:20}[m];
+   const best=data.modeScores[m];
+   const scoreText=Number.isInteger(best)?`Meilleur : ${best}/${total}`:state==='green'?`Meilleur : ${total}/${total}`:state==='orange'?'≥80 % (ancien score)':state==='red'?'<80 % (ancien score)':'';
+   const noteText=m==='sudden'?'':(!open?`🔒 ${prev} · 80 %`:(scoreText||''));
+   document.querySelectorAll(`[data-mode="${m}"]`).forEach(b=>{
+     b.classList.toggle('lockedMode',!open);b.classList.remove('grade-red','grade-orange','grade-green');if(state)b.classList.add('grade-'+state);
+     b.setAttribute('aria-disabled',String(!open));
+     const note=b.querySelector('.modeResult'); if(note) note.textContent=noteText;
+     if(b.classList.contains('homeModeBtn')) b.classList.toggle('hidden',!homeVisibleMode(m));
+   });
+  }
+ }
+ const reset=()=>{data=blank();save();render()};
+ $('masterToggle').addEventListener('click',()=>{
+  if(master)return;
+  $('masterError').textContent='';$('masterPassword').value='';$('masterDialog').showModal();$('masterPassword').focus();
+ });
+ $('masterCancel').addEventListener('click',()=>$('masterDialog').close());
+ $('masterForm').addEventListener('submit',e=>{e.preventDefault();
+  if($('masterPassword').value!=='Thecakeisalie'){$('masterError').textContent='Mot de passe incorrect.';$('masterPassword').value='';return}
+  master=true;try{sessionStorage.setItem(SESSION,'1')}catch(e){}$('masterDialog').close();render();
+ });
+ $('masterExit').addEventListener('click',()=>{master=false;try{sessionStorage.removeItem(SESSION)}catch(e){}render()});
+ $('masterReset').addEventListener('click',()=>{if(master&&confirm('Effacer la progression, les déblocages et le record Mort subite sur cet appareil ?'))reset()});
+ window.MATHAS_PROGRESS={unlocked,recordStage,recordMode,recordSudden,render,grade:color,passes,reset,get master(){return master}};
+ render();
+})();
+</script><script>
+(()=>{'use strict';const UNITS=['km','hm','dam','m','dm','cm','mm'],TARGET=['km','m','cm','mm'],$=id=>document.getElementById(id),items=window.MATHAS_ITEMS;let stage=0,unitPosition={},imgPosition={},round=[],chosen=null,verified=false,history=[],drag=null,ghost=null,ignoreClick=false,showUnitErrors=false,unitFirstScore=0,unitScored=false;
 const shuffle=x=>{const a=[...x];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 function drawRound(){// Toujours 8 images : le plus souvent 2 par unité, parfois 1/3/2/2.
  const counts=Object.fromEntries(TARGET.map(u=>[u,2]));
@@ -537,7 +756,7 @@ function drawRound(){// Toujours 8 images : le plus souvent 2 par unité, parfoi
  let selection=[];for(const u of TARGET){const candidates=shuffle(items.filter(a=>a.unit===u));const fresh=candidates.filter(a=>!history.includes(a.id)),old=candidates.filter(a=>history.includes(a.id));selection.push(...[...fresh,...old].slice(0,counts[u]));}history=[...new Set([...selection.map(x=>x.id),...history])].slice(0,14);return shuffle(selection);
 }
 function say(t,cl=''){$('feedback').textContent=t;$('feedback').className='feedback '+cl;}
-function start(){round=drawRound();unitPosition={};imgPosition={};stage=1;verified=false;chosen=null;showUnitErrors=false;$('homeScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');$('gameScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');$('helpBtn').classList.remove('hidden');$('help').classList.add('hidden');say('');render();}
+function start(){round=drawRound();unitPosition={};imgPosition={};stage=1;verified=false;chosen=null;showUnitErrors=false;unitFirstScore=0;unitScored=false;$('homeScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');$('gameScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');$('helpBtn').classList.remove('hidden');$('help').classList.add('hidden');say('');render();}
 function home(){$('homeScreen').classList.remove('hidden');$('gameScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('homeBtn').classList.add('hidden');$('helpBtn').classList.add('hidden');stage=0;}
 function mapForStage(){return stage===1?unitPosition:imgPosition;}
 function itemFor(id){return items.find(a=>a.id===id);}
@@ -565,16 +784,23 @@ function check(){
  const map=mapForStage(),total=stage===1?4:round.length;
  if(verified||Object.keys(map).length!==total)return;
  const correct=stage===1?TARGET.filter(u=>map[u]===u).length:round.filter(a=>map[a.id]===a.unit).length;
+ if(stage===1&&!unitScored){unitFirstScore=correct;unitScored=true}
  if(stage===1){
-  if(correct===4){verified=true;next();return;}
+  if(correct===4){window.MATHAS_CELEBRATE?.toast();verified=true;next();return;}
   showUnitErrors=true;
   say(`${correct} unité${correct>1?'s':''} bien placée${correct>1?'s':''} sur 4. Corrige les étiquettes rouges puis valide à nouveau.`,'error');
   render();return;
  }
  verified=true;
+ const score=unitFirstScore+correct, grade=window.MATHAS_PROGRESS.recordStage('stage1',score,12);
  if(correct===total)say(`Bravo ! Les ${total} images sont bien classées.`,'good');
  else say(`${correct} bonne${correct>1?'s':''} réponse${correct>1?'s':''} sur ${total}. Corrections : ${round.filter(a=>map[a.id]!==a.unit).map(a=>a.label+' → '+a.unit).join(' · ')}`,'error');
+ if(grade.grade==='red')say(`${score}/12 au premier essai. Il faut au moins 10/12 pour valider une réussite.`,'error');
+ else say(`${score}/12 au premier essai · ${grade.count}/2 réussites.`,'good');
  render();
+ const nextLabel=window.MATHAS_PROGRESS.unlocked('stage2')?'Activité 2':'2e série';
+ const nextAction=window.MATHAS_PROGRESS.unlocked('stage2')?(()=>document.getElementById('moveLaunchBtn').click()):start;
+ window.MATHAS_CELEBRATE?.modal({title:grade.grade==='red'?'Continue !':'Bravo !',emoji:grade.grade==='red'?'✨':'🏆',text:grade.grade==='red'?`Tu as obtenu ${score}/12. Il faut au moins 10/12 pour valider cette série.`:`Série terminée : ${score}/12.`,buttons:[{label:'Accueil',action:home},{label:'Recommencer',action:start},{label:nextLabel,primary:true,action:nextAction}]});
 }
 function next(){if(stage!==1||!verified)return;stage=2;verified=false;chosen=null;say('');render();requestAnimationFrame(()=>{document.getElementById('abaqueWrap').scrollIntoView({behavior:'smooth',block:'start'});});}
 function retry(){if(verified)return;if(stage===1)unitPosition={};else imgPosition={};chosen=null;showUnitErrors=false;say('');render();}
@@ -596,7 +822,7 @@ const $=id=>document.getElementById(id);
 const names=['km','hm','dam','m','dm','cm','mm'];
 const targets=['km','m','cm','mm'];
 const pairs=[];for(const a of targets)for(const b of targets)if(a!==b)pairs.push([a,b]);
-let tasks=[];const states=[0,0,0,0],checked=[false,false,false,false];
+let tasks=[];const states=[0,0,0,0],checked=[false,false,false,false];let movePage=0,moveCorrect=0,pageChecked=false,moveHelpUsed=false;
 let previousTasks=[];
 function shufflePairs(list){const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a}
 function newTasks(){
@@ -615,15 +841,17 @@ function newTasks(){
 let refs=[],helpPosition={},helpSelected=null,helpUnlocked=false,helpDrag=null,helpGhost=null,suppressUnitClick=false;
 function expected(a,b){return names.indexOf(b)-names.indexOf(a)}
 function hideHelp(){
- $('moveAbacus').classList.add('hidden');$('showMoveAbacus').setAttribute('aria-expanded','false');
+ $('moveAbacus').classList.add('hidden');$('moveAbacus').classList.remove('compactDone');$('moveHelpTop').classList.remove('hidden');$('showMoveAbacus').setAttribute('aria-expanded','false');
  $('showMoveAbacus').textContent='▦ Afficher l’abaque';
 }
 function openMoves(){
+ if(!window.MATHAS_PROGRESS.unlocked('stage2'))return;
+ movePage=0;moveCorrect=0;pageChecked=false;
  $('homeScreen').classList.add('hidden');$('gameScreen').classList.add('hidden');$('convertScreen').classList.add('hidden');
  $('moveScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');
  $('helpBtn').classList.add('hidden');hideHelp();
- helpUnlocked=false;helpPosition={};helpSelected=null;
- newTasks();renderAll();renderHelp();$('moveNew').classList.add('hidden');$('verifyMoves').classList.remove('hidden');
+ helpUnlocked=false;helpPosition={};helpSelected=null;moveHelpUsed=false;
+ newTasks();renderAll();renderHelp();$('moveNew').classList.add('hidden');$('verifyMoves').classList.remove('hidden');$('movePageLabel').textContent='Page 1 / 2';
  window.scrollTo({top:0,behavior:'smooth'});
 }
 function color(n){const k=Math.abs(n);if(!k)return '#738696';const l=n<0?
@@ -644,7 +872,7 @@ function svg(i){
 }
 function description(n){return n===0?'Au point central. Choisir un déplacement.':`${Math.abs(n)} déplacement${Math.abs(n)>1?'s':''} vers la ${n<0?'gauche':'droite'}`}
 function renderOne(i){
- const box=refs[i];if(!box)return;const n=states[i];box.dataset.dir=n<0?'left':n>0?'right':'none';
+ const box=refs[i];if(!box)return;const n=states[i];box.dataset.dir=n<0?'left':n>0?'right':'none';box.classList.toggle('helpUsed',moveHelpUsed);
  box.style.setProperty('--shade',color(n));
  const rail=box.querySelector('.moveRail');rail.innerHTML=svg(i);
  box.querySelector('.moveResult').toggleAttribute('data-moved',n!==0);box.querySelector('.moveResult').innerHTML=n===0?'?':`<div class="moveLine"><div class="moveLineTop"><strong>${Math.abs(n)}</strong><span>déplacement${Math.abs(n)>1?'s':''}</span></div><div class="moveLineBottom">vers la <span class="moveWord">${n<0?'gauche':'droite'}</span></div></div>`;
@@ -654,7 +882,7 @@ function renderOne(i){
   box.querySelector('.moveFeedback').className='moveFeedback';
  }
 }
-function setVal(i,n){states[i]=Math.max(-6,Math.min(6,Math.round(n)));checked[i]=false;renderOne(i);$('moveAllFeedback').textContent=''}
+function setVal(i,n){if(pageChecked)return;states[i]=Math.max(-6,Math.min(6,Math.round(n)));checked[i]=false;renderOne(i);$('moveAllFeedback').textContent=''}
 function pointAt(i,clientX,clientY){
  const rail=refs[i].querySelector('.moveRail'),svgEl=rail.querySelector('svg');
  // SVG transform maps the exact drawn tick positions to the real pointer coordinates,
@@ -665,13 +893,13 @@ function pointAt(i,clientX,clientY){
  setVal(i,Math.round((svgPoint.x-300)/44));
 }
 function renderAll(){
- const host=$('moveExamples');host.replaceChildren();refs=[];
+ const host=$('moveExamples');host.replaceChildren();refs=[];if(!tasks.length)newTasks();
  tasks.forEach(([from,to],i)=>{
   const el=document.createElement('article');el.className='moveEx';
   el.innerHTML=`<div class="movePrompt"><small>EXERCICE ${i+1}</small><span class="moveEquation">${from} <span style="color:#86827b">→</span> ${to}</span></div><div class="moveRail" role="slider" tabindex="0" aria-label="Déplacements de ${from} vers ${to}" aria-valuemin="-6" aria-valuemax="6" aria-valuenow="0" aria-valuetext="Point de départ"></div><div class="moveOutcome"><div class="moveResult"></div><div class="moveFeedback" role="status" aria-live="polite"></div></div>`;
   const rail=el.querySelector('.moveRail');let pointer=null;
   rail.addEventListener('pointerdown',e=>{
-   if(e.pointerType==='mouse'&&e.button!==0)return;
+   if(pageChecked||(e.pointerType==='mouse'&&e.button!==0))return;
    pointer=e.pointerId;rail.classList.add('dragging');
    try{rail.setPointerCapture(e.pointerId)}catch{}
    pointAt(i,e.clientX,e.clientY);e.preventDefault();
@@ -689,7 +917,7 @@ function renderAll(){
  $('moveAllFeedback').textContent='';
 }
 function verifyAll(){
- let correct=0;
+ if(pageChecked)return;pageChecked=true;let correct=0;
  tasks.forEach(([from,to],i)=>{
   checked[i]=true;const ok=states[i]===expected(from,to),box=refs[i];
   if(ok)correct++;
@@ -697,7 +925,13 @@ function verifyAll(){
   const feedback=box.querySelector('.moveFeedback');feedback.className='moveFeedback '+(ok?'ok':'no');
   feedback.textContent=ok?'✓ Exact !':'À revoir';
  });
- $('moveAllFeedback').textContent=`${correct} réponse${correct>1?'s':''} correcte${correct>1?'s':''} sur 4${correct===4?' — Bravo !':''}`;$('moveNew').classList.remove('hidden');
+ moveCorrect+=correct;
+ $('moveAllFeedback').textContent=`${correct}/4 réponses correctes.`;
+ $('moveNew').classList.remove('hidden');$('verifyMoves').classList.add('hidden');
+ if(correct===4)window.MATHAS_CELEBRATE?.toast();
+ if(movePage===0){$('moveNew').textContent='Page suivante →'; if(correct===4){window.MATHAS_CELEBRATE?.modal({title:'Bravo !',emoji:'🎉',text:'Page 1 réussie. Tu peux passer à la deuxième page.',buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:openMoves},{label:'Page suivante',primary:true,action:()=>$('moveNew').click()}]})}}
+ else{const result=window.MATHAS_PROGRESS.recordStage('stage2',moveCorrect,8);$('moveAllFeedback').textContent=`Série : ${moveCorrect}/8 · ${result.grade==='red'?'À réessayer.':result.count+'/2 réussites.'}`;$('moveNew').textContent='↻ Nouvelle série'; const nextLabel=window.MATHAS_PROGRESS.unlocked('stage3')?'Activité 3':'2e série'; const nextAction=window.MATHAS_PROGRESS.unlocked('stage3')?(()=>document.getElementById('homeModeGrid').querySelector('[data-mode="one"]')?.click()):openMoves; window.MATHAS_CELEBRATE?.modal({title:result.grade==='red'?'Continue !':'Bravo !',emoji:result.grade==='red'?'✨':'🏆',text:result.grade==='red'?`Tu as obtenu ${moveCorrect}/8. Il faut au moins 80 % pour valider la série.`:`Série réussie : ${moveCorrect}/8.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:openMoves},{label:nextLabel,primary:true,action:nextAction}]})}
+
 }
 function putHelp(id,unit){
  if(helpUnlocked||!targets.includes(id)||!names.includes(unit))return;
@@ -751,6 +985,8 @@ function helpTargetAt(x,y){
 function renderHelp(){
  $('moveHelpChallenge').classList.toggle('hidden',helpUnlocked);
  $('moveHelpRevealed').classList.toggle('hidden',!helpUnlocked);
+ $('moveAbacus').classList.toggle('compactDone',helpUnlocked);
+ $('moveHelpTop').classList.toggle('hidden',helpUnlocked);
  $('moveHelpTitle').textContent=helpUnlocked?'Abaque métrique complet':'Reconstitue l’abaque pour obtenir l’aide';
  if(helpUnlocked)return;
  $('moveHelpUnitBank').replaceChildren(...targets.filter(u=>!helpPosition[u]).map(makeHelpChip));
@@ -778,11 +1014,15 @@ function verifyHelp(){
  else{$('moveHelpFeedback').textContent=`${good} unité${good>1?'s':''} correcte${good>1?'s':''} sur 4. Corrige le placement et valide à nouveau.`}
 }
 $('moveLaunchBtn').addEventListener('click',openMoves);
-$('verifyMoves').addEventListener('click',verifyAll);$('moveNew').addEventListener('click',()=>{newTasks();renderAll();$('moveNew').classList.add('hidden')});
+$('verifyMoves').addEventListener('click',verifyAll);$('moveNew').addEventListener('click',()=>{
+ if(!pageChecked)return;
+ if(movePage===0){movePage=1;$('movePageLabel').textContent='Page 2 / 2';}else{movePage=0;moveCorrect=0;$('movePageLabel').textContent='Page 1 / 2';}
+ pageChecked=false;newTasks();renderAll();$('moveNew').classList.add('hidden');$('verifyMoves').classList.remove('hidden');
+});
 $('showMoveAbacus').addEventListener('click',()=>{
  const box=$('moveAbacus');if(!box.classList.contains('hidden')){hideHelp();return}
  box.classList.remove('hidden');$('showMoveAbacus').setAttribute('aria-expanded','true');
- $('showMoveAbacus').textContent='▦ Masquer l’abaque';renderHelp();
+ $('showMoveAbacus').textContent='▦ Masquer l’abaque';moveHelpUsed=true;renderAll();renderHelp();
 });
 $('closeMoveAbacus').addEventListener('click',hideHelp);
 $('verifyMoveHelp').addEventListener('click',verifyHelp);
@@ -800,6 +1040,7 @@ const POS=Object.fromEntries(UNITS.map((u,i)=>[u,i]));
 const pairList=[];
 for(const a of OPTIONS)for(const b of OPTIONS)if(a!==b)pairList.push([a,b]);
 let series=[],activeIndex=0,locked=false,first=true,correctionMode=false;
+let selectedMode=null, pageNumber=0, totalPages=1, runCorrect=0, runQuestions=0, suddenStreak=0, runFinished=false;
 const random=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
 const shuffle=arr=>{const x=[...arr];for(let i=x.length-1;i>0;i--){const j=random(0,i);[x[i],x[j]]=[x[j],x[i]]}return x};
 const nice=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
@@ -815,7 +1056,18 @@ function makeTask(from,to){
      const factor=10**(-shift);
      const maxBase=Math.floor(limit/factor);
      if(maxBase<1)continue;
-     const base=random(1,Math.min(maxBase,Math.max(12,Math.min(999,Math.floor(maxBase/3)))));
+     // Alterne les réponses avec 0, 1 ou 2 zéros terminaux, si
+     // l'abaque à 7 colonnes permet de représenter le nombre de départ.
+     const allowedZeros=[0];
+     if(maxBase>=10)allowedZeros.push(1,1);
+     if(maxBase>=100)allowedZeros.push(2,2);
+     const remain=allowedZeros[random(0,allowedZeros.length-1)];
+     const scale=10**remain;
+     const maxMantissa=Math.min(99,Math.floor(maxBase/scale));
+     let mantissa=random(1,maxMantissa);
+     // Maîtriser le nombre de zéros conservés après la conversion.
+     if(mantissa%10===0)mantissa=Math.max(1,mantissa-1);
+     const base=mantissa*scale;
      source=base*factor;
    }else{
      const max=Math.min(limit,1000);
@@ -827,7 +1079,7 @@ function makeTask(from,to){
    if(Number.isInteger(result)&&result>0&&Number.isSafeInteger(result))break;
  }
  if(!source||!Number.isInteger(result))return null;
- return {from,to,source,result,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null};
+ return {from,to,source,result,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null,helpUsed:false};
 }
 function makeSeries(){
  let specs=shuffle(pairList);
@@ -839,18 +1091,23 @@ function makeSeries(){
   chosen.push(pair);if(chosen.length===4)break;
  }
  if(first){first=false;chosen=[['cm','m'],...chosen.filter(p=>p.join('/')!=='cm/m').slice(0,3)]}
+ if(selectedMode==='sudden')chosen=chosen.slice(0,1);
  series=chosen.map(([from,to],i)=>{
-  if(i===0&&from==='cm'&&to==='m'&&!window.__MATHAS_T3_EXAMPLE_DONE){window.__MATHAS_T3_EXAMPLE_DONE=true;return {from,to,source:34000,result:340,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null}}
+  if(i===0&&from==='cm'&&to==='m'&&!window.__MATHAS_T3_EXAMPLE_DONE){window.__MATHAS_T3_EXAMPLE_DONE=true;return {from,to,source:34000,result:340,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null,helpUsed:false}}
   return makeTask(from,to)
  });
  activeIndex=0;locked=false;correctionMode=false;
- $('t3Summary').textContent='';$('t3Progress').textContent='';$('t3Progress').classList.add('hidden');$('t3Verify').textContent='✓ Vérifier les 4 réponses';
+ $('t3Summary').textContent='';$('t3Progress').textContent='';$('t3Progress').classList.add('hidden');$('t3Verify').textContent=selectedMode==='sudden'?'✓ Valider':'✓ Vérifier les 4 réponses';
+ $('t3PageLabel').textContent=selectedMode==='sudden'?`Mort subite · question ${suddenStreak+1}`:`Page ${pageNumber+1} / ${totalPages}`;
  $('t3Verify').classList.remove('hidden');$('t3New').classList.add('hidden');
  renderAll();
 }
-function showScreen(){
+function startMode(mode){
+ if(!window.MATHAS_PROGRESS.unlocked(mode))return;
  $('homeScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('gameScreen').classList.add('hidden');
  $('convertScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');$('helpBtn').classList.add('hidden');
+ selectedMode=mode;totalPages={one:1,three:3,five:5,sudden:Infinity}[mode];pageNumber=0;runCorrect=0;runQuestions=0;suddenStreak=0;runFinished=false;
+ $('t3Layout').classList.remove('hidden');$('t3SessionHead').classList.remove('hidden');
  makeSeries();window.scrollTo({top:0,behavior:'smooth'});
 }
 function makeHelp(ex){
@@ -860,6 +1117,7 @@ function makeHelp(ex){
 }
 function renderOne(i){
  const ex=series[i],el=$('t3ExList').children[i];if(!el)return;
+ el.classList.toggle('helpUsed',!!ex.helpUsed);
  el.classList.toggle('t3good',ex.status==='good'||ex.status==='corrected');
  el.classList.toggle('t3bad',ex.status==='badFinal');
  el.classList.toggle('t3retry',ex.status==='retry');
@@ -870,6 +1128,7 @@ function renderOne(i){
  el.querySelector('.t3Open').textContent=ex.open?'▦ Masquer la manipulation':'▦ Manipuler la virgule';
  el.querySelector('.t3UnitsBtn').setAttribute('aria-pressed',String(ex.units));
  el.querySelector('.t3UnitsBtn').textContent=ex.units?'▤ Masquer les unités':'▤ Afficher les unités';
+ el.querySelector('.t3UnitsBtn').classList.toggle('hidden',!ex.open);
  el.querySelector('.t3Assistance').classList.toggle('hidden',!ex.open);
  const st=el.querySelector('.t3Status');
  st.textContent=ex.status==='good'?'✓ Correct.':ex.status==='retry'?'À corriger : deuxième essai.':ex.status==='corrected'?'✓ Corrigé au deuxième essai.':ex.status==='badFinal'?`✗ Réponse attendue : ${nice(ex.result)} ${ex.to}`:'';
@@ -880,9 +1139,9 @@ function renderAll(){
  series.forEach((ex,i)=>{
   const article=document.createElement('article');article.className='t3Ex';
   article.innerHTML=`<div class="t3Heading"><span class="t3Num">${i+1}</span><div class="t3Expression"><span>${nice(ex.source)} ${ex.from} =</span><input class="t3Answer" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Réponse de la conversion ${i+1}" maxlength="13"><span>${ex.to}</span></div></div>
-   <div class="t3Controls"><div class="t3HelpControls"><button class="btn t3HelpBtn t3Open" type="button" aria-expanded="false">▦ Manipuler la virgule</button><button class="btn t3UnitsBtn" type="button" aria-pressed="false">▤ Afficher les unités</button></div><div class="t3Status" role="status"></div></div>
+   <div class="t3Controls"><div class="t3HelpControls"><button class="btn t3HelpBtn t3Open" type="button" aria-expanded="false">▦ Manipuler la virgule</button></div><div class="t3Status" role="status"></div></div>
    <div class="t3Assistance hidden">
-   <div class="t3ManipRow"><div class="t3BoardScroll"><div class="t3Board"><div class="t3Movement" aria-hidden="true"></div><div class="t3UnitLabels hidden"></div><div class="t3Digits"></div><div class="t3Commas"></div></div></div>
+   <div class="t3ManipRow"><button class="btn t3UnitsBtn" type="button" aria-pressed="false">▤ Afficher les unités</button><div class="t3BoardScroll"><div class="t3Board"><div class="t3Movement" aria-hidden="true"></div><div class="t3UnitLabels hidden"></div><div class="t3Digits"></div><div class="t3Commas"></div></div></div>
    <div class="t3BoardSide"><div class="t3Direction" role="status" aria-live="polite"></div><div class="t3BoardActions"><button type="button" class="btn t3ResetHelp">↺ Recommencer la manipulation</button></div></div></div></div>`;
   const input=article.querySelector('input');
   input.value=ex.answer;
@@ -891,10 +1150,10 @@ function renderAll(){
   input.addEventListener('input',()=>{ex.answer=input.value.replace(/\D/g,'').slice(0,13);if(input.value!==ex.answer)input.value=ex.answer;});
   input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();nextAnswer()}});
   article.querySelector('.t3Open').addEventListener('click',()=>{
-    ex.open=!ex.open;if(ex.open&&!ex.help)ex.help=makeHelp(ex);renderOne(i);
+    ex.open=!ex.open;if(ex.open){ex.helpUsed=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i);
   });
-  article.querySelector('.t3UnitsBtn').addEventListener('click',()=>{ex.units=!ex.units;if(ex.units){ex.open=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i)});
-  article.querySelector('.t3ResetHelp').addEventListener('click',()=>{ex.help=makeHelp(ex);renderBoard(i)});
+  article.querySelector('.t3UnitsBtn').addEventListener('click',()=>{ex.units=!ex.units;if(ex.units){ex.open=true;ex.helpUsed=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i)});
+  article.querySelector('.t3ResetHelp').addEventListener('click',()=>{ex.helpUsed=true;ex.help=makeHelp(ex);renderBoard(i);renderOne(i)});
   host.appendChild(article);
  });
  series.forEach((_,i)=>renderOne(i));setActive(activeIndex);
@@ -972,36 +1231,72 @@ function renderBoard(i){
  const end=e=>{if(e.pointerId===pointer){pointer=null;try{if(commas.hasPointerCapture(e.pointerId))commas.releasePointerCapture(e.pointerId)}catch{}}};
  commas.onpointerup=end;commas.onpointercancel=end;
 }
+function finishPage(firstGood,corrected=0){
+ locked=true;runCorrect+=firstGood;runQuestions+=series.length;
+ series.forEach((_,i)=>renderOne(i));
+ $('t3Progress').textContent=`${runCorrect}/${runQuestions} au premier essai`;
+ $('t3Progress').classList.remove('hidden');
+ $('t3Verify').classList.add('hidden');$('t3New').classList.remove('hidden');
+ if(firstGood===series.length)window.MATHAS_CELEBRATE?.toast();
+ if(selectedMode==='sudden'){
+   if(firstGood===1){suddenStreak++;$('t3Summary').textContent=`${suddenStreak} conversion${suddenStreak>1?'s':''} réussie${suddenStreak>1?'s':''} de suite !`; $('t3New').textContent='Conversion suivante →'; window.MATHAS_CELEBRATE?.modal({title:'Bravo !',emoji:'⚡',text:'Encore une conversion réussie en mort subite !',buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode('sudden')},{label:'Suivante',primary:true,action:()=>$('t3New').click()}]});}
+   else{runFinished=true;window.MATHAS_PROGRESS.recordSudden(suddenStreak);$('t3Summary').textContent=`Fin de série · ${suddenStreak} réussite${suddenStreak>1?'s':''} d’affilée.`;$('t3New').textContent='↻ Rejouer';window.MATHAS_CELEBRATE?.modal({title:'Fin de mort subite',emoji:'🏁',text:`Tu as enchaîné ${suddenStreak} réussite${suddenStreak>1?'s':''} d’affilée.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode('sudden')}]});}
+   $('t3PageLabel').textContent='Mort subite · '+suddenStreak+' réussite'+(suddenStreak>1?'s':'');
+   return;
+ }
+ const total=totalPages*4;
+ if(pageNumber+1<totalPages){$('t3Summary').textContent=`Page ${pageNumber+1}/${totalPages} · ${firstGood}/4 au premier essai.`;$('t3New').textContent='Page suivante →'; window.MATHAS_CELEBRATE?.modal({title:'Bravo !',emoji:'🎉',text:`Page ${pageNumber+1} terminée.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode(selectedMode)},{label:'Page suivante',primary:true,action:()=>$('t3New').click()}]});}
+ else{
+   runFinished=true;
+   const grade=window.MATHAS_PROGRESS.recordMode(selectedMode,runCorrect,total);
+   $('t3Summary').textContent=`Série : ${runCorrect}/${total} · ${grade==='green'?'100 % !':grade==='orange'?'80 % atteint !':'À réessayer.'}`;
+   $('t3New').textContent='↻ Nouvelle série';
+   const nextMap={one:'three',three:'five',five:'sudden'}; const nextMode=nextMap[selectedMode];
+   const nextUnlocked=nextMode && window.MATHAS_PROGRESS.unlocked(nextMode);
+   const nextLabel=grade==='red'?'2e série':(nextUnlocked?(nextMode==='three'?'3 pages':nextMode==='five'?'5 pages':'Mort subite'):'2e série');
+   const nextAction=grade==='red'?(()=>startMode(selectedMode)):(nextUnlocked?(()=>startMode(nextMode)):(()=>startMode(selectedMode)));
+   window.MATHAS_CELEBRATE?.modal({title:grade==='red'?'Continue !':'Bravo !',emoji:grade==='red'?'✨':'🏆',text:grade==='red'?`Tu as obtenu ${runCorrect}/${total}. Il faut au moins 80 % pour valider cette série.`:`Série terminée : ${runCorrect}/${total}.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode(selectedMode)},{label:nextLabel,primary:true,action:nextAction}]});
+ }
+}
 function verify(){
  if(locked)return;
  const editable=series.map((ex,i)=>['pending','retry'].includes(ex.status)?i:-1).filter(i=>i>=0);
  const blank=editable.find(i=>!series[i].answer.trim());
  if(blank!==undefined){$('t3Summary').textContent=`Il manque la réponse ${blank+1}.`;setActive(blank);$('t3ExList').children[blank].querySelector('input').focus();return}
+ if(selectedMode==='sudden'){
+   const good=Number(series[0].answer)===series[0].result;
+   series[0].status=good?'good':'badFinal';
+   finishPage(Number(good));return;
+ }
  if(!correctionMode){
   const wrong=[];
   series.forEach((ex,i)=>{if(Number(ex.answer)===ex.result){ex.status='good'}else{ex.status='retry';wrong.push(i)}});
   if(wrong.length){
    correctionMode=true;
-   $('t3Summary').textContent=`${4-wrong.length} bonne${4-wrong.length>1?'s':''} réponse${4-wrong.length>1?'s':''}. Corrige les cases orange.`;
+   const good=series.length-wrong.length;
+   $('t3Summary').textContent=`${good} bonne${good>1?'s':''} réponse${good>1?'s':''}. Corrige les cases orange.`;
    $('t3Verify').textContent='✓ Valider les corrections';
    series.forEach((_,i)=>renderOne(i));
-   setActive(wrong[0]);$('t3ExList').children[wrong[0]].querySelector('input').focus();
-   return;
+   setActive(wrong[0]);$('t3ExList').children[wrong[0]].querySelector('input').focus();return;
   }
  }else{
   series.forEach(ex=>{if(ex.status==='retry')ex.status=Number(ex.answer)===ex.result?'corrected':'badFinal'});
  }
- locked=true;
  const firstGood=series.filter(ex=>ex.status==='good').length;
  const corrected=series.filter(ex=>ex.status==='corrected').length;
- series.forEach((_,i)=>renderOne(i));
- $('t3Progress').textContent=`${firstGood} / 4 sans correction`;$('t3Progress').classList.remove('hidden');
- $('t3Summary').textContent=firstGood===4?'Bravo ! Les quatre conversions sont correctes.':`Premier essai : ${firstGood}/4${corrected?' · '+corrected+' corrigée'+(corrected>1?'s':''):''}.`;
- $('t3Verify').classList.add('hidden');$('t3New').classList.remove('hidden');
-} 
-$('convertLaunchBtn').addEventListener('click',showScreen);
+ finishPage(firstGood,corrected);
+}
 $('t3Verify').addEventListener('click',verify);
-$('t3New').addEventListener('click',makeSeries);
+$('t3New').addEventListener('click',()=>{
+ if(!locked)return;
+ if(selectedMode==='sudden'){
+   if(runFinished){startMode('sudden');return}
+   pageNumber++;makeSeries();return;
+ }
+ if(runFinished){startMode(selectedMode);return}
+ pageNumber++;makeSeries();
+});
+document.querySelectorAll('.t3Mode').forEach(button=>button.addEventListener('click',()=>startMode(button.dataset.mode)));
 function setKey(k){
  if(locked)return;const ex=series[activeIndex];if(!ex||!['pending','retry'].includes(ex.status))return;
  let val=ex.answer;
@@ -1012,5 +1307,10 @@ function setKey(k){
 document.querySelectorAll('[data-t3key]').forEach(btn=>btn.addEventListener('click',()=>setKey(btn.dataset.t3key)));
 $('homeBtn').addEventListener('click',()=>{$('convertScreen').classList.add('hidden')});
 })();
+</script>
+<div id="celebrateToast" aria-live="polite" role="status"></div>
+<dialog id="celebrateDialog" class="celebrateOverlay" aria-labelledby="celebrateTitleEl"><div class="celebrateCard"><div class="celebrateDecor"></div><div class="celebrateDecor2"></div><div class="celebrateBurst" id="celebrateBurst">🌟</div><h2 class="celebrateTitle" id="celebrateTitleEl">Bravo !</h2><p class="celebrateText" id="celebrateTextEl"></p><div class="celebrateActions" id="celebrateActions"></div></div></dialog>
+<script>
+(()=>{const toast=document.getElementById('celebrateToast'),dlg=document.getElementById('celebrateDialog'),title=document.getElementById('celebrateTitleEl'),text=document.getElementById('celebrateTextEl'),actions=document.getElementById('celebrateActions'),burst=document.getElementById('celebrateBurst');const smallMsgs=['Bravo !','Super !','Bien joué !','Excellent !','Top !'];window.MATHAS_CELEBRATE={toast(msg){toast.textContent=msg||smallMsgs[Math.floor(Math.random()*smallMsgs.length)];toast.classList.add('show');clearTimeout(window.__mathasToast);window.__mathasToast=setTimeout(()=>toast.classList.remove('show'),1550)},modal(opts={}){title.textContent=opts.title||'Bravo !';text.textContent=opts.text||'';burst.textContent=opts.emoji||'🌟';actions.replaceChildren();(opts.buttons||[]).forEach(btn=>{const b=document.createElement('button');b.type='button';b.className='btn'+(btn.primary?' celebratePrimary':'');b.textContent=btn.label;b.addEventListener('click',()=>{try{dlg.close()}catch(e){};btn.action&&btn.action()});actions.appendChild(b)});try{dlg.showModal()}catch(e){}}};})();
 </script>
 </body></html>
