@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152334"><title>Math'as — Abaque des longueurs v0.7.0</title><style>
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152334"><title>Math'as — Abaque des longueurs v1.0.0</title><style>
 :root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#172838;background:#e5ebed}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(120deg,#dce6e8,#f5f1eb)}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,[role=button]:focus-visible{outline:3px solid #f3a441;outline-offset:2px}.shell{max-width:1420px;margin:14px auto;background:#f9f8f4;min-height:calc(100vh - 28px);border-radius:22px;overflow:hidden;box-shadow:0 18px 50px #253b4b24}header{background:#152334;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 22px}.brand{font-weight:950;letter-spacing:-.03em;font-size:1.35rem}.brand span{color:#54c3c5}.mutedHead{font-size:.8rem;color:#bdced4}.headerBtns{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #b8c7cf;border-radius:11px;background:white;color:#173044;min-height:43px;padding:9px 15px;font-weight:800}.btn.primary{background:#167b82;border-color:#167b82;color:white}.btn.dark{background:#304257;border-color:#516578;color:#fff}.btn:disabled{opacity:.44;cursor:not-allowed}main{padding:22px}.hidden{display:none!important}.eyebrow{color:#127d83;letter-spacing:.12em;font-size:.75rem;font-weight:950;text-transform:uppercase}.screenTitle{font-size:clamp(1.4rem,3vw,2.2rem);margin:6px 0 8px}.sub{color:#566674;font-size:.94rem;font-weight:600;margin:0 0 18px}.homeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:950px;margin:32px auto}.homeCard{padding:25px;border:2px solid #c8d7d9;border-radius:19px;background:white;text-align:left;min-height:200px;box-shadow:0 8px 21px #162b4010}.homeCard strong{display:block;font-size:1.38rem;margin:14px 0 9px}.homeCard p{color:#5c6874;margin:0;line-height:1.45}.homeCard .symbol{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:16px;background:#d8f1ef;color:#146a72;font-weight:950;font-size:1.8rem}.homeCard.disabled{background:#e8eaeb;border-color:#d4dade;cursor:default}.homeCard.disabled .symbol{background:#dce0e4;color:#819098}.soon{font-size:.78rem;color:#66727d;font-weight:900;letter-spacing:.07em}.steps{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 20px}.step{padding:8px 13px;border-radius:999px;background:#e7e9e7;color:#6f7d84;font-size:.8rem;font-weight:850}.step.on{background:#cce9e5;color:#116e71}.step.done{background:#e4f2e6;color:#22805b}.intro{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.pill{border-radius:30px;background:#e3ecec;color:#3a5c66;padding:9px 14px;font-weight:900;font-size:.82rem}.sectionTitle{font-size:1.03rem;margin:17px 0 8px}.unitBank{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px;border-radius:14px;background:#e9efef;margin-bottom:12px;min-height:75px}.unitChip{background:white;border:2px solid #6caaa9;color:#163344;border-radius:12px;min-width:82px;min-height:50px;padding:8px 17px;font-size:1.23rem;font-weight:950;touch-action:none;user-select:none}.unitChip.selected{background:#fff1dd;border-color:#e79440}.unitChip.inSlot{min-width:0;width:100%;max-width:102px;min-height:47px}.unitChip.verifiedGood{border-color:#359b77;background:#e5f5eb}.unitChip.verifiedBad{border-color:#c95361;background:#ffedf0}.unitChip:disabled{opacity:1;cursor:default}.abaqueWrap{overflow-x:auto;padding:3px 2px 10px;scrollbar-color:#98b6bb transparent}.abaque{display:grid;grid-template-columns:repeat(7,minmax(112px,1fr));gap:5px;min-width:816px}.col{border:2px dashed #bbc8ce;border-radius:12px;min-width:0;min-height:164px;display:flex;flex-direction:column;gap:7px;padding:7px;background:#e9eeee;align-items:center;transition:background .1s}.col.target{background:#f2fbfa;border-color:#70b3b3}.col.dropHover{background:#d2eae8;border-color:#188589}.col.nonTarget{background:#ebece9;border-color:#d5d9d7}.colHeader{text-align:center;background:#dce7e9;color:#375063;width:100%;border-radius:7px;padding:7px 2px;font-weight:950;font-size:.9rem}.col.target .colHeader{background:#d3eeeb;color:#1a7378}.col .hint{font-size:.69rem;font-weight:750;color:#7b8c96;text-align:center;margin:auto}.labelSlot{width:100%;min-height:58px;display:flex;align-items:center;justify-content:center;border:1px dashed #afc4c7;border-radius:10px;padding:4px}.imagesSlot{display:flex;flex-direction:column;align-items:stretch;gap:5px;width:100%;min-height:72px}.itemCard{position:relative;background:#fff;border:2px solid #c2d3d7;border-radius:9px;padding:4px;min-width:0;text-align:center;cursor:grab;user-select:none;touch-action:none;box-shadow:0 2px 6px #22374712}.itemCard.selected{border-color:#e99644;background:#fff4e4}.itemCard img{display:block;width:100%;height:64px;object-fit:contain;background:#e6eff0;border-radius:6px;pointer-events:none}.itemCard span{display:block;font-weight:780;font-size:.72rem;line-height:1.17;padding-top:4px}.itemCard.small img{height:90px}.itemCard.small span{font-size:.66rem}.itemCard.good{border-color:#2b936c;background:#e5f6ea}.itemCard.bad{border-color:#c54f5b;background:#fff0f0}.imagesBank{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:10px 0;padding:12px;border:1px solid #d8e0df;border-radius:15px;background:#ebf0ef;min-height:116px}.imagesBank .itemCard img{height:150px;object-fit:cover;object-position:center}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 7px}.feedback{min-height:34px;margin:8px 0;font-weight:800;color:#395367}.feedback.good{color:#18845c}.feedback.error{color:#bb4758}.help{margin:10px 0;padding:12px 14px;background:#e8eff0;border-left:4px solid #18858c;border-radius:0 9px 9px 0;line-height:1.5;font-size:.9rem}.ghost{position:fixed;pointer-events:none;z-index:3000;transform:translate(-50%,-50%);box-shadow:0 15px 30px #102f4466;opacity:.93;min-width:80px;max-width:130px}.footer{border-top:1px solid #d7dfe0;padding:13px 22px;color:#77838a;font-size:.75rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.note{color:#647783;font-size:.78rem;line-height:1.45}.count{font-variant-numeric:tabular-nums}@media(max-width:950px){.imagesBank{grid-template-columns:repeat(3,minmax(0,1fr))}.imagesBank .itemCard img{height:120px;object-fit:cover;object-position:center}}@media(max-width:600px){.shell{border-radius:0;margin:0;min-height:100vh}header{padding:12px}.brand{font-size:1.1rem}main{padding:12px}.homeGrid{grid-template-columns:1fr;margin:20px auto}.homeCard{min-height:150px;padding:18px}.imagesBank{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:6px}.imagesBank .itemCard img{height:48px;object-fit:cover;object-position:center}.imagesBank .itemCard span{font-size:.65rem}.btn{padding:8px 10px;font-size:.85rem}.col{min-height:138px}.itemCard.small img{height:66px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 #unitsSection{max-height:220px;opacity:1;overflow:hidden;transition:max-height .45s ease,opacity .25s ease,margin .4s ease}
 #unitsSection.collapsed{max-height:0;opacity:0;margin:0;pointer-events:none}
@@ -31,7 +31,7 @@
 @media(max-width:850px){.moveEx{grid-template-columns:1fr;gap:6px;padding:12px}.movePrompt{font-size:1.1rem}.moveRail{height:136px}.moveResult{min-height:auto;text-align:center;justify-content:center}.moveCheck{justify-content:center}.moveAbacus{top:72px;width:calc(100vw - 12px);max-height:46vh}}
 @media(prefers-reduced-motion:reduce){.moveDot{transition:none}}
 
-/* v0.7.0 — La banque est toujours visible pendant le classement.
+/* v0.7.2 — La banque est toujours visible pendant le classement.
    Elle dispose de son propre défilement horizontal : la page ne la fait plus disparaître. */
 #gameScreen.imagesMode{padding-bottom:var(--bank-height,270px)}
 #gameScreen.imagesMode #imagesSection{
@@ -76,7 +76,7 @@
  .bankHeader .note{display:none}
 }
 
-/* v0.7.0 : tableau classique à cases contiguës, et bande d'images immobile */
+/* v0.7.2 : tableau classique à cases contiguës, et bande d'images immobile */
 #gameScreen.imagesMode #imagesSection.appear{animation:none!important;transform:translateX(-50%)!important}
 #gameScreen.imagesMode{padding-bottom:max(var(--bank-height,275px),220px)}
 .metricTableScroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
@@ -104,7 +104,7 @@
 .abaque .col.target .colHeader{background:#d0eae6}
 @media(max-width:700px){.metricDirections{font-size:.69rem}.tableTop{align-items:flex-start}}
 
-/* v0.7.0 : quatre exercices en deux colonnes, taille compacte et aide à construire. */
+/* v0.7.2 : quatre exercices en deux colonnes, taille compacte et aide à construire. */
 #moveScreen{max-width:1400px;margin:auto}
 #moveScreen .sub{margin:3px 0 0}
 .moveTop{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
@@ -203,7 +203,7 @@
 .t3KeyGrid button{min-height:46px;padding:4px 0;border:2px solid #ccd8da;background:#fff;border-radius:9px;font-size:1.2rem;font-weight:950;color:#143449}
 .t3KeyGrid button:active{background:#d8f4f2}.t3KeyGrid button:disabled{opacity:.45;cursor:default}
 .t3KeyGrid .t3NextKey{grid-column:1/-1;min-height:39px;font-size:.82rem;background:#e0efed;color:#16676e}
-/* v0.7.0 : virgule aux intercases, arceaux et aide plus compacte */
+/* v0.7.2 : virgule aux intercases, arceaux et aide plus compacte */
 .t3ManipRow{display:flex;align-items:center;justify-content:center;gap:14px;min-width:0}
 .t3ManipRow .t3BoardScroll{margin:0;flex:0 1 auto;min-width:0;padding:4px 4px 4px}
 .t3BoardSide{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:12px;flex:0 1 175px;min-width:128px;max-width:190px}
@@ -230,7 +230,7 @@
 @media(max-width:620px){.homeGrid{grid-template-columns:1fr}.t3Ex{padding:10px 9px}.t3Heading{gap:8px}.t3Controls{margin-left:0}.t3Expression{gap:5px}.t3Answer{width:104px}.t3Board{--cell:45px}}
 
 
-/* v0.7.0 — Les teintes bleu/mauve sont réservées au sens des déplacements. */
+/* v0.7.2 — Les teintes bleu/mauve sont réservées au sens des déplacements. */
 #moveScreen .eyebrow{color:#a85e20}
 #moveScreen .moveHelpTrigger{background:#fff4e5;border-color:#eac295;color:#875019}
 #moveScreen .moveHelpTrigger:hover{background:#ffebcf}
@@ -279,7 +279,7 @@
 }
 
 
-/* v0.7.0 — interface épurée et sélection tactile explicite */
+/* v0.7.2 — interface épurée et sélection tactile explicite */
 #gameScreen.hasSelection .col.target,#gameScreen.hasSelection:not(.imagesMode) .col{border-color:#d77d24;box-shadow:inset 0 0 0 2px #f5bc67,0 0 0 2px #f9e1bb;background:#fff9ed;cursor:pointer}
 #gameScreen .itemCard.selected,#gameScreen .unitChip.selected{outline:3px solid #e99a33;outline-offset:2px;box-shadow:0 0 0 6px #f9e4bd}
 #gameScreen .unitChip.verifiedBad{border-color:#c73e55;background:#ffe9ee;box-shadow:0 0 0 2px #e69da9}
@@ -298,7 +298,7 @@
 @media(min-width:891px){#moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(102px,121px);column-gap:4px;padding-left:8px;padding-right:8px}}
 @media(max-width:890px) and (min-width:581px){#moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr) minmax(105px,140px);column-gap:3px}}
 
-/* v0.7.0 — Déblocages et modes : affichage compact, sur les boutons uniquement. */
+/* v0.7.2 — Déblocages et modes : affichage compact, sur les boutons uniquement. */
 .homeCard{position:relative;display:flex;flex-direction:column;align-items:flex-start}
 .homeCard p{min-height:2.9em}
 .homeCard .progressDots{display:flex;gap:10px;margin-top:auto;padding-top:12px;min-height:25px}
@@ -334,7 +334,7 @@
 .masterError{min-height:18px;font-size:.82rem;font-weight:850;color:#bf4054}
 @media(max-width:600px){.t3Mode{padding:12px;min-height:132px}.t3Mode strong{font-size:1.03rem}.t3Mode .modeResult{font-size:.72rem}.masterTools{max-width:calc(100vw - 45px);flex-wrap:wrap}.homeCard p{min-height:0}}
 
-/* v0.7.0.1 — ajustements demandés pour l’aide et l’activité 3 */
+/* v0.7.2.1 — ajustements demandés pour l’aide et l’activité 3 */
 .moveTop{display:grid!important;grid-template-columns:minmax(300px,470px) minmax(340px,1fr) auto;align-items:start;gap:12px;margin-bottom:12px}
 .moveTop .screenTitle{font-size:clamp(1.45rem,2.25vw,1.95rem);margin:3px 0 2px}
 .moveAbacus{position:relative!important;top:auto!important;left:auto!important;transform:none!important;width:100%!important;max-height:none!important;overflow:visible!important;z-index:auto!important;box-shadow:none!important;min-height:118px}
@@ -356,7 +356,7 @@
 @media(max-width:690px){.t3ManipRow{display:flex!important;flex-direction:column;align-items:stretch;gap:0}.t3ManipRow .t3BoardScroll{margin:auto;max-width:100%}.t3BoardSide{flex-direction:row!important;align-items:center!important;gap:9px;justify-content:space-between!important;margin-top:4px}.t3Direction{display:block!important;flex:1;min-height:0!important;text-align:left!important;font-size:.94rem!important}.t3Direction .t3Count{font-size:1.2rem!important}.t3ResetHelp{font-size:.7rem;min-height:33px;padding:5px 8px;max-width:175px}.t3Board{--cell:45px}}
 
 
-/* v0.7.0 — modes sur l’accueil, verrous plus lisibles, aide compacte */
+/* v0.7.2 — modes sur l’accueil, verrous plus lisibles, aide compacte */
 .homeCard.homeCardPanel{cursor:default}
 .homeModeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;margin-top:auto;padding-top:10px}
 .homeModeBtn{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:1px;text-align:left;width:100%;min-height:56px;padding:9px 12px 8px;border-radius:14px;border:2px solid #d4dfdf;background:#f8fbfb;color:#173044;box-shadow:none}
@@ -372,7 +372,7 @@
 @media(max-width:600px){#convertLaunchCard{min-height:0}.homeModeGrid{grid-template-columns:1fr 1fr;gap:8px}.homeModeBtn{min-height:52px;padding:8px 9px}.homeModeBtn strong{font-size:.92rem}.homeModeBtn span{font-size:.73rem}.homeModeBtn .modeResult{font-size:.7rem}}
 
 
-/* v0.7.0 — aides mises en évidence + célébrations */
+/* v0.7.2 — aides mises en évidence + célébrations */
 .homeModeBtn[data-mode="sudden"] > span:not(.modeResult){display:none}
 .homeModeBtn[data-mode="sudden"] .modeResult:empty{display:none}
 .moveEx.helpUsed .moveRail{position:relative}
@@ -397,7 +397,7 @@
 @keyframes popIn{0%{transform:scale(.55);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
 
 
-/* v0.7.0 : résultats chiffrés, sans allonger les boutons */
+/* v0.7.2 : résultats chiffrés, sans allonger les boutons */
 .homeCard .progressDots{gap:12px;align-items:flex-end;padding-top:8px;min-height:0}
 .dotResult{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:37px}
 .dotScore{font-size:.75rem;line-height:1.1;white-space:nowrap;font-weight:950;color:#324d5c;min-height:13px;font-variant-numeric:tabular-nums}
@@ -406,7 +406,802 @@
 .homeModeBtn .modeResult{font-size:.75rem;line-height:1.15;font-variant-numeric:tabular-nums;white-space:normal;overflow-wrap:normal}
 .homeModeBtn .modeResult:empty{display:none}
 @media(max-width:600px){.dotScore{font-size:.72rem}.homeModeBtn .modeResult{font-size:.71rem}}
-</style></head><body><div class="shell"><header><div><div class="brand">MATH<span>'AS</span> / LONGUEURS <small class="mutedHead">v0.7.0</small></div></div><div class="headerBtns"><button id="homeBtn" class="btn dark hidden" type="button">← Accueil</button><button id="helpBtn" class="btn dark hidden" type="button">? Aide</button><button id="fullBtn" class="btn dark" type="button">⛶ Plein écran</button></div></header><main><section id="homeScreen"><div class="eyebrow">Math'as · Les unités de longueur</div><h1 class="screenTitle">L'abaque, étape par étape.</h1><p class="sub">Choisis une activité pour commencer.</p><div class="homeGrid"><button id="launchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 54 48" width="47" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="48" height="34" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 7v34M35 7v34M3 20h48" stroke="currentColor" stroke-width="2"/><path d="M9 14h4m12 0h4m12 0h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 28h7m10 0h5m10 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span><strong>1. Construire l’abaque</strong><p>Place les unités, puis classe les images.</p><span class="progressDots" id="stage1Dots" aria-label="Progression : 0 réussite sur 2"></span></button><button id="moveLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">↔</span><strong>2. Compter les déplacements</strong><p>Fais glisser le point et compte les déplacements.</p><span class="progressDots" id="stage2Dots" aria-label="Progression : 0 réussite sur 2"></span><span class="lockNote hidden" id="moveLock">🔒 Réussis 2 fois l’activité 1 · 0/2</span></button><div id="convertLaunchCard" class="homeCard homeCardPanel"><span class="symbol" aria-hidden="true">⇄</span><strong>3. Convertir les longueurs</strong><p>Convertis les longueurs, avec deux aides facultatives.</p><div class="homeModeGrid" id="homeModeGrid" aria-label="Modes de l’activité 3"><button type="button" class="t3Mode homeModeBtn" data-mode="one"><strong>1 page</strong><span>4 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="three"><strong>3 pages</strong><span>12 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="five"><strong>5 pages</strong><span>20 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="sudden"><strong>Mort subite</strong><span></span><span class="modeResult"></span></button></div><span class="lockNote hidden" id="convertLock">🔒 Réussis 2 fois l’activité 2 · 0/2</span></div></div></section><section id="moveScreen" class="hidden" aria-label="Compter les déplacements">
+
+/* v0.7.2 — Pavé toujours hors du flux de défilement et saisie sans clavier Windows */
+.t3Answer[readonly]{cursor:pointer;caret-color:transparent;user-select:none;-webkit-user-select:none}
+/* La colonne de droite réserve la place au pavé, mais sa position est fixée à la fenêtre. */
+#convertScreen .t3Layout{grid-template-columns:minmax(0,1fr) 205px}
+#convertScreen .t3Keypad{
+ position:fixed;z-index:150;top:clamp(105px,17vh,160px);
+ right:max(24px,calc((100vw - 1420px)/2 + 30px));
+ width:205px;max-width:205px;margin:0;
+ max-height:calc(100dvh - 115px);overflow-y:auto;overscroll-behavior:contain;
+}
+@media(max-width:860px) and (min-width:781px){
+ #convertScreen .t3Layout{grid-template-columns:minmax(0,1fr) 185px}
+ #convertScreen .t3Keypad{width:185px;max-width:185px;right:18px}
+}
+@media(max-width:780px){
+ #convertScreen{padding-bottom:242px}
+ #convertScreen .t3Layout{display:block;grid-template-columns:none}
+ #convertScreen .t3Keypad{
+  position:fixed;top:auto;bottom:0;left:0;right:0;
+  width:100%;max-width:none;max-height:none;overflow:visible;
+  border-radius:17px 17px 0 0;padding:7px 12px max(8px,env(safe-area-inset-bottom));
+  box-shadow:0 -6px 22px #102e4424;margin:0;
+ }
+ #convertScreen .t3KeyTitle{display:none}
+ #convertScreen .t3KeyInfo{min-height:15px;margin:0 0 5px;font-size:.74rem}
+ #convertScreen .t3KeyGrid{max-width:430px;margin:0 auto;gap:3px}
+ #convertScreen .t3KeyGrid button{min-height:34px;padding:0;font-size:1.04rem;border-radius:7px}
+ #convertScreen .t3KeyGrid .t3NextKey{min-height:32px;font-size:.78rem}
+}
+@media(max-width:780px) and (max-height:540px){
+ #convertScreen .t3KeyGrid{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}
+ #convertScreen .t3KeyGrid .t3NextKey{grid-column:span 3}
+ #convertScreen{padding-bottom:145px}
+}
+@media(max-width:780px){
+ /* Le menu enseignant est placé au-dessus du pavé fixe pour ne pas cacher ses touches. */
+ body:has(#convertScreen:not(.hidden)) .masterTools{bottom:231px;left:40px}
+ body:has(#convertScreen:not(.hidden)) .masterToggle{bottom:234px}
+}
+@media(max-width:780px) and (max-height:540px){
+ body:has(#convertScreen:not(.hidden)) .masterTools{bottom:145px}
+ body:has(#convertScreen:not(.hidden)) .masterToggle{bottom:148px}
+}
+@media(prefers-reduced-motion:reduce){#convertScreen .t3Keypad{scroll-behavior:auto}}
+
+
+/* v0.7.2 — L'abaque prend l'espace à droite de l'énoncé, sans faire décaler les colonnes */
+#convertScreen .t3Ex{display:grid;grid-template-columns:minmax(295px,345px) minmax(0,1fr);align-items:center;column-gap:12px;min-height:0}
+#convertScreen .t3Prompt{min-width:0;align-self:start;padding-top:3px}
+#convertScreen .t3Prompt .t3Heading{gap:7px;flex-wrap:nowrap}
+#convertScreen .t3Prompt .t3Expression{gap:5px;font-size:clamp(1rem,1.38vw,1.2rem);white-space:nowrap;flex-wrap:nowrap}
+#convertScreen .t3Prompt .t3Answer{width:105px;flex:0 0 105px}
+#convertScreen .t3Controls{margin:8px 0 0 43px!important;gap:4px;align-items:center}
+#convertScreen .t3Status{line-height:1.15;font-size:.8rem;min-height:0}
+#convertScreen .t3Assistance{grid-column:2;grid-row:1;align-self:center;min-width:0;border:none!important;margin:0!important;padding:0!important;text-align:left;overflow:visible}
+#convertScreen .t3ManipRow{display:grid!important;grid-template-columns:104px minmax(0,1fr) 132px!important;align-items:center!important;column-gap:7px!important;row-gap:0!important;min-width:0}
+#convertScreen .t3ManipRow .t3UnitsBtn{grid-area:auto!important;min-width:0!important;width:104px;padding:6px 5px;white-space:normal;line-height:1.15;justify-self:start}
+#convertScreen .t3ManipRow .t3BoardScroll{grid-area:auto!important;justify-self:center;overflow-x:auto;margin:0!important;padding:0!important;min-width:0;max-width:100%}
+#convertScreen .t3Board{--cell:45px;width:calc(7.5 * var(--cell));margin:0 auto!important}
+#convertScreen .t3BoardSide{display:flex!important;grid-area:auto!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:7px!important;min-width:132px;min-height:118px}
+#convertScreen .t3Direction{display:flex!important;align-items:center!important;justify-content:center!important;width:132px;min-height:56px!important;max-height:70px;line-height:1.2;font-size:.93rem!important;text-align:center!important;margin:0!important;padding:0!important;white-space:normal}
+#convertScreen .t3Direction .t3Count{font-size:1.24rem!important}
+#convertScreen .t3BoardActions{grid-area:auto!important;justify-self:stretch;align-self:center;width:132px;display:flex!important;justify-content:center!important}
+#convertScreen .t3ResetHelp{min-height:32px!important;padding:5px 7px;font-size:.75rem!important;white-space:nowrap;line-height:1.1}
+#convertScreen .t3Movement{height:35px!important}
+#convertScreen .t3Movement svg{height:35px!important}
+/* En fenêtre étroite, l'aide repasse sous l'énoncé pour éviter de miniaturiser l'abaque. */
+@media(max-width:1250px){
+ #convertScreen .t3Ex{display:block;min-height:0}
+ #convertScreen .t3Prompt{padding-top:0}
+ #convertScreen .t3Assistance{margin-top:7px!important;padding:8px 0 0!important;border-top:1px dashed #c5d5d7!important}
+ #convertScreen .t3ManipRow{grid-template-columns:minmax(90px,1fr) auto minmax(125px,1fr)!important;gap:8px!important}
+ #convertScreen .t3BoardSide{min-width:132px}
+}
+@media(max-width:660px){
+ #convertScreen .t3Controls{margin-left:0!important}
+ #convertScreen .t3ManipRow{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-areas:'units side' 'board board'!important;gap:5px 8px!important;align-items:center!important}
+ #convertScreen .t3ManipRow .t3UnitsBtn{grid-area:units!important}
+ #convertScreen .t3ManipRow .t3BoardScroll{grid-area:board!important;justify-self:center;max-width:100%}
+ #convertScreen .t3BoardSide{grid-area:side!important;display:flex!important;flex-direction:row!important;gap:8px!important;justify-content:flex-end!important;min-width:0;min-height:40px}
+ #convertScreen .t3Direction{width:auto!important;max-width:200px;min-height:40px!important;line-height:1.05!important;font-size:.75rem!important;text-align:right!important}
+ #convertScreen .t3Direction .t3Count{font-size:1rem!important}
+ #convertScreen .t3BoardActions{width:auto;flex:0 0 auto}
+ #convertScreen .t3ResetHelp{font-size:.72rem!important}
+ #convertScreen .t3Board{--cell:44px}
+}
+@media(max-width:395px){#convertScreen .t3Board{--cell:41px}}
+
+
+/* v0.7.2 — repli des commandes sur deux rangées seulement si la place manque */
+@media(max-width:1250px){
+ #convertScreen .t3ManipRow{grid-template-columns: minmax(0,1fr) minmax(0,1fr)!important;grid-template-rows:70px auto;grid-template-areas:'units side' 'board board'!important;align-items:center!important;gap:1px 8px!important}
+ #convertScreen .t3ManipRow .t3UnitsBtn{grid-area:units!important;align-self:center!important}
+ #convertScreen .t3ManipRow .t3BoardSide{grid-area:side!important;display:flex!important;flex-direction:row!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;min-width:0!important;min-height:70px!important;max-height:70px}
+ #convertScreen .t3ManipRow .t3BoardScroll{grid-area:board!important;justify-self:center;max-width:100%}
+ #convertScreen .t3BoardActions{width:auto!important;flex:0 0 auto;justify-content:flex-end!important}
+ #convertScreen .t3Direction{display:flex!important;align-items:center!important;justify-content:center!important;flex:0 1 185px!important;min-width:0!important;max-width:185px;min-height:56px!important;max-height:56px!important;text-align:center!important}
+}
+@media(max-width:660px){
+ #convertScreen .t3ManipRow{grid-template-rows:72px auto!important}
+ #convertScreen .t3ManipRow .t3BoardSide{gap:4px!important}
+ #convertScreen .t3Direction{max-width:148px;min-height:58px!important;max-height:58px!important;font-size:.74rem!important}
+ #convertScreen .t3Board{--cell:43px}
+}
+@media(max-width:395px){#convertScreen .t3Board{--cell:40px}}
+
+
+/* ==============================================================
+   Math'as — Longueurs v0.8.1 | Identité visuelle et confort mobile
+   Couleurs pédagogiques de déplacement BLEU / MAUVE conservées.
+   Corrections CSS ciblées : aucune modification aux exercices.
+   ============================================================== */
+:root{
+  --m-ink:#193448; --m-navy:#142c3a; --m-teal:#127e7c;
+  --m-muted:#526776; --m-line:#d5e2df; --m-paper:#fbfaf6;
+  color:var(--m-ink);background:#eaf2f0;
+}
+html{scrollbar-color:#b1c9c4 #f0f4f1}
+body{
+  background:radial-gradient(ellipse at 7% 0%,#d9ede7 0%,transparent 42%),
+             radial-gradient(ellipse at 92% 78%,#f3e7d8 0%,transparent 37%),
+             linear-gradient(135deg,#eef5f2,#f5f0e8);
+}
+.shell{
+  background:var(--m-paper);
+  border:1px solid #dce5df;
+  box-shadow:0 18px 52px #16334418;
+}
+header{
+  background:linear-gradient(115deg,#142c3c 0%,#193b48 66%,#21565b 100%);
+  border-bottom:3px solid #57bcb1;
+}
+.brand{letter-spacing:-.025em}
+.brand span{color:#6bd3c5}
+.mutedHead{color:#bbd6d8}
+.btn{border-color:#b8cecd;background:#fffefa;box-shadow:0 2px 4px #1737470b;transition:background .15s,border-color .15s,transform .15s}
+.btn.primary{background:#117c7c;border-color:#117c7c;color:#fff;box-shadow:0 4px 10px #126c6c22}
+.btn.primary:hover:not(:disabled){background:#096a6c;border-color:#096a6c}
+.btn:not(:disabled):active{transform:translateY(1px)}
+.eyebrow{color:#177e7c;letter-spacing:.095em}
+.screenTitle{color:#1b3545;letter-spacing:-.025em}
+.sub{color:#526978}
+#homeScreen{position:relative}
+#homeScreen>.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 12px;border-radius:999px;
+  background:#e1f1ec;border:1px solid #cce4dc;color:#1d7776;
+}
+#homeScreen>.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#4fae9e;flex:none}
+#homeScreen>.screenTitle{font-size:clamp(1.7rem,3.1vw,2.45rem);margin:11px 0 7px}
+#homeScreen>.sub{font-weight:550}
+.homeGrid{
+  gap:17px;margin:25px auto 14px;max-width:1140px;
+  align-items:stretch;
+}
+.homeCard{
+  --activity-accent:#128983;--activity-tint:#e6f5ee;
+  position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(155deg,#fff 0%,#fbfdfb 100%);
+  border:1.5px solid var(--m-line);border-radius:19px;
+  padding:23px 23px 20px;
+  min-height:210px;
+  box-shadow:0 7px 20px #183b4910,0 1px 3px #183b4910;
+  transition:border-color .17s,box-shadow .17s,transform .17s;
+}
+.homeCard::before{
+  content:"";position:absolute;left:0;top:23px;bottom:23px;width:5px;
+  border-radius:0 5px 5px 0;background:var(--activity-accent);
+  opacity:.92;
+}
+#moveLaunchBtn{--activity-accent:#648ab8;--activity-tint:#e9f0fa}
+#convertLaunchCard{--activity-accent:#c5914e;--activity-tint:#fff1db}
+.homeCard .symbol{
+  width:59px;height:59px;border-radius:18px;
+  background:var(--activity-tint);color:var(--activity-accent);
+  box-shadow:inset 0 0 0 1px #ffffffb8;
+}
+#homeScreen #moveLaunchBtn .symbol,#homeScreen #convertLaunchCard .symbol{
+  background:var(--activity-tint);color:var(--activity-accent);
+}
+.homeCard strong{color:#1d3747}
+.homeCard>strong{font-size:1.28rem;line-height:1.21;margin:13px 0 9px;letter-spacing:-.018em}
+.homeCard p{color:#566d78;font-size:.92rem;line-height:1.46;min-height:2.75em}
+button.homeCard:not(.lockedCard):hover{
+  transform:translateY(-2px);
+  border-color:#9ccbc7;
+  box-shadow:0 11px 25px #193e501a;
+}
+.homeCard.homeCardPanel:hover{transform:none}
+.homeCard.lockedCard{
+  background:#eef2f0!important;border-color:#d8e0de!important;
+  filter:saturate(.49)!important;box-shadow:none!important;
+}
+.homeCard.lockedCard::before{opacity:.48}
+.homeCard.lockedCard .symbol{background:#e2e9e8!important}
+.lockNote{
+  background:#e2e9e7;color:#4f626b;border:1px solid #d3dddb;
+  padding:9px 11px;border-radius:10px;font-size:.8rem;
+}
+/* Progrès : libellé explicite + deux tentatives, scores au-dessus des médaillons */
+.homeCard .progressDots{
+  align-items:center;flex-wrap:wrap;gap:10px;
+  width:100%;margin-top:auto;padding-top:13px;
+  border-top:1px solid #e6eeea;
+}
+.progressCaption{
+  display:flex;flex-direction:column;gap:2px;
+  min-width:79px;margin-right:auto;
+  color:#607783;font-size:.7rem;line-height:1.2;font-weight:800;
+}
+.progressCaption strong{font-size:1rem;line-height:1.15;color:#203d4c;font-variant-numeric:tabular-nums}
+.dotResult{min-width:54px;gap:5px}
+.dotScore{
+  min-height:23px;display:inline-flex;align-items:center;justify-content:center;
+  border-radius:7px;border:1px solid #d4e1de;
+  background:#f0f5f2;color:#254e58;
+  padding:3px 7px;font-size:.78rem;font-weight:900;line-height:1.08;
+  font-variant-numeric:tabular-nums;
+}
+.dotScore.unplayed{color:#8da19d;background:transparent;border-color:transparent}
+.progressDot{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  width:23px;height:23px;border:2px solid #a9bdb9;
+  background:#f4f8f5;border-radius:50%;
+  box-shadow:inset 0 2px 2px #183b4110,0 2px 4px #183b411a;
+}
+.progressDot.green,.progressDot.orange,.progressDot.red{box-shadow:0 2px 5px #20384527,inset 0 1px 1px #fff9}
+.progressDot.green::after,.progressDot.orange::after{
+  content:'✓';color:#fff;font-size:13px;font-weight:950;line-height:1;
+}
+.progressDot.red::after{content:'×';color:#fff;font-size:15px;font-weight:950;line-height:1}
+/* Modes : mini-cartes et véritables zones de résultats */
+.homeModeGrid{gap:9px;padding-top:13px}
+.homeModeBtn{
+  position:relative;min-width:0;min-height:93px;padding:12px 12px 11px;
+  border:1.5px solid #d1dfda;border-radius:12px;
+  background:linear-gradient(145deg,#fff,#f5faf8);color:#25414c;
+  box-shadow:0 2px 7px #1937460a;
+  transition:border-color .15s,background .15s,transform .15s;
+}
+.homeModeBtn:not(.lockedMode):hover{border-color:#7abeb5;background:#f3faf6;transform:translateY(-1px)}
+.homeModeBtn strong{font-size:1.03rem;line-height:1.17;letter-spacing:-.01em}
+.homeModeBtn>span:nth-child(2){font-size:.79rem;color:#5e7580;line-height:1.3}
+.homeModeBtn .modeResult{
+  display:inline-flex;align-items:center;align-self:flex-start;
+  font-size:.8rem;line-height:1.17;font-weight:900;
+  margin-top:auto;padding:5px 8px;border:1px solid #d4e3df;
+  border-radius:8px;background:#ebf4f0;color:#365c62;
+  font-variant-numeric:tabular-nums;
+}
+.homeModeBtn .modeResult:empty{display:none}
+.homeModeBtn.lockedMode{background:#eef1f0;border-color:#d8e1df;filter:none;color:#788b8d;box-shadow:none}
+.homeModeBtn.lockedMode .modeResult{color:#62777a;background:#e4eae8;border-color:#d5dedb}
+.homeModeBtn.grade-green{border-color:#62b98d;background:#f0faf3}
+.homeModeBtn.grade-green .modeResult{color:#1a7450;background:#dcf3e6;border-color:#bce5cd}
+.homeModeBtn.grade-orange{border-color:#e0a65f;background:#fff8eb}
+.homeModeBtn.grade-orange .modeResult{color:#925716;background:#ffefd4;border-color:#f0d7a8}
+.homeModeBtn.grade-red{border-color:#da8990;background:#fff4f3}
+.homeModeBtn.grade-red .modeResult{color:#a64650;background:#ffeaec;border-color:#eccbd0}
+/* Discret mais facilement identifiable et touchable sur téléphone. */
+.masterToggle{
+  width:37px;height:37px;bottom:8px;left:8px;
+  border:1px solid #91a9ad83;background:#ffffffd6;
+  color:#385f68;font-size:1.03rem;font-weight:950;
+  opacity:.52;box-shadow:0 2px 7px #0e273721;
+  transition:opacity .15s;
+}
+.masterToggle:hover,.masterToggle:focus-visible,.masterToggle.active{opacity:.94;background:#fff}
+.masterTools{left:52px}
+/* Boutons et surfaces sobres, pas de changement aux directions gauche/droite. */
+#moveScreen .moveEx{
+  border-color:#dedfd6;background:#fffefb;
+  box-shadow:0 3px 12px #193b450d;
+}
+#moveScreen .moveExamples{gap:13px}
+#moveScreen .moveAllActions{margin-top:16px}
+#convertScreen .t3Mode:hover:not(.lockedMode){border-color:#8cc3b6}
+/* Sur grand écran, les deux premières étapes puis les quatre modes,
+   sans grandes cartes inutilement vides. */
+@media(min-width:1101px){
+  #homeScreen .homeGrid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1100px}
+  #homeScreen #convertLaunchCard{grid-column:1/-1}
+  #homeScreen .homeModeGrid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:12px}
+  #homeScreen .homeCard{min-height:210px}
+}
+@media(max-width:1100px){
+  .homeGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #convertLaunchCard{grid-column:1/-1}
+}
+/* Téléphones, tablettes étroites et navigateur mobile en « mode ordinateur ». */
+@media(max-width:940px){
+  #homeScreen .homeGrid{grid-template-columns:minmax(0,1fr);max-width:720px;gap:12px}
+  #homeScreen #convertLaunchCard{grid-column:auto}
+  #homeScreen .homeModeGrid{grid-template-columns:minmax(0,1fr);gap:8px}
+  #homeScreen .homeCard{min-height:0;padding:18px 19px 17px}
+  #homeScreen .homeCard>strong{font-size:1.19rem;margin:10px 0 6px}
+  #homeScreen .homeCard p{min-height:0;margin-bottom:10px}
+  #homeScreen .homeCard .symbol{height:48px;width:48px;border-radius:14px;font-size:1.55rem}
+  #homeScreen .homeCard .symbol svg{width:39px;height:36px}
+  #homeScreen .homeModeBtn{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;
+    grid-template-rows:auto auto;gap:2px 10px;
+    align-items:center;min-height:66px;padding:9px 12px;
+  }
+  #homeScreen .homeModeBtn strong{grid-column:1;grid-row:1;font-size:.98rem;margin:0}
+  #homeScreen .homeModeBtn>span:nth-child(2){grid-column:1;grid-row:2}
+  #homeScreen .homeModeBtn .modeResult{grid-column:2;grid-row:1 / span 2;margin:0;max-width:160px;overflow-wrap:anywhere}
+  #moveScreen .moveExamples{grid-template-columns:minmax(0,1fr);gap:12px}
+  #moveScreen .moveEx{min-width:0}
+}
+@media(max-width:600px){
+  .shell{border:0;border-radius:0;margin:0}
+  header{padding:12px 14px}
+  main{padding:16px 14px}
+  #homeScreen>.eyebrow{font-size:.66rem;padding:6px 10px}
+  #homeScreen>.screenTitle{font-size:1.55rem}
+  #homeScreen>.sub{font-size:.87rem}
+  #homeScreen .homeGrid{margin:17px auto 10px}
+  #homeScreen .homeCard .progressDots{gap:11px}
+  .progressCaption{min-width:80px}
+  .dotScore{font-size:.74rem}
+  #homeScreen .homeModeBtn .modeResult{font-size:.76rem}
+  #moveScreen .moveEx{grid-template-columns:max-content minmax(0,1fr);padding:11px 10px;gap:6px}
+  #moveScreen .moveResult{grid-column:1/-1}
+  #moveScreen .moveRail{min-width:0;height:110px}
+  #moveScreen .movePrompt{font-size:1.03rem}
+  .masterToggle{left:7px;bottom:7px}
+  .masterTools{left:49px}
+}
+/* En conversion, l'accès enseignant évite le bouton de vérification. */
+@media(max-width:780px){
+  body:has(#convertScreen:not(.hidden)) .masterToggle{left:auto;right:8px;bottom:237px}
+  body:has(#convertScreen:not(.hidden)) .masterTools{left:auto;right:52px;bottom:233px}
+}
+@media(max-width:780px) and (max-height:540px){
+  body:has(#convertScreen:not(.hidden)) .masterToggle{bottom:150px}
+  body:has(#convertScreen:not(.hidden)) .masterTools{bottom:146px}
+}
+@media(max-width:360px){
+  #homeScreen .homeModeBtn .modeResult{max-width:118px;font-size:.72rem}
+  #homeScreen .homeCard{padding:16px 14px}
+  .progressCaption{min-width:66px}
+}
+@media(prefers-reduced-motion:reduce){
+  .homeCard,.homeModeBtn,.btn,.masterToggle{transition:none!important}
+}
+
+
+/* ======================================================================
+   v0.8.1 — PC : 3 cartes côte à côte, modes 2 × 2.
+   Fond « papier d'atelier » en couches CSS uniquement, sans requête réseau.
+   Repères graphiques décoratifs sans interaction ni changement pédagogique.
+   ====================================================================== */
+:root{
+  --m-paper:#fbfaf6;
+  --m-soft-ink:#294757;
+}
+/* Première couche : l'environnement de la page, légèrement tramé. */
+body{
+  background-color:#edf1ec;
+  background-image:
+    radial-gradient(ellipse at 8% 10%,rgba(151,205,196,.38),transparent 43%),
+    radial-gradient(ellipse at 96% 87%,rgba(234,186,136,.30),transparent 43%),
+    repeating-linear-gradient(135deg,transparent 0 46px,rgba(47,96,105,.025) 46px 47px),
+    linear-gradient(128deg,#e9f3ef 0%,#f2f0e8 51%,#f5eee5 100%);
+  background-attachment:fixed;
+}
+/* Deuxième couche : feuille centrale au quadrillage extrêmement léger. */
+.shell{
+  background:#fbfaf6;
+  border-color:#e6e9e1;
+  box-shadow:0 5px 18px #193d4510,0 22px 72px #1d41451e;
+}
+.shell main{
+  background-color:#fbfaf6;
+  background-image:
+    radial-gradient(ellipse at 89% 5%,rgba(165,218,202,.14),transparent 43%),
+    radial-gradient(ellipse at 7% 95%,rgba(233,199,160,.09),transparent 45%),
+    repeating-linear-gradient(0deg,transparent 0 47px,rgba(44,88,91,.017) 47px 48px),
+    repeating-linear-gradient(90deg,transparent 0 47px,rgba(44,88,91,.017) 47px 48px),
+    linear-gradient(180deg,#fcfbf7 0%,#faf9f4 100%);
+}
+header{
+  background-image:
+    radial-gradient(ellipse at 83% -30%,rgba(116,197,180,.20),transparent 42%),
+    repeating-linear-gradient(120deg,transparent 0 33px,rgba(255,255,255,.017) 33px 34px),
+    linear-gradient(115deg,#132b3c 0%,#1a3a49 58%,#225e60 100%);
+  box-shadow:inset 0 1px 0 #ffffff14;
+}
+/* Troisième couche : cartes satinées et marques discrètes de mesure. */
+#homeScreen .homeCard:not(.lockedCard){
+  background-image:
+    radial-gradient(ellipse at 100% 0%,var(--activity-tint) 0%,transparent 66%),
+    repeating-linear-gradient(145deg,transparent 0 20px,rgba(41,94,103,.016) 20px 21px),
+    linear-gradient(156deg,#fffefd,#f9fcf9);
+  box-shadow:0 1px 2px #1a3c470d,0 9px 24px #173d4511;
+}
+#homeScreen .homeCard::after{
+  content:"";position:absolute;right:18px;top:18px;
+  width:111px;height:17px;pointer-events:none;
+  opacity:.21;
+  background:repeating-linear-gradient(90deg,var(--activity-accent) 0 1px,transparent 1px 14px);
+  -webkit-mask-image:linear-gradient(to bottom,#000 0 6px,transparent 7px 100%);
+  mask-image:linear-gradient(to bottom,#000 0 6px,transparent 7px 100%);
+}
+#homeScreen .homeCard.lockedCard::after{opacity:.12}
+#homeScreen .homeCard .progressDots{border-top-color:#dceae3}
+#homeScreen .homeModeBtn:not(.lockedMode):not(.grade-green):not(.grade-orange):not(.grade-red){
+  background-image:radial-gradient(ellipse at 100% 0%,#e5f1e9 0%,transparent 72%),linear-gradient(145deg,#fffdfa,#f4f9f6);
+}
+#homeScreen .homeModeBtn{
+  box-shadow:inset 0 1px 0 #ffffffbd,0 3px 9px #1937460b;
+}
+/* Le matériau des exercices reste distinct du support principal. */
+#moveScreen .moveEx{
+  background-image:
+    radial-gradient(ellipse at 100% 0%,rgba(171,205,214,.12),transparent 57%),
+    linear-gradient(155deg,#fffefa,#fffcf5);
+  box-shadow:0 1px 2px #29444d0a,0 5px 16px #1c3c4710;
+}
+#convertScreen .t3Ex:not(.t3retry):not(.t3corrected){
+  background-image:
+    radial-gradient(ellipse at 100% 0%,rgba(202,218,212,.12),transparent 54%),
+    linear-gradient(150deg,#fffefa,#fcfbf6);
+}
+#gameScreen .unitBank,
+#gameScreen .imagesBank,
+#moveScreen .moveAbacus,
+#convertScreen .t3Keypad{
+  background-image:
+    repeating-linear-gradient(135deg,transparent 0 28px,rgba(45,100,106,.018) 28px 29px),
+    linear-gradient(155deg,#eff6f3,#e9f1ee);
+}
+#gameScreen.imagesMode #imagesSection{
+  background-image:linear-gradient(135deg,#f9fcf8,#eff6f1);
+}
+/* Retour à l'accueil historique PC : trois activités sur une même ligne.
+   La carte de conversion garde deux boutons par rangée (2 + 2). */
+@media(min-width:941px){
+  #homeScreen .homeGrid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    max-width:1200px;gap:17px;align-items:stretch;
+  }
+  #homeScreen #convertLaunchCard{grid-column:auto}
+  #homeScreen .homeModeGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;margin-top:auto;padding-top:12px;
+  }
+  #homeScreen .homeModeBtn{min-width:0}
+  #homeScreen .homeModeBtn .modeResult{max-width:100%;overflow-wrap:anywhere}
+}
+/* Sur PC compact : garder 3 colonnes et éviter la compression des libellés. */
+@media(min-width:941px) and (max-width:1120px){
+  #homeScreen .homeGrid{gap:12px;max-width:100%}
+  #homeScreen .homeCard{padding:18px 15px 17px}
+  #homeScreen .homeCard>strong{font-size:1.13rem}
+  #homeScreen .homeCard p{font-size:.84rem}
+  #homeScreen .homeModeBtn{padding:9px 8px;min-height:88px}
+  #homeScreen .homeModeBtn strong{font-size:.92rem}
+  #homeScreen .homeModeBtn>span:nth-child(2){font-size:.72rem}
+  #homeScreen .homeModeBtn .modeResult{font-size:.7rem;padding:4px 5px}
+  #homeScreen .progressCaption{min-width:60px}
+  #homeScreen .homeCard .progressDots{gap:5px}
+  #homeScreen .dotResult{min-width:49px}
+  #homeScreen .dotScore{font-size:.7rem;padding:3px 4px}
+}
+/* GSM et petites tablettes : conserver le menu et les exercices en colonne. */
+@media(max-width:940px){
+  #homeScreen .homeGrid{grid-template-columns:minmax(0,1fr)}
+  #homeScreen #convertLaunchCard{grid-column:auto}
+  #homeScreen .homeModeGrid{grid-template-columns:minmax(0,1fr)}
+}
+
+/* ================================================================
+   V0.8.3 — Manipulation de la virgule : plus compacte sur PC.
+   Les commandes utilisent les espaces libres à gauche et à droite
+   du tableau, au lieu de repousser celui-ci sur une troisième ligne.
+   ================================================================ */
+@media(min-width:1081px){
+  /* Sur PC standard le panneau de manipulation est accolé à l'énoncé.
+     Sur PC plus étroit, il passe dessous mais reste sur UNE ligne. */
+  #convertScreen .t3Ex{
+    display:grid!important;
+    grid-template-columns:minmax(292px,338px) minmax(0,1fr)!important;
+    align-items:center!important;
+    gap:9px 13px!important;
+    padding:9px 13px!important;
+  }
+  #convertScreen .t3Assistance{
+    grid-column:2!important;grid-row:1!important;align-self:center!important;
+    margin:0!important;padding:0!important;border:none!important;min-width:0!important;
+  }
+  #convertScreen .t3ManipRow{
+    display:grid!important;
+    grid-template-columns:minmax(123px,154px) minmax(347px,1fr) minmax(128px,160px)!important;
+    grid-template-rows:minmax(58px,auto) minmax(54px,auto)!important;
+    align-items:center!important;
+    gap:0 9px!important;
+    min-width:0!important;
+  }
+  /* Afficher les unités : dans l'espace libre, à gauche des cases. */
+  #convertScreen .t3ManipRow .t3UnitsBtn{
+    grid-area:2/1/3/2!important;
+    align-self:center!important;justify-self:center!important;
+    width:100%!important;min-width:0!important;max-width:154px!important;
+    padding:7px 6px!important;white-space:normal!important;line-height:1.13!important;
+    font-size:.77rem!important;
+  }
+  /* Chiffres et virgule sur la grande zone centrale, entièrement visible. */
+  #convertScreen .t3ManipRow .t3BoardScroll{
+    grid-area:1/2/3/3!important;
+    width:100%!important;min-width:0!important;max-width:100%!important;
+    display:flex!important;justify-content:center!important;align-items:center!important;
+    overflow:visible!important;margin:0!important;padding:0!important;
+  }
+  #convertScreen .t3Board{--cell:45px;width:calc(7.5 * var(--cell))!important;margin:0 auto!important}
+  /* Information de déplacement et recommencer, dans la colonne droite. */
+  #convertScreen .t3ManipRow .t3BoardSide{
+    grid-area:1/3/3/4!important;
+    display:flex!important;flex-direction:column!important;
+    align-items:stretch!important;justify-content:space-between!important;
+    gap:3px!important;min-width:0!important;min-height:94px!important;
+    max-height:none!important;max-width:none!important;
+  }
+  #convertScreen .t3Direction{
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    width:100%!important;min-width:0!important;max-width:none!important;
+    min-height:47px!important;max-height:none!important;
+    font-size:.86rem!important;line-height:1.15!important;
+    text-align:center!important;margin:0!important;padding:0!important;
+  }
+  #convertScreen .t3Direction .t3Count{font-size:1.15rem!important}
+  #convertScreen .t3BoardActions{
+    display:flex!important;justify-content:center!important;align-self:stretch!important;
+    width:100%!important;min-width:0!important;
+  }
+  #convertScreen .t3ResetHelp{
+    min-height:35px!important;width:100%!important;
+    padding:6px 7px!important;font-size:.75rem!important;
+    line-height:1.1!important;white-space:normal!important;
+  }
+}
+/* Dès que le panneau latéral manque d'espace, l'aide se place
+   sous l'énoncé : ses TROIS éléments restent sur la même ligne. */
+@media(min-width:1081px) and (max-width:1259px){
+  #convertScreen .t3Ex{display:block!important}
+  #convertScreen .t3Assistance{
+    margin-top:8px!important;padding-top:7px!important;
+    border-top:1px dashed #c5d5d7!important;
+  }
+  #convertScreen .t3ManipRow{grid-template-columns: minmax(130px,175px) minmax(345px,1fr) minmax(130px,175px)!important}
+}
+@media(min-width:661px) and (max-width:1080px){
+  #convertScreen .t3Ex{display:block!important;padding:10px 12px!important}
+  #convertScreen .t3Assistance{
+    margin-top:8px!important;padding:7px 0 0!important;
+    border-top:1px dashed #c5d5d7!important;
+  }
+  #convertScreen .t3ManipRow{
+    display:grid!important;
+    grid-template-columns:minmax(135px,1fr) minmax(0,1fr)!important;
+    grid-template-areas:'units side' 'board board'!important;
+    grid-template-rows:auto auto!important;
+    align-items:center!important;gap:1px 10px!important;
+  }
+  #convertScreen .t3ManipRow .t3UnitsBtn{
+    grid-area:units!important;justify-self:start!important;
+    width:auto!important;min-width:140px!important;padding:6px 12px!important;
+  }
+  #convertScreen .t3ManipRow .t3BoardSide{
+    grid-area:side!important;display:flex!important;flex-direction:row!important;
+    align-items:center!important;justify-content:flex-end!important;
+    gap:8px!important;min-height:0!important;min-width:0!important;max-width:none!important;
+  }
+  #convertScreen .t3Direction{
+    width:auto!important;min-width:0!important;max-width:210px!important;
+    min-height:36px!important;max-height:none!important;font-size:.8rem!important;
+  }
+  #convertScreen .t3BoardActions{width:auto!important;flex:0 0 auto!important}
+  #convertScreen .t3ResetHelp{min-height:34px!important;font-size:.75rem!important}
+  #convertScreen .t3ManipRow .t3BoardScroll{
+    grid-area:board!important;display:flex!important;justify-content:center!important;
+    width:100%!important;max-width:100%!important;overflow:visible!important;
+    padding:0!important;margin:0!important;
+  }
+  #convertScreen .t3Board{--cell:45px;width:calc(7.5 * var(--cell))!important}
+}
+/* Sur GSM on garde l'organisation verticale de la v0.8.1, mais
+   le tableau adapte ses cellules au petit écran sans scrollbar. */
+@media(max-width:660px){
+  #convertScreen .t3ManipRow .t3BoardScroll{
+    overflow:visible!important;max-width:100%!important;
+    display:flex!important;justify-content:center!important;
+    padding:0!important;margin:0 auto!important;
+  }
+  #convertScreen .t3Board{
+    --cell:min(43px,calc((100vw - 43px)/7.5));
+    width:calc(7.5 * var(--cell))!important;
+    max-width:100%!important;
+  }
+  #convertScreen .t3ManipRow .t3BoardSide{max-width:none!important}
+}
+
+/* ================================================================
+   V0.8.3 — Identité artistique : halos, surfaces et profondeur.
+   Décors uniquement CSS, sans fichier image ni contenu interactif.
+   ================================================================ */
+body{
+  background-image:
+    radial-gradient(ellipse 660px 520px at -6% 0%,rgba(76,181,174,.26),transparent 75%),
+    radial-gradient(ellipse 540px 500px at 106% 20%,rgba(125,141,206,.20),transparent 74%),
+    radial-gradient(ellipse 660px 630px at 96% 102%,rgba(239,162,119,.24),transparent 76%),
+    repeating-linear-gradient(132deg,transparent 0 47px,rgba(38,88,96,.025) 47px 48px),
+    linear-gradient(122deg,#e1f1ef,#f3f0eb 52%,#f5eade);
+}
+.shell main{
+  background-image:
+    radial-gradient(ellipse 620px 380px at 88% 0%,rgba(134,192,221,.18),transparent 79%),
+    radial-gradient(ellipse 450px 380px at 1% 35%,rgba(127,199,175,.12),transparent 78%),
+    radial-gradient(ellipse 660px 450px at 100% 86%,rgba(245,191,133,.15),transparent 83%),
+    repeating-linear-gradient(0deg,transparent 0 53px,rgba(41,92,103,.014) 53px 54px),
+    repeating-linear-gradient(90deg,transparent 0 53px,rgba(41,92,103,.014) 53px 54px),
+    linear-gradient(155deg,#fafbf7,#fcfaf7 52%,#f9f8f3);
+}
+#homeScreen{position:relative;isolation:isolate}
+#homeScreen::before,#homeScreen::after{content:"";position:absolute;pointer-events:none;z-index:-1;border-radius:50%}
+#homeScreen::before{
+  width:min(680px,75vw);height:340px;right:-135px;top:-95px;
+  transform:rotate(-18deg);
+  background:
+    radial-gradient(ellipse at 45% 53%,rgba(103,197,180,.24),rgba(146,191,220,.14) 41%,transparent 75%);
+  box-shadow:0 0 85px 22px rgba(128,193,193,.065);
+}
+#homeScreen::after{
+  width:min(720px,85vw);height:410px;left:-180px;bottom:-180px;
+  transform:rotate(23deg);
+  background:radial-gradient(ellipse at 52% 50%,rgba(247,181,128,.24),rgba(207,175,223,.13) 42%,transparent 77%);
+}
+#homeScreen .homeGrid{position:relative;z-index:1}
+#homeScreen .homeCard:not(.lockedCard){
+  background-image:
+    radial-gradient(ellipse 270px 210px at 100% 0%,var(--activity-tint) 0%,transparent 92%),
+    radial-gradient(ellipse 190px 260px at 0% 100%,rgba(143,195,183,.085),transparent 90%),
+    repeating-linear-gradient(145deg,transparent 0 23px,rgba(49,103,106,.015) 23px 24px),
+    linear-gradient(150deg,#ffffff,#f9fcfa);
+  box-shadow:inset 0 1px 0 #fff,0 2px 4px #1335430a,0 12px 25px #173b4a16;
+}
+#homeScreen .homeCard .symbol{
+  box-shadow:inset 0 1px 0 #ffffffd6,0 3px 12px #1c4f5430;
+}
+#homeScreen #moveLaunchBtn:not(.lockedCard){
+  background-image:
+    radial-gradient(ellipse 310px 250px at 100% 0%,rgba(160,194,238,.29),transparent 83%),
+    radial-gradient(ellipse 260px 260px at -5% 100%,rgba(170,205,219,.13),transparent 86%),
+    linear-gradient(148deg,#ffffff,#f9fbff);
+}
+#homeScreen #convertLaunchCard:not(.lockedCard){
+  background-image:
+    radial-gradient(ellipse 320px 320px at 100% 0%,rgba(255,214,150,.30),transparent 88%),
+    radial-gradient(ellipse 240px 210px at 0% 100%,rgba(215,186,230,.12),transparent 87%),
+    linear-gradient(148deg,#ffffff,#fffaf3);
+}
+#homeScreen .homeModeBtn:not(.lockedMode){
+  box-shadow:inset 0 1px 0 #ffffffef,0 3px 9px #1a455016;
+}
+#homeScreen .homeModeBtn.lockedMode{background-image:linear-gradient(150deg,#f0f2f1,#e8eeed)}
+@media(max-width:600px){
+  #homeScreen::before{right:-170px;top:-88px;opacity:.85}
+  #homeScreen::after{left:-185px;bottom:-120px;opacity:.75}
+}
+
+/* v0.8.4 — activité 2 et pavé numérique : lisibilité + codes couleur */
+#moveScreen .moveLineTop{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ gap:1px;
+ line-height:1.02;
+ font-size:clamp(.86rem,1.1vw,.98rem);
+}
+#moveScreen .moveLineTop strong{
+ display:block;
+ font-size:2.15rem;
+ line-height:.95;
+ font-weight:950;
+}
+#moveScreen .moveLineTop span{display:block;text-align:center}
+#moveScreen .moveLineBottom{margin-top:3px;font-size:clamp(1rem,1.25vw,1.17rem);font-weight:900;line-height:1.05}
+#convertScreen .t3KeyGrid button[data-t3key="clear"],
+#convertScreen .t3KeyGrid button[data-t3key="back"]{background:#fff1f1;border-color:#efb1b7;color:#a34755}
+#convertScreen .t3KeyGrid button[data-t3key="clear"]:active,
+#convertScreen .t3KeyGrid button[data-t3key="back"]:active{background:#ffdfe2}
+#convertScreen .t3KeyGrid .t3NextKey{background:linear-gradient(180deg,#61c690 0%,#3daa74 100%);border-color:#2e9b65;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+#convertScreen .t3KeyGrid .t3NextKey:active{background:linear-gradient(180deg,#4bb580 0%,#2f965f 100%)}
+
+
+/* v0.8.11 : guidage pédagogique des unités (affiché seulement sur demande) */
+#convertScreen .t3Ex.unitsGuideActive .t3FromUnit{
+ color:#b7444d;text-decoration:underline;text-decoration-color:#d95b62;
+ text-underline-offset:5px;text-decoration-thickness:3px;
+}
+#convertScreen .t3Ex.unitsGuideActive .t3ToUnit{
+ color:#207d50;text-decoration:underline;text-decoration-color:#39a96e;
+ text-underline-offset:5px;text-decoration-thickness:3px;
+}
+#convertScreen .t3UnitLabels .t3UnitLabel{transition:background-color .12s ease,box-shadow .12s ease}
+#convertScreen .t3UnitLabels .t3UnitLabel.from{
+ background:#ffebeb;color:#aa3d47;
+ box-shadow:inset 0 -3px 0 #d95862;
+}
+#convertScreen .t3UnitLabels .t3UnitLabel.to{
+ background:#e5f6e9;color:#23784b;
+ outline:none;box-shadow:inset 0 -3px 0 #37a86c;
+}
+#convertScreen .t3UnitLabels .t3UnitLabel.activeUnit{
+ position:relative;z-index:1;
+ background:#ffe3ab;color:#583b14;
+ box-shadow:inset 0 0 0 2px #d68d1e,inset 0 -4px 0 #bd7519;
+ border-radius:6px;
+}
+#convertScreen .t3UnitLabels .t3UnitLabel.activeUnit.from{
+ background:#ffe0de;box-shadow:inset 0 0 0 2px #d85c65,inset 0 -4px 0 #bf4852;
+}
+#convertScreen .t3UnitLabels .t3UnitLabel.activeUnit.to{
+ background:#d9f7df;box-shadow:inset 0 0 0 2px #2a9b62,inset 0 -4px 0 #238653;
+}
+@media(prefers-reduced-motion:reduce){#convertScreen .t3UnitLabels .t3UnitLabel{transition:none}}
+
+
+/* v0.8.11 : correspondances énoncé ↔ unités, sans indice de déplacement */
+#convertScreen .t3Ex{position:relative}
+#convertScreen .t3Correspondences{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:4}
+/* Les petits arcs illustrent UNIQUEMENT les déplacements réellement effectués.
+   Ils restent visibles même avec les unités affichées, au-dessus des correspondances. */
+#convertScreen .t3Movement.active{position:relative;z-index:8;visibility:visible}
+#convertScreen .t3Movement.active svg{position:relative;z-index:8}
+#convertScreen .t3Ex.unitsGuideActive .t3Movement.active{display:block!important}
+
+
+
+/* v0.8.11 — Deux trajectoires bien distinctes pour les correspondances.
+   Un discret espace de guidage empêche le tracé vert de traverser les unités. */
+@media(min-width:1251px){
+ #convertScreen .t3Ex.unitsGuideActive .t3ManipRow .t3BoardScroll{
+  padding-top:22px!important;
+ }
+}
+@media(max-width:650px){
+ /* Une petite marge dédiée sépare les liaisons des boutons sur téléphone. */
+ #convertScreen .t3Ex.unitsGuideActive .t3ManipRow .t3BoardScroll{
+  padding-top:20px!important;
+ }
+}
+
+
+/* v0.8.11 — plus de discrétion au repos, meilleure lisibilité au survol / Master. */
+.masterToggle{
+  opacity:.18;
+  background:#ffffff80;
+  border-color:#91a9ad50;
+  box-shadow:none;
+}
+.masterToggle:hover,.masterToggle:focus-visible,.masterToggle.active{
+  opacity:.9;
+  background:#fff;
+  box-shadow:0 2px 7px #0e273721;
+}
+/* Diminue de moitié l'opacité de toutes les parties des flèches :
+   tiges, pointes et points de départ, sans modifier leur géométrie. */
+#convertScreen .t3Correspondences{opacity:.35}
+
+/* v1.0.0 — Scores de conversion, records et collection de médailles. */
+#homeScreen .scorePanel{margin:13px 0 19px;padding:13px 17px;border:1px solid #d7e5df;border-radius:16px;background:linear-gradient(115deg,#f5faf7,#fffaf0);box-shadow:0 3px 14px #183b490c}
+#homeScreen .scorePanelRecords{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+#homeScreen .scoreRecord{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:9px 12px;background:#ffffffc9;border:1px solid #e0e9e4;border-radius:11px}
+#homeScreen .scoreRecord>span{font-size:.77rem;font-weight:900;color:#42636b}
+#homeScreen .scoreRecord>strong{font-size:1.55rem;line-height:1.12;color:#214c49;font-variant-numeric:tabular-nums}
+#homeScreen .scoreRecord>small{font-size:.7rem;color:#617b7a}
+#homeScreen .scoreMedals{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px}
+#homeScreen .scoreMedalsTitle{font-weight:800;font-size:.77rem;color:#58706a}
+#homeScreen .scoreMedalRow{display:flex;gap:6px;flex-wrap:wrap}
+#homeScreen .scoreMedal{display:inline-flex;align-items:center;gap:3px;padding:5px 8px;border-radius:10px;background:#fffaf0;border:1px solid #e4dbc9;font-size:.77rem;font-weight:900;color:#31524a}
+#homeScreen .scoreMedal.pending{filter:grayscale(1);opacity:.4;background:#f1f2f1}
+#convertScreen .t3RunBoard{display:flex;gap:9px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+#convertScreen #t3ScoreNow{display:inline-flex;padding:8px 14px;border-radius:99px;background:#e5f6e9;border:1px solid #9dd2b3;color:#18613f;font-size:1.07rem;font-weight:950;font-variant-numeric:tabular-nums}
+#convertScreen .t3ScoreBadge{font-size:.75rem;font-weight:850;color:#618178}
+#convertScreen .t3Open:disabled,#convertScreen .t3UnitsBtn:disabled{opacity:.57;cursor:not-allowed;filter:grayscale(.4)}
+@media(max-width:600px){#homeScreen .scorePanel{padding:10px;margin:10px 0 13px}#homeScreen .scorePanelRecords{gap:7px}#homeScreen .scoreRecord{padding:8px}#homeScreen .scoreRecord>strong{font-size:1.32rem}#homeScreen .scoreMedals{gap:6px}#homeScreen .scoreMedal{padding:4px 5px;font-size:.71rem}#convertScreen .t3RunBoard{gap:5px;justify-content:flex-start}#convertScreen #t3ScoreNow{padding:5px 10px;font-size:.92rem}#convertScreen .t3SessionHead{flex-wrap:wrap;gap:5px}}
+</style></head><body><div class="shell"><header><div><div class="brand">MATH<span>'AS</span> / LONGUEURS <small class="mutedHead">v1.0.0</small></div></div><div class="headerBtns"><button id="homeBtn" class="btn dark hidden" type="button">← Accueil</button><button id="helpBtn" class="btn dark hidden" type="button">? Aide</button><button id="fullBtn" class="btn dark" type="button">⛶ Plein écran</button></div></header><main><section id="homeScreen"><div class="eyebrow">Math'as · Les unités de longueur</div><h1 class="screenTitle">L'abaque, étape par étape.</h1><p class="sub">Choisis une activité pour commencer.</p>
+<div class="scorePanel hidden" id="scorePanel" aria-label="Records de conversion">
+  <div class="scorePanelRecords"><div class="scoreRecord"><span>☀️ Meilleur du jour</span><strong id="scoreDay">—</strong><small id="scoreDayMode">Aucun score aujourd’hui</small></div>
+  <div class="scoreRecord"><span>🏆 Record historique</span><strong id="scoreHistory">—</strong><small id="scoreHistoryMode">À battre !</small></div></div>
+  <div class="scoreMedals"><span class="scoreMedalsTitle">Médailles · atteins un score dans une seule partie</span><div class="scoreMedalRow" id="scoreMedalRow"></div></div>
+</div><div class="homeGrid"><button id="launchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 54 48" width="47" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="48" height="34" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 7v34M35 7v34M3 20h48" stroke="currentColor" stroke-width="2"/><path d="M9 14h4m12 0h4m12 0h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 28h7m10 0h5m10 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span><strong>1. Construire l’abaque</strong><p>Place les unités, puis classe les images.</p><span class="progressDots" id="stage1Dots" aria-label="Progression : 0 réussite sur 2"></span></button><button id="moveLaunchBtn" class="homeCard" type="button"><span class="symbol" aria-hidden="true">↔</span><strong>2. Compter les déplacements</strong><p>Fais glisser le point et compte les déplacements.</p><span class="progressDots" id="stage2Dots" aria-label="Progression : 0 réussite sur 2"></span><span class="lockNote hidden" id="moveLock">🔒 Réussis 2 fois l’activité 1 · 0/2</span></button><div id="convertLaunchCard" class="homeCard homeCardPanel"><span class="symbol" aria-hidden="true">⇄</span><strong>3. Convertir les longueurs</strong><p>Convertis les longueurs, avec deux aides facultatives.</p><div class="homeModeGrid" id="homeModeGrid" aria-label="Modes de l’activité 3"><button type="button" class="t3Mode homeModeBtn" data-mode="one"><strong>1 page</strong><span>4 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="three"><strong>3 pages</strong><span>12 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="five"><strong>5 pages</strong><span>20 conversions</span><span class="modeResult"></span></button><button type="button" class="t3Mode homeModeBtn" data-mode="sudden"><strong>Mort subite</strong><span></span><span class="modeResult"></span></button></div><span class="lockNote hidden" id="convertLock">🔒 Réussis 2 fois l’activité 2 · 0/2</span></div></div></section><section id="moveScreen" class="hidden" aria-label="Compter les déplacements">
 <div class="moveTop">
   <div><div class="eyebrow">Activité 2 · Comprendre les déplacements</div>
   <h1 class="screenTitle">Compte les déplacements <span class="pageStep" id="movePageLabel">Page 1 / 2</span></h1>
@@ -437,9 +1232,9 @@
 <section id="convertScreen" class="hidden" aria-label="Transformer les unités de longueur">
   <div class="t3Top"><div><div class="eyebrow">Activité 3 · Convertir des longueurs</div>
     <h1 class="screenTitle">Convertis les longueurs</h1>
-    <p class="sub">Écris les réponses. Utilise les aides si nécessaire.</p>
+    <p class="sub" id="t3Instructions">Écris les réponses. Utilise les aides si nécessaire.</p>
   </div><div class="t3TopCount hidden" id="t3Progress" aria-live="polite"></div></div>
-  <div class="t3SessionHead hidden" id="t3SessionHead"><strong id="t3PageLabel">Page 1 / 1</strong></div>
+  <div class="t3SessionHead hidden" id="t3SessionHead"><strong id="t3PageLabel">Page 1 / 1</strong><div class="t3RunBoard"><span id="t3ScoreNow" aria-live="polite">0 point</span><span id="t3ScoreBadge" class="t3ScoreBadge">Objectif : ton record !</span></div></div>
   <div class="t3Layout hidden" id="t3Layout"><div>
     <div class="t3ExList" id="t3ExList"></div>
     <div class="t3Bottom"><button type="button" class="btn primary" id="t3Verify">✓ Vérifier les 4 réponses</button>
@@ -464,7 +1259,7 @@
 <div id="imagesBank" class="imagesBank" aria-label="Liste des images, défilable horizontalement"></div>
 </section><div class="actions"><button id="verifyBtn" class="btn primary" type="button">✓ Valider</button><button id="retryBtn" class="btn" type="button">↺ Recommencer</button><button id="continueBtn" class="btn primary hidden" type="button">Continuer →</button><button id="newBtn" class="btn hidden" type="button">Nouvelle partie ↻</button></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div></section></main></div>
 <button id="masterToggle" class="masterToggle" type="button" aria-label="Accès enseignant" title="Mode enseignant">M</button>
-<div class="masterTools hidden" id="masterTools"><span>Master actif</span><button type="button" id="masterReset" class="btn">Retour à 0</button><button type="button" id="masterExit" class="btn">Quitter Master</button></div>
+<div class="masterTools hidden" id="masterTools"><span>Master actif</span><button type="button" id="masterEraseScores" class="btn">Effacer les scores</button><button type="button" id="masterReset" class="btn">Retour à 0</button><button type="button" id="masterExit" class="btn">Quitter Master</button></div>
 <dialog id="masterDialog" class="masterDialog" aria-labelledby="masterDialogTitle"><form id="masterForm" method="dialog">
 <h2 id="masterDialogTitle">Mode enseignant</h2><p>Entre le mot de passe pour débloquer les activités pendant cette session.</p>
 <input id="masterPassword" type="password" autocomplete="off" spellcheck="false" aria-label="Mot de passe enseignant" required>
@@ -647,7 +1442,7 @@ window.MATHAS_ITEMS = [
 (()=>{'use strict';
  const STORAGE='mathas_abaque_longueurs_progress_v1', SESSION='mathas_abaque_longueurs_master_v1';
  const $=id=>document.getElementById(id);
- const blank=()=>({stage1:{passes:[],passScores:[],failed:false,failedScore:null},stage2:{passes:[],passScores:[],failed:false,failedScore:null},modes:{one:null,three:null,five:null,sudden:null},modeScores:{one:null,three:null,five:null},suddenBest:0});
+ const blank=()=>({stage1:{passes:[],passScores:[],failed:false,failedScore:null},stage2:{passes:[],passScores:[],failed:false,failedScore:null},modes:{one:null,three:null,five:null,sudden:null},modeScores:{one:null,three:null,five:null},suddenBest:0,scoreRecords:{dayDate:"",dayBest:0,dayMode:"",allBest:0,allMode:"",medals:[]}});
  let data=blank(), master=false;
  try{const saved=JSON.parse(localStorage.getItem(STORAGE));if(saved&&typeof saved==='object'){
    for(const key of ['stage1','stage2']) if(saved[key]){
@@ -665,9 +1460,38 @@ window.MATHAS_ITEMS = [
      const v=saved.modeScores[m];if(Number.isInteger(v)&&v>=0&&v<=total)data.modeScores[m]=v;
    }
    data.suddenBest=Math.max(0,Math.floor(Number(saved.suddenBest)||0));
+   if(saved.scoreRecords && typeof saved.scoreRecords==='object'){
+     const r=saved.scoreRecords;
+     const safeScore=v=>Number.isSafeInteger(v)&&v>=0?Math.min(v,1e9):0;
+     const safeMode=v=>['one','three','five','sudden'].includes(v)?v:'';
+     data.scoreRecords.dayDate=typeof r.dayDate==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(r.dayDate)?r.dayDate:'';
+     data.scoreRecords.dayBest=safeScore(r.dayBest);
+     data.scoreRecords.dayMode=safeMode(r.dayMode);
+     data.scoreRecords.allBest=safeScore(r.allBest);
+     data.scoreRecords.allMode=safeMode(r.allMode);
+     data.scoreRecords.medals=[100,300,500,800].filter(t=>Array.isArray(r.medals)&&r.medals.includes(t)&&data.scoreRecords.allBest>=t);
+   }
  }}catch(e){}
  try{master=sessionStorage.getItem(SESSION)==='1'}catch(e){}
  const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(data))}catch(e){}};
+ const MEDAL_LEVELS=[{min:100,icon:'🥉',label:'100'},{min:300,icon:'🥈',label:'300'},{min:500,icon:'🥇',label:'500'},{min:800,icon:'🏆',label:'800'}];
+ const modeName={one:'1 page',three:'3 pages',five:'5 pages',sudden:'Mort subite'};
+ const localDay=()=>{
+  try{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Brussels',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const field=key=>parts.find(p=>p.type===key)?.value;return `${field('year')}-${field('month')}-${field('day')}`}
+  catch(e){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+ };
+ const normalizeDay=()=>{const day=localDay(),r=data.scoreRecords;if(r.dayDate!==day){r.dayDate=day;r.dayBest=0;r.dayMode='';save()}return r};
+ const recordScore=(score,mode)=>{
+  if(master)return {dayRecord:false,allRecord:false,newMedals:[]};
+  const r=normalizeDay(),dayRecord=score>r.dayBest,allRecord=score>r.allBest;
+  if(dayRecord){r.dayBest=score;r.dayMode=mode}
+  if(allRecord){r.allBest=score;r.allMode=mode}
+  const newMedals=MEDAL_LEVELS.filter(t=>score>=t.min&&!r.medals.includes(t.min));
+  newMedals.forEach(t=>r.medals.push(t.min));
+  if(dayRecord||allRecord||newMedals.length)save();
+  render();return {dayRecord,allRecord,newMedals};
+ };
+ const eraseScores=()=>{data.scoreRecords={dayDate:'',dayBest:0,dayMode:'',allBest:0,allMode:'',medals:[]};data.suddenBest=0;save();render()};
  const color=(correct,total)=>correct===total?'green':correct/total>=.8?'orange':'red';
  const passes=key=>data[key].passes.length;
  const unlocked=what=>master||what==='stage1'||what==='stage2'&&passes('stage1')>=2||what==='stage3'&&passes('stage2')>=2||what==='one'&&passes('stage2')>=2||what==='three'&&['orange','green'].includes(data.modes.one)||what==='five'&&['orange','green'].includes(data.modes.three)||what==='sudden'&&['orange','green'].includes(data.modes.five);
@@ -690,12 +1514,16 @@ window.MATHAS_ITEMS = [
  const recordSudden=points=>{if(master)return;data.suddenBest=Math.max(data.suddenBest,points);data.modes.sudden=points>0?'green':'red';save();render()};
  function dots(key){const target=$(key==='stage1'?'stage1Dots':'stage2Dots');target.replaceChildren();
   const total=key==='stage1'?12:8;
+  const caption=document.createElement('span');caption.className='progressCaption';
+  const captionText=document.createElement('span');captionText.textContent='Réussites';
+  const captionCount=document.createElement('strong');captionCount.textContent=passes(key)+'/2';
+  caption.append(captionText,captionCount);target.appendChild(caption);
   for(let i=0;i<2;i++){
    const col=data[key].passes[i]||((i===passes(key)&&data[key].failed)?'red':'empty');
    const score=col==='red'?data[key].failedScore:data[key].passScores[i];
    const shown=col==='empty'?'':Number.isInteger(score)?`${score}/${total}`:col==='green'?'100 %':col==='orange'?'≥80 %':'<80 %';
    const group=document.createElement('span');group.className='dotResult';
-   const label=document.createElement('span');label.className='dotScore';label.textContent=shown;
+   const label=document.createElement('span');label.className='dotScore'+(shown?'':' unplayed');label.textContent=shown||'—';
    const dot=document.createElement('span');dot.className='progressDot '+col;dot.setAttribute('aria-hidden','true');
    group.append(label,dot);group.setAttribute('aria-label',shown?`${shown}, ${col==='green'?'sans-faute':col==='orange'?'réussite':'à réessayer'}`:'Non réalisé');
    target.appendChild(group);
@@ -703,6 +1531,14 @@ window.MATHAS_ITEMS = [
   target.setAttribute('aria-label',passes(key)+' réussites sur 2');
  }
  function render(){dots('stage1');dots('stage2');
+  const r=normalizeDay();
+  $('scorePanel').classList.toggle('hidden',!unlocked('stage3'));
+  $('scoreDay').textContent=r.dayBest?`${r.dayBest} pts`:'—';
+  $('scoreHistory').textContent=r.allBest?`${r.allBest} pts`:'—';
+  $('scoreDayMode').textContent=r.dayBest?`Obtenu en ${modeName[r.dayMode]||'conversion'}`:'Aucun score aujourd’hui';
+  $('scoreHistoryMode').textContent=r.allBest?`Obtenu en ${modeName[r.allMode]||'conversion'}`:'À battre !';
+  $('scoreMedalRow').replaceChildren();
+  MEDAL_LEVELS.forEach(t=>{const medal=document.createElement('span');medal.className='scoreMedal'+(r.medals.includes(t.min)?'':' pending');medal.textContent=`${t.icon} ${t.label}`;medal.title=r.medals.includes(t.min)?`Médaille ${t.label} points obtenue`:`Atteins ${t.label} points dans une seule partie`;medal.setAttribute('aria-label',medal.title);$('scoreMedalRow').appendChild(medal)});
   $('moveLaunchBtn').classList.toggle('lockedCard',!unlocked('stage2'));
   $('moveLaunchBtn').setAttribute('aria-disabled',String(!unlocked('stage2')));
   $('moveLock').classList.toggle('hidden',unlocked('stage2'));
@@ -722,8 +1558,8 @@ window.MATHAS_ITEMS = [
    const prev={one:'Activité 2',three:'1 page',five:'3 pages',sudden:'5 pages'}[m];
    const total={one:4,three:12,five:20}[m];
    const best=data.modeScores[m];
-   const scoreText=Number.isInteger(best)?`Meilleur : ${best}/${total}`:state==='green'?`Meilleur : ${total}/${total}`:state==='orange'?'≥80 % (ancien score)':state==='red'?'<80 % (ancien score)':'';
-   const noteText=m==='sudden'?'':(!open?`🔒 ${prev} · 80 %`:(scoreText||''));
+   const scoreText=Number.isInteger(best)?`Réussite : ${best}/${total}`:state==='green'?`Réussite : ${total}/${total}`:state==='orange'?'≥80 % (ancien score)':state==='red'?'<80 % (ancien score)':'';
+   const noteText=m==='sudden'?(data.suddenBest>0?`Meilleure série : ${data.suddenBest}`:''):(!open?`🔒 ${prev} · 80 %`:(scoreText||'Pas encore joué'));
    document.querySelectorAll(`[data-mode="${m}"]`).forEach(b=>{
      b.classList.toggle('lockedMode',!open);b.classList.remove('grade-red','grade-orange','grade-green');if(state)b.classList.add('grade-'+state);
      b.setAttribute('aria-disabled',String(!open));
@@ -743,8 +1579,9 @@ window.MATHAS_ITEMS = [
   master=true;try{sessionStorage.setItem(SESSION,'1')}catch(e){}$('masterDialog').close();render();
  });
  $('masterExit').addEventListener('click',()=>{master=false;try{sessionStorage.removeItem(SESSION)}catch(e){}render()});
- $('masterReset').addEventListener('click',()=>{if(master&&confirm('Effacer la progression, les déblocages et le record Mort subite sur cet appareil ?'))reset()});
- window.MATHAS_PROGRESS={unlocked,recordStage,recordMode,recordSudden,render,grade:color,passes,reset,get master(){return master}};
+ $('masterEraseScores').addEventListener('click',()=>{if(master&&confirm('Effacer les points, les records et les médailles sur cet appareil ? La progression et les modes débloqués seront conservés.'))eraseScores()});
+ $('masterReset').addEventListener('click',()=>{if(master&&confirm('Tout remettre à zéro sur cet appareil : progression, déblocages, points, records et médailles ?'))reset()});
+ window.MATHAS_PROGRESS={unlocked,recordStage,recordMode,recordSudden,recordScore,render,grade:color,passes,reset,get master(){return master}};
  render();
 })();
 </script><script>
@@ -1040,7 +1877,23 @@ const POS=Object.fromEntries(UNITS.map((u,i)=>[u,i]));
 const pairList=[];
 for(const a of OPTIONS)for(const b of OPTIONS)if(a!==b)pairList.push([a,b]);
 let series=[],activeIndex=0,locked=false,first=true,correctionMode=false;
-let selectedMode=null, pageNumber=0, totalPages=1, runCorrect=0, runQuestions=0, suddenStreak=0, runFinished=false;
+let selectedMode=null, pageNumber=0, totalPages=1, runCorrect=0, runQuestions=0, suddenStreak=0, runFinished=false, runScore=0;
+const helpRestricted=()=>selectedMode==='sudden'&&suddenStreak>=3;
+const unitsRestricted=()=>selectedMode==='sudden'&&suddenStreak>=1;
+const calcPoints=ex=>{
+ if(Number.isInteger(ex.earnedPoints))return ex.earnedPoints;
+ if(ex.status==='badFinal')return 0;
+ if(ex.status==='corrected')return 6;
+ if(ex.status!=='good')return 0;
+ const base=selectedMode==='sudden'?30+5*Math.floor(suddenStreak/4):25+2*pageNumber;
+ if(ex.usedUnits)return selectedMode==='sudden'?Math.round(base*.6):base-10;
+ if(ex.usedManip)return selectedMode==='sudden'?Math.round(base*.8):base-5;
+ return base;
+};
+function scoreView(message){
+ $('t3ScoreNow').textContent=`${runScore} ${runScore===1?'point':'points'}`;
+ $('t3ScoreBadge').textContent=window.MATHAS_PROGRESS.master?'Master · scores non enregistrés':message||'Record du jour à battre !';
+}
 const random=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
 const shuffle=arr=>{const x=[...arr];for(let i=x.length-1;i>0;i--){const j=random(0,i);[x[i],x[j]]=[x[j],x[i]]}return x};
 const nice=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
@@ -1048,65 +1901,117 @@ const expected=(source,from,to)=>{
  const shift=POS[to]-POS[from];
  return shift>=0?source*10**shift:source/10**(-shift);
 };
-function makeTask(from,to){
- const shift=POS[to]-POS[from],limit=10**(POS[from]+1)-1;
- let source,result;
- for(let attempt=0;attempt<100;attempt++){
-   if(shift<0){
-     const factor=10**(-shift);
-     const maxBase=Math.floor(limit/factor);
-     if(maxBase<1)continue;
-     // Alterne les réponses avec 0, 1 ou 2 zéros terminaux, si
-     // l'abaque à 7 colonnes permet de représenter le nombre de départ.
-     const allowedZeros=[0];
-     if(maxBase>=10)allowedZeros.push(1,1);
-     if(maxBase>=100)allowedZeros.push(2,2);
-     const remain=allowedZeros[random(0,allowedZeros.length-1)];
-     const scale=10**remain;
-     const maxMantissa=Math.min(99,Math.floor(maxBase/scale));
-     let mantissa=random(1,maxMantissa);
-     // Maîtriser le nombre de zéros conservés après la conversion.
-     if(mantissa%10===0)mantissa=Math.max(1,mantissa-1);
-     const base=mantissa*scale;
-     source=base*factor;
-   }else{
-     const max=Math.min(limit,1000);
-     let x=random(1,Math.max(1,max));
-     if(Math.random()<.33&&x*10<=limit)x*=10;
-     source=x;
-   }
-   result=expected(source,from,to);
-   if(Number.isInteger(result)&&result>0&&Number.isSafeInteger(result))break;
+/* Plusieurs structures de nombres pour éviter les suites prévisibles de zéros.
+   On compose la partie utile, puis on place ses chiffres dans les 7 colonnes.
+   Pour une division, la partie utile est le résultat, et on rajoute le facteur
+   de conversion : le résultat ne peut donc jamais être décimal. */
+const historyConversions=[];
+function roomFor(from,to){return POS[POS[to]<POS[from]?to:from]+1}
+function minRoom(kind){return {simple:1,trailing:2,three:3,inner:3,mixed:4}[kind]||1}
+function digitsDifferent(kind,room){
+ const digit=()=>String(random(1,9));
+ const repeatZero=n=>'0'.repeat(n);
+ if(kind==='trailing'&&room>=2){
+  const tail=random(1,Math.min(3,room-1));
+  const early=(selectedMode!=='sudden'&&pageNumber===0)||selectedMode==='sudden'&&suddenStreak<3;
+  const useful=random(1,Math.min(early?2:3,room-tail));
+  return Array.from({length:useful},digit).join('')+repeatZero(tail);
  }
- if(!source||!Number.isInteger(result))return null;
- return {from,to,source,result,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null,helpUsed:false};
+ if(kind==='three'&&room>=3){
+  const finalZero=room>=4&&Math.random()<.3?random(1,Math.min(2,room-3)):0;
+  return digit()+digit()+digit()+repeatZero(finalZero);
+ }
+ if(kind==='inner'&&room>=3){
+  const interior=random(1,Math.min(3,room-2));
+  const third=(room>=interior+3&&Math.random()<.28)?digit():'';
+  return digit()+repeatZero(interior)+digit()+third;
+ }
+ if(kind==='mixed'&&room>=4){
+  const inner=random(1,Math.min(2,room-3));
+  const endZeros=random(1,Math.min(3,room-2-inner));
+  const third=room>=inner+endZeros+3&&Math.random()<.35?digit():'';
+  return digit()+repeatZero(inner)+digit()+third+repeatZero(endZeros);
+ }
+ // Un ou deux chiffres sans piège, parfois un zéro terminal sur page 1.
+ const count=random(1,Math.min(2,room));
+ const tail=room>count&&Math.random()<.16?1:0;
+ return Array.from({length:count},digit).join('')+repeatZero(tail);
+}
+function makeTask(from,to,kind='simple'){
+ const shift=POS[to]-POS[from];
+ const room=roomFor(from,to);
+ if(room<minRoom(kind))return null;
+ const factor=10**Math.abs(shift);
+ const limit=10**(POS[from]+1)-1;
+ let candidate=null;
+ for(let attempt=0;attempt<120;attempt++){
+  const base=Number(digitsDifferent(kind,room));
+  const source=shift<0?base*factor:base;
+  const result=shift<0?base:base*factor;
+  if(!Number.isSafeInteger(source)||!Number.isSafeInteger(result)||source<=0||result<=0||source>limit)continue;
+  const key=`${from}/${to}/${source}`;
+  if(historyConversions.includes(key)&&attempt<100)continue;
+  candidate={from,to,source,result,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null,helpUsed:false,usedManip:false,usedUnits:false,earnedPoints:null};
+  historyConversions.push(key);
+  if(historyConversions.length>80)historyConversions.shift();
+  break;
+ }
+ return candidate;
+}
+function kindsForPage(){
+ if(selectedMode==='sudden'){
+  const phase=suddenStreak;
+  if(phase<3)return [phase===2?'trailing':'simple'];
+  if(phase<7)return [['simple'],['three'],['trailing'],['inner']][(phase-3)%4];
+  return [['mixed'],['inner'],['three'],['trailing'],['simple']][(phase-7)%5];
+ }
+ if(pageNumber===0)return shuffle(['simple','simple','simple','trailing']);
+ if(pageNumber===1)return shuffle(['simple','trailing','three','inner']);
+ if(pageNumber===2)return shuffle(['trailing','three','inner','mixed']);
+ return shuffle(['three','inner','mixed','trailing']);
+}
+function choosePageTask(kind,usedPairs,usedSteps,usedDirections){
+ const maxShift=selectedMode==='sudden'?(suddenStreak<3?3:suddenStreak<7?5:6):(pageNumber===0?3:pageNumber===1?5:6);
+ const options=shuffle(pairList).filter(([from,to])=>roomFor(from,to)>=minRoom(kind)&&Math.abs(POS[to]-POS[from])<=maxShift);
+ options.sort((a,b)=>{
+  const rank=p=>{
+   const sign=Math.sign(POS[p[1]]-POS[p[0]]),step=Math.abs(POS[p[1]]-POS[p[0]]);
+   return (usedPairs.has(p.join('/'))?-120:0)
+     +(usedDirections.has(sign)?0:24)
+     +(usedSteps.has(step)?0:11)
+     +(historyConversions.slice(-25).some(k=>k.startsWith(p.join('/')+'/'))?-8:0);
+  };
+  return rank(b)-rank(a);
+ });
+ for(const [from,to] of options){
+  if(usedPairs.has(`${from}/${to}`))continue;
+  const task=makeTask(from,to,kind);
+  if(task){usedPairs.add(`${from}/${to}`);usedSteps.add(Math.abs(POS[to]-POS[from]));usedDirections.add(Math.sign(POS[to]-POS[from]));return task}
+ }
+ // Sécurité : toutes les catégories avancées ne sont pas possibles
+ // pour les conversions situées au bord de l'abaque.
+ for(const [from,to] of shuffle(pairList).filter(([from,to])=>Math.abs(POS[to]-POS[from])<=maxShift)){
+  if(usedPairs.has(`${from}/${to}`))continue;
+  const task=makeTask(from,to,'simple');
+  if(task){usedPairs.add(`${from}/${to}`);usedSteps.add(Math.abs(POS[to]-POS[from]));usedDirections.add(Math.sign(POS[to]-POS[from]));return task}
+ }
+ throw new Error('Aucune conversion disponible');
 }
 function makeSeries(){
- let specs=shuffle(pairList);
- // Two directions and several unit steps in the same series.
- let chosen=[];
- for(const pair of specs){
-  if(chosen.some(p=>p.join('/')===pair.join('/')))continue;
-  if(chosen.length===1&&Math.sign(POS[pair[1]]-POS[pair[0]])===Math.sign(POS[chosen[0][1]]-POS[chosen[0][0]]))continue;
-  chosen.push(pair);if(chosen.length===4)break;
- }
- if(first){first=false;chosen=[['cm','m'],...chosen.filter(p=>p.join('/')!=='cm/m').slice(0,3)]}
- if(selectedMode==='sudden')chosen=chosen.slice(0,1);
- series=chosen.map(([from,to],i)=>{
-  if(i===0&&from==='cm'&&to==='m'&&!window.__MATHAS_T3_EXAMPLE_DONE){window.__MATHAS_T3_EXAMPLE_DONE=true;return {from,to,source:34000,result:340,answer:'',open:false,units:false,shown:false,checked:false,status:'pending',help:null,helpUsed:false}}
-  return makeTask(from,to)
- });
+ const usedPairs=new Set(),usedSteps=new Set(),usedDirections=new Set();
+ series=kindsForPage().map(kind=>choosePageTask(kind,usedPairs,usedSteps,usedDirections));
  activeIndex=0;locked=false;correctionMode=false;
  $('t3Summary').textContent='';$('t3Progress').textContent='';$('t3Progress').classList.add('hidden');$('t3Verify').textContent=selectedMode==='sudden'?'✓ Valider':'✓ Vérifier les 4 réponses';
  $('t3PageLabel').textContent=selectedMode==='sudden'?`Mort subite · question ${suddenStreak+1}`:`Page ${pageNumber+1} / ${totalPages}`;
+ $('t3Instructions').textContent=selectedMode!=='sudden'?'Écris les réponses. Utilise les aides si nécessaire.':suddenStreak===0?'Mort subite : aucune erreur permise. Les aides se retirent progressivement.':suddenStreak<3?'Mort subite : unités verrouillées, manipulation de la virgule autorisée.':'Mort subite : autonomie totale, aucune aide disponible.';
  $('t3Verify').classList.remove('hidden');$('t3New').classList.add('hidden');
- renderAll();
+ scoreView();renderAll();
 }
 function startMode(mode){
  if(!window.MATHAS_PROGRESS.unlocked(mode))return;
  $('homeScreen').classList.add('hidden');$('moveScreen').classList.add('hidden');$('gameScreen').classList.add('hidden');
  $('convertScreen').classList.remove('hidden');$('homeBtn').classList.remove('hidden');$('helpBtn').classList.add('hidden');
- selectedMode=mode;totalPages={one:1,three:3,five:5,sudden:Infinity}[mode];pageNumber=0;runCorrect=0;runQuestions=0;suddenStreak=0;runFinished=false;
+ selectedMode=mode;totalPages={one:1,three:3,five:5,sudden:Infinity}[mode];pageNumber=0;runCorrect=0;runQuestions=0;suddenStreak=0;runFinished=false;runScore=0;
  $('t3Layout').classList.remove('hidden');$('t3SessionHead').classList.remove('hidden');
  makeSeries();window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -1122,48 +2027,179 @@ function renderOne(i){
  el.classList.toggle('t3bad',ex.status==='badFinal');
  el.classList.toggle('t3retry',ex.status==='retry');
  el.classList.toggle('t3corrected',ex.status==='corrected');
+ el.classList.toggle('unitsGuideActive',ex.open&&ex.units);
  const input=el.querySelector('.t3Answer');if(input.value!==ex.answer)input.value=ex.answer;
  input.disabled=locked||!['pending','retry'].includes(ex.status);input.classList.toggle('active',i===activeIndex&&!input.disabled);
- el.querySelector('.t3Open').setAttribute('aria-expanded',String(ex.open));
- el.querySelector('.t3Open').textContent=ex.open?'▦ Masquer la manipulation':'▦ Manipuler la virgule';
+ const manipulate=el.querySelector('.t3Open'),unitsBtn=el.querySelector('.t3UnitsBtn');
+ manipulate.disabled=helpRestricted();unitsBtn.disabled=unitsRestricted();
+ manipulate.title=helpRestricted()?'Manipulation impossible dès la 4e question en Mort subite':'';
+ unitsBtn.title=unitsRestricted()?'Unités indisponibles dès la 2e question en Mort subite':'';
+ manipulate.setAttribute('aria-expanded',String(ex.open));
+ manipulate.textContent=helpRestricted()?'🔒 Manipulation indisponible':ex.open?'▦ Masquer la manipulation':'▦ Manipuler la virgule';
  el.querySelector('.t3UnitsBtn').setAttribute('aria-pressed',String(ex.units));
- el.querySelector('.t3UnitsBtn').textContent=ex.units?'▤ Masquer les unités':'▤ Afficher les unités';
+ unitsBtn.textContent=unitsRestricted()?'🔒 Unités indisponibles':ex.units?'▤ Masquer les unités':'▤ Afficher les unités';
  el.querySelector('.t3UnitsBtn').classList.toggle('hidden',!ex.open);
  el.querySelector('.t3Assistance').classList.toggle('hidden',!ex.open);
  const st=el.querySelector('.t3Status');
  st.textContent=ex.status==='good'?'✓ Correct.':ex.status==='retry'?'À corriger : deuxième essai.':ex.status==='corrected'?'✓ Corrigé au deuxième essai.':ex.status==='badFinal'?`✗ Réponse attendue : ${nice(ex.result)} ${ex.to}`:'';
  if(ex.open)renderBoard(i);
+ else drawUnitCorrespondences(el);
+ updateKeypadAction();
 }
 function renderAll(){
  const host=$('t3ExList');host.replaceChildren();
  series.forEach((ex,i)=>{
   const article=document.createElement('article');article.className='t3Ex';
-  article.innerHTML=`<div class="t3Heading"><span class="t3Num">${i+1}</span><div class="t3Expression"><span>${nice(ex.source)} ${ex.from} =</span><input class="t3Answer" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Réponse de la conversion ${i+1}" maxlength="13"><span>${ex.to}</span></div></div>
-   <div class="t3Controls"><div class="t3HelpControls"><button class="btn t3HelpBtn t3Open" type="button" aria-expanded="false">▦ Manipuler la virgule</button></div><div class="t3Status" role="status"></div></div>
-   <div class="t3Assistance hidden">
+  article.innerHTML=`<div class="t3Prompt"><div class="t3Heading"><span class="t3Num">${i+1}</span><div class="t3Expression"><span>${nice(ex.source)} <span class="t3FromUnit">${ex.from}</span> =</span><input class="t3Answer" type="text" inputmode="none" readonly autocomplete="off" spellcheck="false" aria-label="Réponse de la conversion ${i+1} ; pavé numérique de Math’as ou clavier physique" maxlength="13"><span class="t3ToUnit">${ex.to}</span></div></div>
+   <div class="t3Controls"><div class="t3HelpControls"><button class="btn t3HelpBtn t3Open" type="button" aria-expanded="false">▦ Manipuler la virgule</button></div><div class="t3Status" role="status"></div></div></div>
+   <div class="t3Assistance hidden" aria-label="Manipulation de la virgule">
    <div class="t3ManipRow"><button class="btn t3UnitsBtn" type="button" aria-pressed="false">▤ Afficher les unités</button><div class="t3BoardScroll"><div class="t3Board"><div class="t3Movement" aria-hidden="true"></div><div class="t3UnitLabels hidden"></div><div class="t3Digits"></div><div class="t3Commas"></div></div></div>
-   <div class="t3BoardSide"><div class="t3Direction" role="status" aria-live="polite"></div><div class="t3BoardActions"><button type="button" class="btn t3ResetHelp">↺ Recommencer la manipulation</button></div></div></div></div>`;
+   <div class="t3BoardSide"><div class="t3Direction" role="status" aria-live="polite"></div><div class="t3BoardActions"><button type="button" class="btn t3ResetHelp" aria-label="Recommencer la manipulation">↺ Recommencer</button></div></div></div></div>`;
   const input=article.querySelector('input');
   input.value=ex.answer;
   input.addEventListener('focus',()=>{if(!input.disabled)setActive(i)});
   input.addEventListener('click',()=>{if(!input.disabled)setActive(i)});
-  input.addEventListener('input',()=>{ex.answer=input.value.replace(/\D/g,'').slice(0,13);if(input.value!==ex.answer)input.value=ex.answer;});
+  // Le champ reste sélectionnable, mais readonly empêche Windows d'ouvrir son clavier tactile.
+  // Toute saisie passe par le pavé Math'as, ou par le clavier physique intercepté ci-dessous.
   input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();nextAnswer()}});
   article.querySelector('.t3Open').addEventListener('click',()=>{
-    ex.open=!ex.open;if(ex.open){ex.helpUsed=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i);
+    if(helpRestricted())return;ex.open=!ex.open;if(ex.open){ex.helpUsed=true;ex.usedManip=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i);
   });
-  article.querySelector('.t3UnitsBtn').addEventListener('click',()=>{ex.units=!ex.units;if(ex.units){ex.open=true;ex.helpUsed=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i)});
+  article.querySelector('.t3UnitsBtn').addEventListener('click',()=>{if(unitsRestricted())return;ex.units=!ex.units;if(ex.units){ex.open=true;ex.helpUsed=true;ex.usedManip=true;ex.usedUnits=true;if(!ex.help)ex.help=makeHelp(ex)}renderOne(i)});
   article.querySelector('.t3ResetHelp').addEventListener('click',()=>{ex.helpUsed=true;ex.help=makeHelp(ex);renderBoard(i);renderOne(i)});
   host.appendChild(article);
  });
- series.forEach((_,i)=>renderOne(i));setActive(activeIndex);
+ series.forEach((_,i)=>renderOne(i));setActive(activeIndex);updateKeypadAction();
+}
+function updateKeypadAction(){
+ const nextBtn=document.querySelector('#convertScreen [data-t3key="next"]');
+ if(!nextBtn)return;
+ const editable=series.filter(ex=>['pending','retry'].includes(ex.status));
+ const allFilled=editable.length>0 && editable.every(ex=>String(ex.answer).trim()!=='');
+ nextBtn.textContent=allFilled?'✓ Valider':'Réponse suivante →';
+ nextBtn.setAttribute('aria-label',allFilled?'Valider les réponses':'Passer à la réponse suivante');
+ nextBtn.dataset.action=allFilled?'validate':'next';
 }
 function setActive(i){
  if(locked||!series[i]||!['pending','retry'].includes(series[i].status))return;activeIndex=i;
  $('t3KeyInfo').textContent=`Réponse de l'exercice ${i+1}`;
  document.querySelectorAll('#t3ExList .t3Answer').forEach((inp,j)=>inp.classList.toggle('active',j===i));
+ updateKeypadAction();
 }
 function nextAnswer(){if(locked)return;const available=series.map((ex,i)=>['pending','retry'].includes(ex.status)?i:-1).filter(i=>i>=0);if(!available.length)return;let next=available.find(i=>i>activeIndex);if(next===undefined)next=available.find(i=>!series[i].answer)??available[0];setActive(next);$('t3ExList').children[next].querySelector('input').focus()}
+/* Associe chaque unité de l'énoncé à la même unité dans l'abaque,
+   sans dessiner de déplacement ni révéler la direction à suivre. */
+function drawUnitCorrespondences(article){
+ let overlay=article.querySelector(':scope > .t3Correspondences');
+ if(!article.classList.contains('unitsGuideActive')){overlay?.remove();return}
+ const pairs=[
+  {from:article.querySelector('.t3FromUnit'),to:article.querySelector('.t3UnitLabel.from'),color:'#d85a62',name:'source'},
+  {from:article.querySelector('.t3ToUnit'),to:article.querySelector('.t3UnitLabel.to'),color:'#239e61',name:'destination'}
+ ];
+ if(pairs.some(x=>!x.from||!x.to||!x.from.getClientRects().length||!x.to.getClientRects().length)){
+  overlay?.remove();return
+ }
+ const box=article.getBoundingClientRect();
+ if(box.width<10||box.height<10)return;
+ if(!overlay){
+  overlay=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  overlay.classList.add('t3Correspondences');
+  overlay.setAttribute('aria-hidden','true');
+  article.appendChild(overlay);
+ }
+ overlay.setAttribute('viewBox',`0 0 ${box.width} ${box.height}`);
+ overlay.replaceChildren();
+ const ns='http://www.w3.org/2000/svg';
+ const isNarrow=window.innerWidth<=650;
+ pairs.forEach((link,i)=>{
+  const a=link.from.getBoundingClientRect(), b=link.to.getBoundingClientRect();
+  // Le petit point marque le départ SUR l'unité écrite, sans ligne flottante.
+  const sx=a.left+a.width/2-box.left;
+  const sy=a.top-box.top+1;
+  // Arrivée dans le bord supérieur de la bonne colonne (sans masquer son nom).
+  const ex=b.left+b.width/2-box.left;
+  const ey=b.top-box.top+1;
+  if(![sx,ex,sy,ey].every(Number.isFinite))return;
+  const defs=document.createElementNS(ns,'defs');
+  const marker=document.createElementNS(ns,'marker');
+  const id=`mathas-correspondence-${i}-${Array.prototype.indexOf.call(article.parentNode.children,article)}`;
+  marker.setAttribute('id',id);
+  marker.setAttribute('viewBox','0 0 8 8');
+  marker.setAttribute('refX','6');marker.setAttribute('refY','4');
+  marker.setAttribute('markerWidth','4.6');marker.setAttribute('markerHeight','4.6');
+  marker.setAttribute('orient','auto');
+  const tip=document.createElementNS(ns,'path');
+  tip.setAttribute('d','M0 0 L8 4 L0 8 z');
+  tip.setAttribute('fill',link.color);
+  tip.setAttribute('fill-opacity','.83');
+  marker.appendChild(tip);defs.appendChild(marker);overlay.appendChild(defs);
+  const path=document.createElementNS(ns,'path');
+  // Les deux courbes montrent uniquement la correspondance des unités.
+  // Leur dernière tangente est oblique, jamais verticale : orient="auto"
+  // fait ainsi suivre au triangle la direction réelle du trait.
+  let d;
+  if(isNarrow){
+   const gutter=i===0?12:box.width-12;
+   const sign=i===0?1:-1;
+   const yTop=Math.max(8,sy-17);
+   const lane=i===0?ey-35:ey-13;
+   const approach=ex>=gutter?1:-1;
+   d=`M ${sx} ${sy} C ${sx} ${yTop} ${gutter} ${yTop} ${gutter} ${sy+8}`+
+     ` L ${gutter} ${lane-13} Q ${gutter} ${lane} ${gutter+sign*12} ${lane}`+
+     ` L ${ex-approach*29} ${lane} Q ${ex-approach*23} ${ey-5} ${ex} ${ey}`;
+  }else{
+   // Deux voies distinctes. Le rouge remonte en arc doux, tandis que
+   // le vert quitte son unité à l'horizontale sans petit crochet.
+   // Les tangentes des courbes et de la tige sont continues aux raccords.
+   const sourceLane=Math.min(sy,ey);
+   const redLane=Math.max(5,sourceLane-18);
+   const greenLane=Math.min(ey-6,Math.max(redLane+17,sy+2));
+   const lane=i===0?redLane:greenLane;
+   const dir=ex>=sx?1:-1;
+   const distance=Math.abs(ex-sx);
+   if(distance<95){
+    // Deux ancrages proches : une courbe unique évite un crochet serré.
+    d=`M ${sx} ${sy} C ${sx+dir*Math.min(18,distance*.35)} ${i===0?sy-10:sy} `+
+      `${ex-dir*17} ${ey-18} ${ex} ${ey}`;
+   }else{
+    const startRun=Math.min(55,distance*.34);
+    // Plus l'abaque est bas, plus on amorce tôt la descente finale.
+    const endRun=Math.min(distance*.46,Math.max(55,(ey-lane)*.67));
+    const startFlat=sx+dir*startRun,finishFlat=ex-dir*endRun;
+    const startControl=i===0?sy-10:sy;
+    d=`M ${sx} ${sy} C ${sx+dir*15} ${startControl} ${startFlat-dir*17} ${lane} ${startFlat} ${lane}`+
+      ` L ${finishFlat} ${lane} C ${finishFlat+dir*22} ${lane} ${ex-dir*16} ${ey-12} ${ex} ${ey}`;
+   }
+  }
+  path.setAttribute('d',d);
+  path.setAttribute('stroke',link.color);
+  path.setAttribute('stroke-width','4.1');
+  path.setAttribute('stroke-linecap','round');
+  path.setAttribute('stroke-linejoin','round');
+  path.setAttribute('fill','none');
+  path.setAttribute('marker-end',`url(#${id})`);
+  path.setAttribute('opacity','.73');
+  overlay.appendChild(path);
+  // La tige rejoint visiblement l'unité dans l'énoncé.
+  const dot=document.createElementNS(ns,'circle');
+  dot.setAttribute('cx',String(sx));dot.setAttribute('cy',String(sy));
+  dot.setAttribute('r','2.9');dot.setAttribute('fill',link.color);
+  dot.setAttribute('opacity','.86');
+  overlay.appendChild(dot);
+ });
+}
+function refreshUnitCorrespondences(){
+ document.querySelectorAll('#t3ExList .t3Ex').forEach(drawUnitCorrespondences);
+}
+let t3LinkRedrawPending=false;
+function scheduleUnitCorrespondences(){
+ if(t3LinkRedrawPending)return;
+ t3LinkRedrawPending=true;
+ requestAnimationFrame(()=>{t3LinkRedrawPending=false;refreshUnitCorrespondences()});
+}
+window.addEventListener('resize',scheduleUnitCorrespondences,{passive:true});
+window.addEventListener('scroll',scheduleUnitCorrespondences,{passive:true});
+$('t3ExList').addEventListener('scroll',scheduleUnitCorrespondences,{passive:true,capture:true});
 function renderBoard(i){
  const ex=series[i],state=ex.help,article=$('t3ExList').children[i];if(!state)return;
  article.querySelector('.t3UnitsBtn').textContent=ex.units?'▤ Masquer les unités':'▤ Afficher les unités';
@@ -1173,6 +2209,7 @@ function renderBoard(i){
   const d=document.createElement('div');d.className='t3UnitLabel';
   if(j===POS[ex.from])d.classList.add('from');
   if(j===POS[ex.to])d.classList.add('to');
+  if(j===state.comma)d.classList.add('activeUnit');
   d.textContent=u;d.setAttribute('aria-hidden','true');headers.appendChild(d);
  });
  const board=article.querySelector('.t3Digits');board.replaceChildren();
@@ -1198,7 +2235,10 @@ function renderBoard(i){
   const palette=left?['#a6dff4','#70c8e7','#43a9d8','#1c87b8','#126b9d','#07517b']:['#dec3f9','#c69af1','#aa79df','#8956ca','#6c3caa','#4f288d'];
   const shade=palette[Math.min(Math.max(count-1,0),5)];
   movement.classList.toggle('active',count>0);
-  if(!count){movement.replaceChildren();direction.textContent='';return}
+  if(!count)direction.textContent='';
+  // Afficher les unités n'indique PAS le trajet de conversion :
+  // seule l'action réelle de l'élève colore la colonne active.
+  if(!count){movement.replaceChildren();return}
   let paths='';const cell=51; // Géométrie proportionnelle : même viewBox quelle que soit la taille réelle des cases.
   for(let step=0;step<count;step++){
    const start=(state.original+1+Math.sign(steps)*step)*cell;
@@ -1221,9 +2261,11 @@ function renderBoard(i){
     comma.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();state.comma=e.key==='ArrowLeft'?Math.max(0,state.comma-1):e.key==='ArrowRight'?Math.min(6,state.comma+1):e.key==='Home'?0:6;visual();const focus=commas.querySelector('.t3Comma');focus?.focus()}});
     slot.appendChild(comma)}
   });
+  if(ex.units)[...headers.children].forEach((label,k)=>label.classList.toggle('activeUnit',k===state.comma));
   updateMovement();
  };
  visual();
+ scheduleUnitCorrespondences();
  const closest=x=>{let best=0,dist=Infinity;[...commas.children].forEach((slot,k)=>{const r=slot.getBoundingClientRect(),delta=Math.abs(x-r.left-r.width/2);if(delta<dist){best=k;dist=delta}});return best};
  let pointer=null;
  commas.onpointerdown=e=>{if(locked)return;if(!e.target.closest('.t3Comma'))return;e.preventDefault();pointer=e.pointerId;try{commas.setPointerCapture(e.pointerId)}catch{}};
@@ -1233,14 +2275,22 @@ function renderBoard(i){
 }
 function finishPage(firstGood,corrected=0){
  locked=true;runCorrect+=firstGood;runQuestions+=series.length;
+ const pagePoints=series.reduce((sum,ex)=>sum+calcPoints(ex),0);
+ runScore+=pagePoints;
+ scoreView(`+${pagePoints} points sur cette ${selectedMode==='sudden'?'conversion':'page'}`);
+ if(pagePoints>0)window.MATHAS_CELEBRATE?.toast(`+${pagePoints} points !`);
+ const notifyRecord=(res)=>{
+  if(res.newMedals.length)window.MATHAS_CELEBRATE?.toast(`Nouvelle médaille ${res.newMedals.at(-1).icon} !`);
+  scoreView(res.allRecord?'🏆 Nouveau record historique !':res.dayRecord?'☀️ Nouveau record du jour !':undefined);
+ };
  series.forEach((_,i)=>renderOne(i));
  $('t3Progress').textContent=`${runCorrect}/${runQuestions} au premier essai`;
  $('t3Progress').classList.remove('hidden');
- $('t3Verify').classList.add('hidden');$('t3New').classList.remove('hidden');
+ $('t3Verify').classList.add('hidden');$('t3New').classList.remove('hidden');updateKeypadAction();
  if(firstGood===series.length)window.MATHAS_CELEBRATE?.toast();
  if(selectedMode==='sudden'){
-   if(firstGood===1){suddenStreak++;$('t3Summary').textContent=`${suddenStreak} conversion${suddenStreak>1?'s':''} réussie${suddenStreak>1?'s':''} de suite !`; $('t3New').textContent='Conversion suivante →'; window.MATHAS_CELEBRATE?.modal({title:'Bravo !',emoji:'⚡',text:'Encore une conversion réussie en mort subite !',buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode('sudden')},{label:'Suivante',primary:true,action:()=>$('t3New').click()}]});}
-   else{runFinished=true;window.MATHAS_PROGRESS.recordSudden(suddenStreak);$('t3Summary').textContent=`Fin de série · ${suddenStreak} réussite${suddenStreak>1?'s':''} d’affilée.`;$('t3New').textContent='↻ Rejouer';window.MATHAS_CELEBRATE?.modal({title:'Fin de mort subite',emoji:'🏁',text:`Tu as enchaîné ${suddenStreak} réussite${suddenStreak>1?'s':''} d’affilée.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode('sudden')}]});}
+   if(firstGood===1){suddenStreak++;window.MATHAS_PROGRESS.recordSudden(suddenStreak);notifyRecord(window.MATHAS_PROGRESS.recordScore(runScore,'sudden'));$('t3Summary').textContent=`${suddenStreak} conversion${suddenStreak>1?'s':''} réussie${suddenStreak>1?'s':''} de suite ! ${runScore} points.`; $('t3New').textContent='Conversion suivante →'; window.MATHAS_CELEBRATE?.modal({title:'Bravo !',emoji:'⚡',text:`${suddenStreak} conversion${suddenStreak>1?'s':''} réussie${suddenStreak>1?'s':''} de suite ! Score actuel : ${runScore} points.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode('sudden')},{label:'Suivante',primary:true,action:()=>$('t3New').click()}]});}
+   else{runFinished=true;window.MATHAS_PROGRESS.recordSudden(suddenStreak);$('t3Summary').textContent=`Fin de série · ${suddenStreak} réussite${suddenStreak>1?'s':''} d’affilée.`;$('t3New').textContent='↻ Rejouer';window.MATHAS_CELEBRATE?.modal({title:'Fin de mort subite',emoji:'🏁',text:`Tu as enchaîné ${suddenStreak} réussite${suddenStreak>1?'s':''} d’affilée et marqué ${runScore} points.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode('sudden')}]});}
    $('t3PageLabel').textContent='Mort subite · '+suddenStreak+' réussite'+(suddenStreak>1?'s':'');
    return;
  }
@@ -1249,13 +2299,14 @@ function finishPage(firstGood,corrected=0){
  else{
    runFinished=true;
    const grade=window.MATHAS_PROGRESS.recordMode(selectedMode,runCorrect,total);
-   $('t3Summary').textContent=`Série : ${runCorrect}/${total} · ${grade==='green'?'100 % !':grade==='orange'?'80 % atteint !':'À réessayer.'}`;
+   const recordResult=window.MATHAS_PROGRESS.recordScore(runScore,selectedMode);notifyRecord(recordResult);
+   $('t3Summary').textContent=`Série : ${runCorrect}/${total} · ${runScore} points · ${grade==='green'?'100 % !':grade==='orange'?'80 % atteint !':'À réessayer.'}`;
    $('t3New').textContent='↻ Nouvelle série';
    const nextMap={one:'three',three:'five',five:'sudden'}; const nextMode=nextMap[selectedMode];
    const nextUnlocked=nextMode && window.MATHAS_PROGRESS.unlocked(nextMode);
    const nextLabel=grade==='red'?'2e série':(nextUnlocked?(nextMode==='three'?'3 pages':nextMode==='five'?'5 pages':'Mort subite'):'2e série');
    const nextAction=grade==='red'?(()=>startMode(selectedMode)):(nextUnlocked?(()=>startMode(nextMode)):(()=>startMode(selectedMode)));
-   window.MATHAS_CELEBRATE?.modal({title:grade==='red'?'Continue !':'Bravo !',emoji:grade==='red'?'✨':'🏆',text:grade==='red'?`Tu as obtenu ${runCorrect}/${total}. Il faut au moins 80 % pour valider cette série.`:`Série terminée : ${runCorrect}/${total}.`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode(selectedMode)},{label:nextLabel,primary:true,action:nextAction}]});
+   window.MATHAS_CELEBRATE?.modal({title:grade==='red'?'Continue !':'Bravo !',emoji:grade==='red'?'✨':'🏆',text:grade==='red'?`Tu as obtenu ${runCorrect}/${total}. Il faut au moins 80 % pour valider cette série.`:`Série terminée : ${runCorrect}/${total}. Score : ${runScore} points.${recordResult.allRecord?' Nouveau record historique !':recordResult.dayRecord?' Record du jour battu !':''}${recordResult.newMedals.length?' Médaille(s) débloquée(s) : '+recordResult.newMedals.map(t=>t.icon+' '+t.label).join(', ')+'.':''}`,buttons:[{label:'Accueil',action:()=>{$('homeBtn').click()}},{label:'Recommencer',action:()=>startMode(selectedMode)},{label:nextLabel,primary:true,action:nextAction}]});
  }
 }
 function verify(){
@@ -1266,16 +2317,18 @@ function verify(){
  if(selectedMode==='sudden'){
    const good=Number(series[0].answer)===series[0].result;
    series[0].status=good?'good':'badFinal';
+   series[0].earnedPoints=good?calcPoints(series[0]):0;
    finishPage(Number(good));return;
  }
  if(!correctionMode){
   const wrong=[];
-  series.forEach((ex,i)=>{if(Number(ex.answer)===ex.result){ex.status='good'}else{ex.status='retry';wrong.push(i)}});
+  series.forEach((ex,i)=>{if(Number(ex.answer)===ex.result){ex.status='good';ex.earnedPoints=calcPoints(ex)}else{ex.status='retry';wrong.push(i)}});
   if(wrong.length){
    correctionMode=true;
    const good=series.length-wrong.length;
    $('t3Summary').textContent=`${good} bonne${good>1?'s':''} réponse${good>1?'s':''}. Corrige les cases orange.`;
    $('t3Verify').textContent='✓ Valider les corrections';
+   updateKeypadAction();
    series.forEach((_,i)=>renderOne(i));
    setActive(wrong[0]);$('t3ExList').children[wrong[0]].querySelector('input').focus();return;
   }
@@ -1300,11 +2353,24 @@ document.querySelectorAll('.t3Mode').forEach(button=>button.addEventListener('cl
 function setKey(k){
  if(locked)return;const ex=series[activeIndex];if(!ex||!['pending','retry'].includes(ex.status))return;
  let val=ex.answer;
- if(k==='next'){nextAnswer();return}
+ if(k==='next'){
+  const nextBtn=document.querySelector('#convertScreen [data-t3key="next"]');
+  if(nextBtn?.dataset.action==='validate'){verify();return}
+  nextAnswer();return
+ }
  if(k==='clear')val='';else if(k==='back')val=val.slice(0,-1);else if(/^\d$/.test(k)&&val.length<13)val+=k;
  ex.answer=val;renderOne(activeIndex);
 }
 document.querySelectorAll('[data-t3key]').forEach(btn=>btn.addEventListener('click',()=>setKey(btn.dataset.t3key)));
+// La saisie physique est gérée par l'application, sans invoquer le clavier Windows.
+document.addEventListener('keydown',e=>{
+ if($('convertScreen').classList.contains('hidden')||locked||e.ctrlKey||e.altKey||e.metaKey||e.isComposing)return;
+ if(document.getElementById('celebrateDialog')?.open||document.getElementById('masterDialog')?.open)return;
+ const target=e.target;
+ if(target instanceof HTMLElement && (target.matches('input:not(.t3Answer), textarea, select')||target.isContentEditable))return;
+ if(/^[0-9]$/.test(e.key)){e.preventDefault();setKey(e.key)}
+ else if(e.key==='Backspace'||e.key==='Delete'){e.preventDefault();setKey(e.key==='Backspace'?'back':'clear')}
+});
 $('homeBtn').addEventListener('click',()=>{$('convertScreen').classList.add('hidden')});
 })();
 </script>
