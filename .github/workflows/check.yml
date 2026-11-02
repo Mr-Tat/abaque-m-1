@@ -1,0 +1,19 @@
+name: GRAN Abaque - application autonome
+on:
+  push:
+    branches: [main, feat/gran-abaque-m-1]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  game:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.0'
+      - run: npm install --no-save --no-package-lock playwright@1.57.0
+      - run: npx playwright install chromium --with-deps
+      - run: node --test tests/*.test.mjs tests/*.browser.mjs
